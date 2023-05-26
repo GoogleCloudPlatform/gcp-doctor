@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/rules/gke/WARN/2021_003/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="rules">
-<meta property="article:modified_time" content="2021-10-26T18:24:02+02:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2023-04-18T15:07:29+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gke/WARN/2021_003">
 <meta itemprop=description content="GKE cluster size close to maximum allowed by pod range
 ">
-<meta itemprop=dateModified content="2021-10-26T18:24:02+02:00">
-<meta itemprop=wordCount content="81"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2023-04-18T15:07:29+00:00">
+<meta itemprop=wordCount content="58"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="gke/WARN/2021_003">
@@ -751,16 +751,15 @@
 <strong>Rule class</strong>: WARN - Something that is possibly wrong</p>
 <h3 id=description>Description</h3>
 <p>The maximum amount of nodes in a GKE cluster is limited based on its pod CIDR
-range. This test checks if the cluster is approaching the maximum amount of
-nodes allowed by the pod range. Users may end up blocked in production if they
-are not able to scale their cluster due to this hard limit imposed by the pod
-CIDR.</p>
+range. This test checks if the cluster is above the threshold of 80% for pod
+CIDR utilization.</p>
 <h3 id=further-information>Further information</h3>
 <ul>
-<li><a href=https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr>feedbackOptimizing IP address allocation</a></li>
+<li><a href=https://cloud.google.com/network-intelligence-center/docs/network-analyzer/insights/kubernetes-engine/gke-ip-utilization>GKE IP address utilization insights</a></li>
+<li><a href=https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr>Optimizing IP address allocation</a></li>
 </ul>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified October 26, 2021: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/5bf944dbc6e862a6df64f101d19a8cc0e04d6b41>improve rules documentation. (5bf944db)</a>
+Last modified April 18, 2023: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/8b4f29479ab7fdd65382f90a828c3ad9c177a810>update GKE pod cidr rule to report values per pod cidr range (8b4f2947)</a>
 </div>
 </div>
 </main>
