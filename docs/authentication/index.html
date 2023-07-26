@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/docs/authentication/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-11-02T09:20:57+01:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2023-07-26T01:46:41+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="Authentication">
 <meta itemprop=description content="Authentication mechanisms.
 ">
-<meta itemprop=dateModified content="2021-11-02T09:20:57+01:00">
-<meta itemprop=wordCount content="268"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2023-07-26T01:46:41+00:00">
+<meta itemprop=wordCount content="151"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="Authentication">
@@ -119,21 +119,6 @@
 <p>gcpdiag supports authentication using multiple mechanisms:</p>
 <ol>
 <li>
-<p>OAuth user consent flow</p>
-<p>gcpdiag uses by default the OAuth user authentication flow, similarly to what
-gcloud does. It will print a URL that you need to access with a browser, and
-ask you to enter the token that you receive after you authenticate there.</p>
-<p>The credentials will be cached on disk, so that you can keep running it for 1
-hour. To remove cached authentication credentials, you can delete the
-<code>$HOME/.cache/gcpdiag</code> directory.</p>
-<p>Note: if your organization has the &ldquo;Block all third-party API access&rdquo;
-policy set, you will need to either ask an organization admin to add gcpdiag
-to the list of trusted applications (client id:
-<code>539612726288-l17ksc9k8f0d63tfs53i45op9nel9h74.apps.googleusercontent.com</code>),
-or use another authentication mechanism (such as application default
-credentials).</p>
-</li>
-<li>
 <p>Application default credentials</p>
 <p>gcpdiag can use Cloud SDK&rsquo;s <a href=https://google-auth.readthedocs.io/en/latest/reference/google.auth.html#google.auth.default>Application Default
 Credentials</a>.
@@ -160,7 +145,7 @@ using the <code>--billing-project</code> option</li>
 recommend that if you use service account authentication (<code>--auth-key</code>), you
 only grant the Viewer+Service Usage Consumer on that service account.</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified November 2, 2021: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/51fb977642725a92b627010a1015a3c39940acee>Use OAuth authentication by default. (51fb97764)</a>
+Last modified July 26, 2023: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/75c0917e073ad91cfae0753206a53f1d3ea4e010>Merge "Remove documentation references to deprecated oauth" -- Branch commit log -- commit 69205456773a4865ed333c6d24b328f37451c05f Author: gcpdiag team &lt;noreply@google.com> Date: 2023-07-22T00:33:59Z (75c0917e0)</a>
 </div>
 </div>
 </main>
