@@ -21,11 +21,11 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/rules/gke/WARN/2022_004/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="rules">
-<meta property="article:modified_time" content="2022-03-07T11:33:55+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2023-08-09T18:22:34+09:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gke/WARN/2022_004">
 <meta itemprop=description content="Cloud Logging API enabled when GKE logging is enabled
 ">
-<meta itemprop=dateModified content="2022-03-07T11:33:55+00:00">
+<meta itemprop=dateModified content="2023-08-09T18:22:34+09:00">
 <meta itemprop=wordCount content="65"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
@@ -900,10 +900,10 @@ and Node logs won&rsquo;t be ingested, and thus, won&rsquo;t be visible in Logs 
 <h3 id=remediation>Remediation</h3>
 <p>Cloud Logging API can be enabled in the Cloud Console, or by running the
 following command:</p>
-<p>gcloud services enable logging.googleapis.com &ndash;project={project-id}</p>
-<h3 id=further-information>Further information</h3>
+<pre tabindex=0><code>gcloud services enable logging.googleapis.com --project={project-id}
+</code></pre><h3 id=further-information>Further information</h3>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified March 7, 2022: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/205708d8daf5f2562085d382dc858e2c2413918c>Merge "new rule: Cloud Logging API enabled when GKE Logging is enabled" -- Branch commit log -- commit b460a2fb9c7955899710262c904d7873735103a5 Author: Roman Doroșchevici &lt;rdoroschevici@google.com> Date: 2022-03-01T14:34:48+02:00 (205708d8d)</a>
+Last modified August 9, 2023: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/28161fb6134a6208d956554b1f2f3de93431bbf7>Add one new rule and 2 other improvements (28161fb61)</a>
 </div>
 </div>
 </main>
