@@ -21,11 +21,11 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/docs/development/architecture/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2023-01-09T17:41:09+02:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2023-08-21T19:55:26-06:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gcpdiag Architecture">
 <meta itemprop=description content="gcpdiag internal code architecture.
 ">
-<meta itemprop=dateModified content="2023-01-09T17:41:09+02:00">
+<meta itemprop=dateModified content="2023-08-21T19:55:26-06:00">
 <meta itemprop=wordCount content="1707"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
@@ -259,7 +259,7 @@ defining logs queries.</p>
 modules instead. This ensures proper testing and separation of concerns. Also,
 this way we can make sure that the queries modules cover all the required
 functionality, and that the API calls are cached.</p>
-<p>You can see the documentation of this rule <a href=https://gcpdiag.dev/rules/gke/ERR/2021_007/>here</a> and the github logic for this rule <a href=https://github.com/444B/gcpdiag/blob/main/gcpdiag/lint/gke/err_2021_007_gke_sa.py>here</a></p>
+<p>You can see the documentation of this rule <a href=https://gcpdiag.dev/rules/gke/ERR/2021_007/>here</a> and the github logic for this rule <a href=https://github.com/GoogleCloudPlatform/gcpdiag/blob/main/gcpdiag/lint/gke/err_2021_007_gke_sa.py>here</a></p>
 <p>Example code:</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#4e9a06>&#34;&#34;&#34;GKE service account permissions.
 </span><span style=color:#4e9a06>Verify that the Google Kubernetes Engine service account exists and has
@@ -372,7 +372,7 @@ gcloud command-line) or with a key file for a service account.</p>
 function is used to retrieve the API interface and also takes care of doing any
 necessary authentication step.</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified January 9, 2023: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/c236a9fbfb484adf9c64f772608a2fb4f106572d>Removed trailing whitespace (c236a9fbf)</a>
+Last modified August 21, 2023: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/efc64ca74d1f6289227c7e1f4767ce97a4ca2b28>Fix incorrect link in architecture.md (efc64ca74)</a>
 </div>
 </div>
 </main>
