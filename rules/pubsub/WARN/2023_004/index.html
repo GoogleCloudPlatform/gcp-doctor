@@ -13,24 +13,24 @@
 <link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96>
 <link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
-<title>apigee/ERR/2023_006 | gcpdiag</title>
-<meta name=description content="A multi-region setup requires a separate MIG for each region.
+<title>pubsub/WARN/2023_004 | gcpdiag</title>
+<meta name=description content="Project should not have a subscription without a topic attached.
 ">
-<meta property="og:title" content="apigee/ERR/2023_006">
-<meta property="og:description" content="A multi-region setup requires a separate MIG for each region.
+<meta property="og:title" content="pubsub/WARN/2023_004">
+<meta property="og:description" content="Project should not have a subscription without a topic attached.
 ">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://gcpdiag.dev/rules/apigee/ERR/2023_006/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="rules">
-<meta property="article:modified_time" content="2023-08-16T08:39:26+00:00"><meta property="og:site_name" content="gcpdiag">
-<meta itemprop=name content="apigee/ERR/2023_006">
-<meta itemprop=description content="A multi-region setup requires a separate MIG for each region.
+<meta property="og:url" content="https://gcpdiag.dev/rules/pubsub/WARN/2023_004/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="rules">
+<meta property="article:modified_time" content="2023-09-20T13:34:19+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta itemprop=name content="pubsub/WARN/2023_004">
+<meta itemprop=description content="Project should not have a subscription without a topic attached.
 ">
-<meta itemprop=dateModified content="2023-08-16T08:39:26+00:00">
-<meta itemprop=wordCount content="108"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2023-09-20T13:34:19+00:00">
+<meta itemprop=wordCount content="133"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
-<meta name=twitter:title content="apigee/ERR/2023_006">
-<meta name=twitter:description content="A multi-region setup requires a separate MIG for each region.
+<meta name=twitter:title content="pubsub/WARN/2023_004">
+<meta name=twitter:description content="Project should not have a subscription without a topic attached.
 ">
 <link href=/scss/main.css rel=stylesheet>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
@@ -76,8 +76,8 @@
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-rules-li>
 <a href=/rules/ title="Lint Rules" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id=m-rules><span>Rules</span></a>
 <ul class=ul-1>
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-rulesapigee-li>
-<input type=checkbox id=m-rulesapigee-check checked>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-rulesapigee-li>
+<input type=checkbox id=m-rulesapigee-check>
 <label for=m-rulesapigee-check><a href=/rules/apigee/ title=APIGEE class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-rulesapigee><span>apigee</span></a></label>
 <ul class="ul-2 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-rulesapigeeerr2022_001-li>
@@ -101,9 +101,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-rulesapigeeerr2023_005-li>
 <input type=checkbox id=m-rulesapigeeerr2023_005-check>
 <label for=m-rulesapigeeerr2023_005-check><a href=/rules/apigee/ERR/2023_005/ title=apigee/ERR/2023_005 class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-rulesapigeeerr2023_005><span>ERR/2023_005</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-rulesapigeeerr2023_006-li>
-<input type=checkbox id=m-rulesapigeeerr2023_006-check checked>
-<label for=m-rulesapigeeerr2023_006-check><a href=/rules/apigee/ERR/2023_006/ title=apigee/ERR/2023_006 class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-rulesapigeeerr2023_006><span class=td-sidebar-nav-active-item>ERR/2023_006</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-rulesapigeeerr2023_006-li>
+<input type=checkbox id=m-rulesapigeeerr2023_006-check>
+<label for=m-rulesapigeeerr2023_006-check><a href=/rules/apigee/ERR/2023_006/ title=apigee/ERR/2023_006 class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-rulesapigeeerr2023_006><span>ERR/2023_006</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-rulesapigeewarn2021_001-li>
 <input type=checkbox id=m-rulesapigeewarn2021_001-check>
 <label for=m-rulesapigeewarn2021_001-check><a href=/rules/apigee/WARN/2021_001/ title=apigee/WARN/2021_001 class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-rulesapigeewarn2021_001><span>WARN/2021_001</span></a></label>
@@ -856,8 +856,8 @@
 <label for=m-rulesnotebookswarn2023_003-check><a href=/rules/notebooks/WARN/2023_003/ title=notebooks/WARN/2023_003 class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-rulesnotebookswarn2023_003><span>WARN/2023_003</span></a></label>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-rulespubsub-li>
-<input type=checkbox id=m-rulespubsub-check>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-rulespubsub-li>
+<input type=checkbox id=m-rulespubsub-check checked>
 <label for=m-rulespubsub-check><a href=/rules/pubsub/ title=PUBSUB class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-rulespubsub><span>pubsub</span></a></label>
 <ul class="ul-2 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-rulespubsubwarn2023_001-li>
@@ -869,9 +869,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-rulespubsubwarn2023_003-li>
 <input type=checkbox id=m-rulespubsubwarn2023_003-check>
 <label for=m-rulespubsubwarn2023_003-check><a href=/rules/pubsub/WARN/2023_003/ title=pubsub/WARN/2023_003 class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-rulespubsubwarn2023_003><span>WARN/2023_003</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-rulespubsubwarn2023_004-li>
-<input type=checkbox id=m-rulespubsubwarn2023_004-check>
-<label for=m-rulespubsubwarn2023_004-check><a href=/rules/pubsub/WARN/2023_004/ title=pubsub/WARN/2023_004 class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-rulespubsubwarn2023_004><span>WARN/2023_004</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-rulespubsubwarn2023_004-li>
+<input type=checkbox id=m-rulespubsubwarn2023_004-check checked>
+<label for=m-rulespubsubwarn2023_004-check><a href=/rules/pubsub/WARN/2023_004/ title=pubsub/WARN/2023_004 class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-rulespubsubwarn2023_004><span class=td-sidebar-nav-active-item>WARN/2023_004</span></a></label>
 </li>
 </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-rulestpu-li>
@@ -936,33 +936,35 @@
 </ul>
 </nav></div>
 <div class="td-page-meta ml-0 pb-1 pt-0 mb-0">
-<a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/rules/apigee/ERR/2023_006.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-<a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=apigee/ERR/2023_006" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
+<a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/rules/pubsub/WARN/2023_004.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+<a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=pubsub/WARN/2023_004" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
 </div>
 </aside>
 <main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
 <div class=td-content>
-<h1>apigee/ERR/2023_006</h1>
-<div class=lead>A multi-region setup requires a separate MIG for each region.</div>
+<h1>pubsub/WARN/2023_004</h1>
+<div class=lead>Project should not have a subscription without a topic attached.</div>
 <header class=article-meta>
 </header>
-<p><strong>Product</strong>: <a href=https://cloud.google.com/apigee>Apigee API Management</a><br>
-<strong>Rule class</strong>: ERR - Something that is very likely to be wrong</p>
+<p><strong>Product</strong>: <a href=https://cloud.google.com/pubsub/>Cloud Pub/Sub</a><br>
+<strong>Rule class</strong>: WARN - Something that is possibly wrong</p>
 <h3 id=description>Description</h3>
-<p>If Apigee X instances exist in multiple regions, then a MIG should be created
-in each region. Otherwise the traffic will only be routed to one region.</p>
+<p>For a subscription whose topic is deleted, it cannot be reattached to a new
+topic and thus cannot receive new published messages. Messages in the
+subscription will expire after the message retention period if unacked,
+and discarded from Pub/Sub which may lead to data loss.
+The subscription is then counting as quota consumed for an unusable resource.</p>
 <h3 id=remediation>Remediation</h3>
-<p>If you are provisioning Apigee X with VPC peering by using MIGs (Managed Instance Groups),
-you need to create a MIG for each of the region where you created an Apigee X instance. You
-can follow the documentation for <a href=https://cloud.google.com/apigee/docs/api-platform/get-started/install-cli-paygo#external-routing-mig>External routing (MIG)</a>
-and repeat Steps 8b and 8c for each region.</p>
+<p><a href=https://cloud.google.com/pubsub/docs/delete-subscriptions>Delete a subscription</a>
+whose topic is deleted to free up <a href=https://cloud.google.com/pubsub/quotas#resource_limits>the quota</a>
+for new subscriptions.</p>
 <h3 id=further-information>Further information</h3>
-<ul>
-<li><a href=https://cloud.google.com/apigee/docs/api-platform/get-started/install-cli-paygo>Provision a paid org with VPC peering</a></li>
-<li><a href=https://cloud.google.com/apigee/docs/api-platform/get-started/install-cli-paygo#external-routing-mig>External routing (MIG)</a></li>
-</ul>
+<p>You can also set expiration policy for subscriptions to delete inactive
+subscriptions past their expiry period. By default this value is <a href=https://cloud.google.com/pubsub/docs/subscription-properties#expiration_period>31 days</a>.
+However, subscriptions set to <code>never expire</code> will not be deleted even if they
+are inactive and count against the project&rsquo;s quota usage.</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified August 16, 2023: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/3f1f86ff265abf32c9fb759f4a3a9c6df8223d80>new rule: multiple migs for multiple regions (3f1f86ff2)</a>
+Last modified September 20, 2023: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/a8ce5d4e0f824ef5e8a7decd62d6767080b83b67>Merge "new rule: no subscription without attached topic" -- Branch commit log -- commit f2a9b17d61227e72be7c1cdec5972be315aef50b Author: Ian Mburu &lt;mburuian@google.com> Date: 2023-09-18T14:43:16Z (a8ce5d4e0)</a>
 </div>
 </div>
 </main>
