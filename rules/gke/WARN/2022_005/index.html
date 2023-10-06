@@ -21,11 +21,11 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/rules/gke/WARN/2022_005/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="rules">
-<meta property="article:modified_time" content="2022-03-14T21:42:34+08:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2023-10-05T22:07:11-04:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gke/WARN/2022_005">
 <meta itemprop=description content="NVIDIA GPU device drivers are installed on GKE nodes with GPU
 ">
-<meta itemprop=dateModified content="2022-03-14T21:42:34+08:00">
+<meta itemprop=dateModified content="2023-10-05T22:07:11-04:00">
 <meta itemprop=wordCount content="88"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
@@ -952,13 +952,13 @@
 <p><strong>Product</strong>: <a href=https://cloud.google.com/kubernetes-engine>Google Kubernetes Engine</a><br>
 <strong>Rule class</strong>: WARN - Something that is possibly wrong</p>
 <h3 id=description>Description</h3>
-<p>After adding GPU nodes to the GKE cluster, the NVIDIA&rsquo;s device drivers should be installed in the nodes. Google provides a DaemonSet that will install for the drivers. This rule detectes that if the <code>nvidia-driver-installer</code> DaemonSet is missing using the <code>kubernetes.io/container/uptime</code> metric.</p>
+<p>After adding GPU nodes to the GKE cluster, the NVIDIA&rsquo;s device drivers should be installed in the nodes. Google provides a DaemonSet that will install for the drivers. This rule detects that if the <code>nvidia-driver-installer</code> DaemonSet is missing using the <code>kubernetes.io/container/uptime</code> metric.</p>
 <h3 id=remediation>Remediation</h3>
 <p>Installing NVIDIA GPU device drivers based on the node systems. Refer to the section in <a href=https://cloud.google.com/kubernetes-engine/docs/how-to/gpus#installing_drivers>Running GPUs</a> for installation instructions for Container-Optimized OS (COS) and Ubuntu nodes.</p>
 <h3 id=further-information>Further information</h3>
 <p><a href=https://cloud.google.com/kubernetes-engine/docs/how-to/gpus>Running GPUs</a></p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified March 14, 2022: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/bfbc8f3c1466cfed44459ed2ce6ee59f2256a80f>Detect if NVIDIA GPU device drivers are installed on GKE nodes (bfbc8f3c1)</a>
+Last modified October 5, 2023: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/ce2d18e0e98c65b56870eb0d943c891bca69aa5b>Updating working and typos in multiple files (ce2d18e0e)</a>
 </div>
 </div>
 </main>

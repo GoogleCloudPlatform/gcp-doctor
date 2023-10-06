@@ -21,11 +21,11 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/rules/gke/ERR/2023_006/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="rules">
-<meta property="article:modified_time" content="2023-07-31T00:23:08+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2023-10-05T22:07:11-04:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gke/ERR/2023_006">
 <meta itemprop=description content="GKE Gateway controller reporting misconfigured annnotations in Gateway resource
 ">
-<meta itemprop=dateModified content="2023-07-31T00:23:08+00:00">
+<meta itemprop=dateModified content="2023-10-05T22:07:11-04:00">
 <meta itemprop=wordCount content="90"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
@@ -953,7 +953,7 @@
 <strong>Rule class</strong>: ERR - Something that is very likely to be wrong</p>
 <h3 id=description>Description</h3>
 <p>Gateway controller creates loadbalancing resources based on annotations
-specified in gateway resouces.</p>
+specified in gateway resources.</p>
 <p>It expects the user to use correct set of supported annotations name and values.</p>
 <p>It might be case that annotation name has a typo or mistake.</p>
 <p>You can use the following filter to find matching log entries with gateway resource
@@ -962,11 +962,11 @@ containing misconfigured annotations:</p>
 resource.type=&quot;k8s_cluster&quot;
 </code></pre><h3 id=remediation>Remediation</h3>
 <ul>
-<li>Fix the annotaions in gateway resources obtained from above query</li>
+<li>Fix the annotations in gateway resources obtained from above query</li>
 </ul>
 <h3 id=further-information>Further information</h3>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified July 31, 2023: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/042483792cfdea3f90bb0b7acee1bc8207c87391>Merge "This change add two new rules for GKE" -- Branch commit log -- commit a42d40c881e03a24be70218c646c27c6a90cac80 Author: gcpdiag team &lt;noreply@google.com> Date: 2023-07-25T19:06:13Z (042483792)</a>
+Last modified October 5, 2023: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/ce2d18e0e98c65b56870eb0d943c891bca69aa5b>Updating working and typos in multiple files (ce2d18e0e)</a>
 </div>
 </div>
 </main>

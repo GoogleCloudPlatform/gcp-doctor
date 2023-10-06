@@ -21,11 +21,11 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/rules/gke/ERR/2023_003/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="rules">
-<meta property="article:modified_time" content="2023-03-23T17:07:05+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2023-10-05T22:07:11-04:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gke/ERR/2023_003">
 <meta itemprop=description content="containerd config.toml is valid.
 ">
-<meta itemprop=dateModified content="2023-03-23T17:07:05+00:00">
+<meta itemprop=dateModified content="2023-10-05T22:07:11-04:00">
 <meta itemprop=wordCount content="185"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
@@ -960,15 +960,15 @@ state.</p>
 <h3 id=remediation>Remediation</h3>
 <p>Usually such a change is introduced via a DaemonSet with a privileged
 container.</p>
-<p>A short-term remidiation is to disable (delete) the DeamonSet and
+<p>A short-term remidiation is to disable (delete) the DaemonSet and
 recreate all affected nodes by scaling the affected nodepools to 0 nodes and
 then back, to the original value.</p>
 <p>A long-term solution is to fix the issue at the source (the application in the
 DaemonSet).</p>
 <p>One of the known DaemonSets that could cause
 this issue is <code>twistlock defender</code> from <a href=https://docs.paloaltonetworks.com/prisma/prisma-cloud>Prizma Cloud security suite</a>,
-which could inject configuration entries in old configuraton file format to a
-configuration file created with a newer configuraton file format.</p>
+which could inject configuration entries in old configuration file format to a
+configuration file created with a newer configuration file format.</p>
 <p>You can use the following filter to find matching log lines:</p>
 <pre tabindex=0><code>resource.type=&quot;k8s_node&quot;
 log_id(&quot;container-runtime&quot;)
@@ -978,7 +978,7 @@ jsonPayload.MESSAGE:&quot;containerd: failed to load TOML&quot;
 <li><a href=https://github.com/containerd/containerd/blob/main/docs/man/containerd-config.toml.5.md>config.toml - configuration file for containerd</a></li>
 </ul>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified March 23, 2023: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/ee29b32babee2b279f694fd3307d79cdf9bba4e6>Add new rule - GKE: invalid /etc/containerd/config.toml (ee29b32ba)</a>
+Last modified October 5, 2023: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/ce2d18e0e98c65b56870eb0d943c891bca69aa5b>Updating working and typos in multiple files (ce2d18e0e)</a>
 </div>
 </div>
 </main>

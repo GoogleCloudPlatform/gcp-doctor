@@ -21,11 +21,11 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/rules/datafusion/ERR/2022_001/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="rules">
-<meta property="article:modified_time" content="2022-09-10T00:41:03+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2023-10-05T22:07:11-04:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="datafusion/ERR/2022_001">
 <meta itemprop=description content="Firewall rules allow for Data Fusion to communicate to Dataproc VMs.
 ">
-<meta itemprop=dateModified content="2022-09-10T00:41:03+00:00">
+<meta itemprop=dateModified content="2023-10-05T22:07:11-04:00">
 <meta itemprop=wordCount content="150"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
@@ -960,22 +960,22 @@ communicate to the Dataproc running pipeline jobs in the client project.</p>
 <ul>
 <li>
 <p>If your Cloud Data Fusion is private, create the <a href=https://cloud.google.com/data-fusion/docs/how-to/create-private-ip#create_a_firewall_rule>allow-ssh firewall rule</a>
-with a high priority (e.g <code>--priority=100</code>) to overide any conflicting
+with a high priority (e.g <code>--priority=100</code>) to override any conflicting
 firewall rules that may be blocking communication.</p>
 </li>
 <li>
 <p>If your Cloud Data Fusion is public and has a version below 6.2.0
 create the <a href=https://cloud.google.com/data-fusion/docs/concepts/networking#firewall-rules>Default allow ssh firewall rule</a> with a high priority (e.g <code>--priority=100</code>)
-to overide any conflicting firewall rules that may be blocking communication.</p>
+to override any conflicting firewall rules that may be blocking communication.</p>
 </li>
 </ul>
 <h3 id=further-information>Further information</h3>
 <ul>
-<li>You can find the firewall version disclamer
+<li>You can find the firewall version disclaimer
 in the <code>Creating a Cloud Data Fusion instance</code> <a href=https://cloud.google.com/data-fusion/docs/how-to/create-instance#before_you_begin>Before you begin</a> section.</li>
 </ul>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified September 10, 2022: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/589724ce9218f39ace7fab18d93b8183f9648a7d>new rule: Data Fusion firewall check. (589724ce9)</a>
+Last modified October 5, 2023: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/ce2d18e0e98c65b56870eb0d943c891bca69aa5b>Updating working and typos in multiple files (ce2d18e0e)</a>
 </div>
 </div>
 </main>
