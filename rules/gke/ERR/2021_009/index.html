@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/rules/gke/ERR/2021_009/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="rules">
-<meta property="article:modified_time" content="2021-10-26T18:24:02+02:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2023-10-18T09:34:38+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gke/ERR/2021_009">
 <meta itemprop=description content="Version skew between cluster and node pool
 ">
-<meta itemprop=dateModified content="2021-10-26T18:24:02+02:00">
-<meta itemprop=wordCount content="76"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2023-10-18T09:34:38+00:00">
+<meta itemprop=wordCount content="88"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="gke/ERR/2021_009">
@@ -952,20 +952,20 @@
 <p><strong>Product</strong>: <a href=https://cloud.google.com/kubernetes-engine>Google Kubernetes Engine</a><br>
 <strong>Rule class</strong>: ERR - Something that is very likely to be wrong</p>
 <h3 id=description>Description</h3>
-<p>Difference between cluster version and node pools version should be no more
-than 2 minor versions.</p>
-<p>For example: Cluster 1.19.12-gke.2101, Node Pool: 1.14.10-gke.36
-Such a big difference is not supported.</p>
+<p>Difference between cluster version and node pools version should be no more than
+2 (K8s &lt;v1.28) or 3 (K8s v1.28+) minor versions.</p>
+<p>For example: Cluster 1.19.12-gke.2101, Node Pool: 1.14.10-gke.36 Such a big
+difference is not supported.</p>
 <p>In this situation the cluster might be stuck in auto-repair.</p>
 <h3 id=remediation>Remediation</h3>
 <p>Upgrade the problematic node pool or recreate it with a later version.</p>
 <h3 id=further-information>Further information</h3>
 <ul>
-<li><a href=https://cloud.google.com/kubernetes-engine/versioning>GKE versioning and
-support</a></li>
+<li><a href=https://cloud.google.com/kubernetes-engine/versioning>GKE versioning and support</a></li>
+<li><a href=https://kubernetes.io/blog/2023/08/15/kubernetes-v1-28-release/#changes-to-supported-skew-between-control-plane-and-node-versions>Kubernetes v1.28 expands the supported skew </a></li>
 </ul>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified October 26, 2021: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/5bf944dbc6e862a6df64f101d19a8cc0e04d6b41>improve rules documentation. (5bf944dbc)</a>
+Last modified October 18, 2023: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/aa3be5bfad8fe3bca275db9610339ba89a298163>Update the version skew for modern versions of Kubernetes. https://kubernetes.io/blog/2023/08/15/kubernetes-v1-28-release/#changes-to-supported-skew-between-control-plane-and-node-versions (aa3be5bfa)</a>
 </div>
 </div>
 </main>
