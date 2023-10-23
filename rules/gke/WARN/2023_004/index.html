@@ -13,21 +13,29 @@
 <link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96>
 <link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
-<title>GKE | gcpdiag</title>
-<meta name=description content="Google Kubernetes Engine">
-<meta property="og:title" content="GKE">
-<meta property="og:description" content="Google Kubernetes Engine">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://gcpdiag.dev/rules/gke/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="og:site_name" content="gcpdiag">
-<meta itemprop=name content="GKE">
-<meta itemprop=description content="Google Kubernetes Engine"><meta name=twitter:card content="summary_large_image">
+<title>gke/WARN/2023_004 | gcpdiag</title>
+<meta name=description content="A Node Pool doesn't have too low `maxPodsPerNode` number
+">
+<meta property="og:title" content="gke/WARN/2023_004">
+<meta property="og:description" content="A Node Pool doesn't have too low `maxPodsPerNode` number
+">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://gcpdiag.dev/rules/gke/WARN/2023_004/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="rules">
+<meta property="article:modified_time" content="2023-10-23T14:21:11+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta itemprop=name content="gke/WARN/2023_004">
+<meta itemprop=description content="A Node Pool doesn't have too low `maxPodsPerNode` number
+">
+<meta itemprop=dateModified content="2023-10-23T14:21:11+00:00">
+<meta itemprop=wordCount content="339"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
-<meta name=twitter:title content="GKE">
-<meta name=twitter:description content="Google Kubernetes Engine">
+<meta name=twitter:title content="gke/WARN/2023_004">
+<meta name=twitter:description content="A Node Pool doesn't have too low `maxPodsPerNode` number
+">
 <link href=/scss/main.css rel=stylesheet>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
 </head>
-<body class=td-section>
+<body class=td-page>
 <header>
 <nav class="js-navbar-scroll navbar navbar-expand navbar-light nav-shadow flex-column flex-md-row td-navbar">
 <a id=gcpdiag-top class=navbar-brand href=/>
@@ -616,7 +624,7 @@
 </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-rulesgke-li>
 <input type=checkbox id=m-rulesgke-check checked>
-<label for=m-rulesgke-check><a href=/rules/gke/ title=GKE class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id=m-rulesgke><span class=td-sidebar-nav-active-item>gke</span></a></label>
+<label for=m-rulesgke-check><a href=/rules/gke/ title=GKE class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-rulesgke><span>gke</span></a></label>
 <ul class="ul-2 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-rulesgkebp2021_001-li>
 <input type=checkbox id=m-rulesgkebp2021_001-check>
@@ -919,400 +927,93 @@
 </div>
 </aside>
 <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+<div class=td-toc><nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li><a href=#description>Description</a></li>
+<li><a href=#remediation>Remediation</a></li>
+<li><a href=#further-information>Further information</a></li>
+</ul>
+</li>
+</ul>
+</nav></div>
 <div class="td-page-meta ml-0 pb-1 pt-0 mb-0">
-<a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/rules/gke/_index.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-<a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=GKE" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
+<a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/rules/gke/WARN/2023_004.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+<a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=gke/WARN/2023_004" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
 </div>
 </aside>
 <main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
 <div class=td-content>
-<h1>GKE</h1>
-<div class=lead>Google Kubernetes Engine</div>
+<h1>gke/WARN/2023_004</h1>
+<div class=lead>A Node Pool doesn&rsquo;t have too low <code>maxPodsPerNode</code> number</div>
 <header class=article-meta>
 </header>
-<div class=section-index>
-<hr class=panel-line>
-<div class=entry>
-<h5>
-<a href=/rules/gke/BP/2021_001/>gke/BP/2021_001</a>
-</h5>
-<p>GKE logging and monitoring enabled.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/BP/2022_001/>gke/BP/2022_001</a>
-</h5>
-<p>GKE clusters are regional.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/BP/2022_002/>gke/BP/2022_002</a>
-</h5>
-<p>GKE clusters are using unique subnets.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/BP/2022_003/>gke/BP/2022_003</a>
-</h5>
-<p>GKE cluster is not near to end of life</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/BP/2022_004/>gke/BP/2022_004</a>
-</h5>
-<p>GKE clusters should have HTTP load balancing enabled to use GKE ingress.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/BP/2023_001/>gke/BP/2023_001</a>
-</h5>
-<p>GKE network policy enforcement</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/BP/2023_002/>gke/BP/2023_002</a>
-</h5>
-<p>Stateful workloads not run on preemptible node</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/BP/2023_004/>gke/BP/2023_004</a>
-</h5>
-<p>GKE clusters are VPC-native.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/BP/2023_005/>gke/BP/2023_005</a>
-</h5>
-<p>Enable gateway resources through Gateway API.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/BP_EXT/2022_001/>gke/BP_EXT/2022_001</a>
-</h5>
-<p>Google Groups for RBAC enabled.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/BP_EXT/2023_001/>gke/BP_EXT/2023_003</a>
-</h5>
-<p>GKE maintenance windows are defined</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2021_001/>gke/ERR/2021_001</a>
-</h5>
-<p>GKE nodes service account permissions for logging.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2021_002/>gke/ERR/2021_002</a>
-</h5>
-<p>GKE nodes service account permissions for monitoring.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2021_003/>gke/ERR/2021_003</a>
-</h5>
-<p>App-layer secrets encryption is activated and Cloud KMS key is enabled.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2021_004/>gke/ERR/2021_004</a>
-</h5>
-<p>GKE nodes aren&rsquo;t reporting connection issues to apiserver.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2021_005/>gke/ERR/2021_005</a>
-</h5>
-<p>GKE nodes aren&rsquo;t reporting connection issues to storage.google.com.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2021_006/>gke/ERR/2021_006</a>
-</h5>
-<p>GKE Autoscaler isn&rsquo;t reporting scaleup failures.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2021_007/>gke/ERR/2021_007</a>
-</h5>
-<p>GKE service account permissions.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2021_008/>gke/ERR/2021_008</a>
-</h5>
-<p>Google APIs service agent has Editor role.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2021_009/>gke/ERR/2021_009</a>
-</h5>
-<p>Version skew between cluster and node pool</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2021_010/>gke/ERR/2021_010</a>
-</h5>
-<p>Check internal peering forwarding limits which affect GKE.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2021_011/>gke/ERR/2021_011</a>
-</h5>
-<p>ip-masq-agent not reporting errors</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2021_012/>gke/ERR/2021_012</a>
-</h5>
-<p>Node pool service account exists and is not disabled.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2021_013/>gke/ERR/2021_013</a>
-</h5>
-<p>GKE cluster firewall rules are configured.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2021_014/>gke/ERR/2021_014</a>
-</h5>
-<p>GKE masters of private clusters can reach the nodes.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2021_015/>gke/ERR/2021_015</a>
-</h5>
-<p>GKE connectivity: node to pod communication.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2022_001/>gke/ERR/2022_001</a>
-</h5>
-<p>GKE connectivity: pod to pod communication.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2022_002/>gke/ERR/2022_002</a>
-</h5>
-<p>GKE nodes of private clusters can access Google APIs and services.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2022_003/>gke/ERR/2022_003</a>
-</h5>
-<p>GKE connectivity: load balancer to node communication (ingress).</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2023_012/>gke/ERR/2022_012</a>
-</h5>
-<p>Missing request for memory resources.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2023_001/>gke/ERR/2023_001</a>
-</h5>
-<p>Container File System API quota not exceeded</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2023_002/>gke/ERR/2023_002</a>
-</h5>
-<p>GKE private clusters are VPC-native.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2023_003/>gke/ERR/2023_003</a>
-</h5>
-<p>containerd config.toml is valid.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2023_004/>gke/ERR/2023_004</a>
-</h5>
-<p>GKE ingresses are well configured.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2023_005/>gke/ERR/2023_005</a>
-</h5>
-<p>Workloads not reporting misconfigured CNI plugins</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2023_006/>gke/ERR/2023_006</a>
-</h5>
-<p>GKE Gateway controller reporting misconfigured annnotations in Gateway resource</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2023_007/>gke/ERR/2023_007</a>
-</h5>
-<p>GKE Gateway controller reporting missing or invalid resource references in Gateway resource</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2023_009/>gke/ERR/2023_007</a>
-</h5>
-<p>Missing request for CPU resources.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2023_008/>gke/ERR/2023_008</a>
-</h5>
-<p>GKE Cluster does not have any pods in Crashloopbackoff state.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2023_010/>gke/ERR/2023_010</a>
-</h5>
-<p>NodeLocal DNSCache timeout errors.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/ERR/2023_011/>gke/ERR/2023_011</a>
-</h5>
-<p>GKE Metadata Server isn&rsquo;t reporting errors for pod IP not found</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/SEC/2021_001/>gke/SEC/2021_001</a>
-</h5>
-<p>GKE nodes don&rsquo;t use the GCE default service account.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/WARN/2021_001/>gke/WARN/2021_001</a>
-</h5>
-<p>GKE master version available for new clusters.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/WARN/2021_002/>gke/WARN/2021_002</a>
-</h5>
-<p>GKE nodes version available for new clusters.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/WARN/2021_003/>gke/WARN/2021_003</a>
-</h5>
-<p>GKE cluster size close to maximum allowed by pod range</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/WARN/2021_004/>gke/WARN/2021_004</a>
-</h5>
-<p>GKE system workloads are running stable.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/WARN/2021_005/>gke/WARN/2021_005</a>
-</h5>
-<p>GKE nodes have good disk performance.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/WARN/2021_006/>gke/WARN/2021_006</a>
-</h5>
-<p>GKE nodes aren&rsquo;t reporting conntrack issues.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/WARN/2021_007/>gke/WARN/2021_007</a>
-</h5>
-<p>GKE nodes have enough free space on the boot disk.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/WARN/2021_008/>gke/WARN/2021_008</a>
-</h5>
-<p>Istio/ASM version not deprecated nor close to deprecation in GKE</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/WARN/2021_009/>gke/WARN/2021_009</a>
-</h5>
-<p>GKE nodes use a containerd image.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/WARN/2022_001/>gke/WARN/2022_001</a>
-</h5>
-<p>GKE clusters with workload identity are regional.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/WARN/2022_002/>gke/WARN/2022_002</a>
-</h5>
-<p>GKE metadata concealment is not in use</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/WARN/2022_003/>gke/WARN/2022_003</a>
-</h5>
-<p>GKE service account permissions to manage project firewall rules.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/WARN/2022_004/>gke/WARN/2022_004</a>
-</h5>
-<p>Cloud Logging API enabled when GKE logging is enabled</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/WARN/2022_005/>gke/WARN/2022_005</a>
-</h5>
-<p>NVIDIA GPU device drivers are installed on GKE nodes with GPU</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/WARN/2022_006/>gke/WARN/2022_006</a>
-</h5>
-<p>GKE NAP nodes use a containerd image.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/WARN/2022_007/>gke/WARN/2022_007</a>
-</h5>
-<p>GKE nodes need Storage API access scope to retrieve build artifacts</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/WARN/2022_008/>gke/WARN/2022_008</a>
-</h5>
-<p>GKE connectivity: possible dns timeout in some gke versions.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/WARN/2023_001/>gke/WARN/2023_001</a>
-</h5>
-<p>Container File System has the required scopes for Image Streaming</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/WARN/2023_002/>gke/WARN/2023_002</a>
-</h5>
-<p>GKE workload timeout to Compute Engine metadata server.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/WARN/2023_003/>gke/WARN/2023_003</a>
-</h5>
-<p>Cloud Monitoring API enabled when GKE monitoring is enabled</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/rules/gke/WARN/2023_004/>gke/WARN/2023_004</a>
-</h5>
-<p>A Node Pool doesn&rsquo;t have too low <code>maxPodsPerNode</code> number</p>
-</div>
-</div>
+<p><strong>Product</strong>: <a href=https://cloud.google.com/kubernetes-engine>Google Kubernetes Engine</a><br>
+<strong>Rule class</strong>: WARN - Something that is possibly wrong</p>
+<h3 id=description>Description</h3>
+<p>Modern GKE clusters could run multiple system DaemonSets, and enabling a GKE
+feature could add another DaemonSet or two. 7+ DaemonSets is the norm for an
+average GKE cluster. Keeping a small reserve (1-2 slots) for non-DaemonSet pods
+requires close attention, as enabling a new GKE feature or adding a new
+DeamonSet could prevent normal workload scheduling as all the available slots
+could be occupied by system or custom DaemonSet pods. This could also cause the
+Cluster Autoscaler to misbehave: it could add new nodes and remove them promptly
+as empty ones, because no pods except DaemonSet ones can be scheduled on the
+nodes.</p>
+<p>Note that with new versions of GKE, some features could be enabled by default,
+bringing a DeamonSet along.</p>
+<p>Here is an incomplete list of system GKE DaemonSets that are added by a
+corresponding GKE-feature:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>DeamonSet name</th>
+<th>GKE Feature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>kube-proxy</td>
+<td>non-DPv2 clusters</td>
+</tr>
+<tr>
+<td>2</td>
+<td>konnectivity-agent</td>
+<td>some GKE &lt;v1.27 clusters, all GKE v1.27+</td>
+</tr>
+</tbody>
+</table>
+<dl>
+<dt>: : : clusters :</dt>
+<dt>| 3 | fluentbit-gke | GKE Logging |</dt>
+<dt>| 4 | gke-metrics-agent | GKE Monitoring |</dt>
+<dt>| 5 | pdcsi-node | CSI-enabled clusters == (almost) all |</dt>
+<dd>: : v1.18+ clusters :
+| 6 | collector | GMP-enabled clusters, enabled by default |</dd>
+<dd>: : on v1.25 (Autopilot) and v1.27 (Standard) :</dd>
+<dd>: : clusters :
+| 7 | netd | Workload Identity, Infra-node visibility, |</dd>
+<dd>: : other :
+| 8 | anetd | DPv2 clusters |
+| 9 | calico-node | Calico Network Policies |
+| 10 | container-watcher | Container Threat Detection |
+| 11 | gke-metadata-server | Workload Identity |
+| 12 | nvidia-gpu-device-plugin | GKE TPUs/GPUs |
+| 13 | nccl-fastsocket-installer | nVidia NCCL Fast Socket |</dd>
+</dl>
+<p><code>maxPodsPerNode</code> >= 16 should be a safer option.</p>
+<h3 id=remediation>Remediation</h3>
+<p>Recreate the Node Pool with higher (>=16) <code>maxPodsPerNode</code>. Alternatively, you
+can create a new Node Pool and migrate your workloads to the new one.</p>
+<h3 id=further-information>Further information</h3>
+<ul>
+<li><a href=https://cloud.google.com/kubernetes-engine/docs/tutorials/migrating-node-pool#step_4_migrate_the_workloads>Migrate your workloads to another Node Pool</a></li>
+</ul>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified October 27, 2021: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/960f9f1ed6e5f6ac5d00c5813b7cd79ca44abf10>add product descriptions (960f9f1ed)</a>
+Last modified October 23, 2023: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/3917fea42bc3088ea336da46859f0199645a5138>Merge "Add a check for too low `maxPodsPerNode` number" -- Branch commit log -- commit 8ad63ae449c18a0c6d668ae12b0ab623744ed42d Author: Evgenii Ianiuk &lt;eianiuk@google.com> Date: 2023-10-18T13:27:16Z (3917fea42)</a>
 </div>
 </div>
 </main>
