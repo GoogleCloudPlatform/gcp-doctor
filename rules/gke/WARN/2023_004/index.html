@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/rules/gke/WARN/2023_004/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="rules">
-<meta property="article:modified_time" content="2023-10-23T14:21:11+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2023-11-28T14:56:11+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gke/WARN/2023_004">
 <meta itemprop=description content="A Node Pool doesn't have too low `maxPodsPerNode` number
 ">
-<meta itemprop=dateModified content="2023-10-23T14:21:11+00:00">
-<meta itemprop=wordCount content="339"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2023-11-28T14:56:11+00:00">
+<meta itemprop=wordCount content="278"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="gke/WARN/2023_004">
@@ -1006,28 +1006,65 @@ corresponding GKE-feature:</p>
 <tr>
 <td>2</td>
 <td>konnectivity-agent</td>
-<td>some GKE &lt;v1.27 clusters, all GKE v1.27+</td>
+<td>some GKE &lt;v1.27 clusters, all GKE v1.27+ clusters</td>
+</tr>
+<tr>
+<td>3</td>
+<td>fluentbit-gke</td>
+<td>GKE Logging</td>
+</tr>
+<tr>
+<td>4</td>
+<td>gke-metrics-agent</td>
+<td>GKE Monitoring</td>
+</tr>
+<tr>
+<td>5</td>
+<td>pdcsi-node</td>
+<td>CSI-enabled clusters == (almost) all v1.18+ clusters</td>
+</tr>
+<tr>
+<td>6</td>
+<td>collector</td>
+<td>GMP-enabled clusters, enabled by default on v1.25 (Autopilot) and v1.27 (Standard)clusters</td>
+</tr>
+<tr>
+<td>7</td>
+<td>netd</td>
+<td>Workload Identity, Infra-node visibility, other</td>
+</tr>
+<tr>
+<td>8</td>
+<td>anetd</td>
+<td>DPv2 clusters</td>
+</tr>
+<tr>
+<td>9</td>
+<td>calico-node</td>
+<td>Calico Network Policies</td>
+</tr>
+<tr>
+<td>10</td>
+<td>container-watcher</td>
+<td>Container Threat Detection</td>
+</tr>
+<tr>
+<td>11</td>
+<td>gke-metadata-server</td>
+<td>Workload Identity</td>
+</tr>
+<tr>
+<td>12</td>
+<td>nvidia-gpu-device-plugin</td>
+<td>GKE TPUs/GPUs</td>
+</tr>
+<tr>
+<td>13</td>
+<td>nccl-fastsocket-installer</td>
+<td>nVidia NCCL Fast Socket</td>
 </tr>
 </tbody>
 </table>
-<dl>
-<dt>: : : clusters :</dt>
-<dt>| 3 | fluentbit-gke | GKE Logging |</dt>
-<dt>| 4 | gke-metrics-agent | GKE Monitoring |</dt>
-<dt>| 5 | pdcsi-node | CSI-enabled clusters == (almost) all |</dt>
-<dd>: : v1.18+ clusters :
-| 6 | collector | GMP-enabled clusters, enabled by default |</dd>
-<dd>: : on v1.25 (Autopilot) and v1.27 (Standard) :</dd>
-<dd>: : clusters :
-| 7 | netd | Workload Identity, Infra-node visibility, |</dd>
-<dd>: : other :
-| 8 | anetd | DPv2 clusters |
-| 9 | calico-node | Calico Network Policies |
-| 10 | container-watcher | Container Threat Detection |
-| 11 | gke-metadata-server | Workload Identity |
-| 12 | nvidia-gpu-device-plugin | GKE TPUs/GPUs |
-| 13 | nccl-fastsocket-installer | nVidia NCCL Fast Socket |</dd>
-</dl>
 <p><code>maxPodsPerNode</code> >= 16 should be a safer option.</p>
 <h3 id=remediation>Remediation</h3>
 <p>Recreate the Node Pool with higher (>=16) <code>maxPodsPerNode</code>. Alternatively, you
@@ -1037,7 +1074,7 @@ can create a new Node Pool and migrate your workloads to the new one.</p>
 <li><a href=https://cloud.google.com/kubernetes-engine/docs/tutorials/migrating-node-pool#step_4_migrate_the_workloads>Migrate your workloads to another Node Pool</a></li>
 </ul>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified October 23, 2023: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/3917fea42bc3088ea336da46859f0199645a5138>Merge "Add a check for too low `maxPodsPerNode` number" -- Branch commit log -- commit 8ad63ae449c18a0c6d668ae12b0ab623744ed42d Author: Evgenii Ianiuk &lt;eianiuk@google.com> Date: 2023-10-18T13:27:16Z (3917fea42)</a>
+Last modified November 28, 2023: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/b98a7d4a742a8c619c545a2339614d66f409b7a7>Fix MD formatting for gke/WARN/2023_004.md as GitHub doesn't support extended table syntax (b98a7d4a7)</a>
 </div>
 </div>
 </main>
