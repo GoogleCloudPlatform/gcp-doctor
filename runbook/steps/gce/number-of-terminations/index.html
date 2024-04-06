@@ -15,31 +15,31 @@
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
 <title>gcpdiag</title>
 <meta name=description content="
-title: &ldquo;gce/Gce Firewall Allows Ssh&rdquo;
-linkTitle: &ldquo;Gce Firewall Allows Ssh&rdquo;
+title: &ldquo;gce/Number Of Terminations&rdquo;
+linkTitle: &ldquo;Number Of Terminations&rdquo;
 weight: 3
 type: docs
 description: >
-Assesses the …">
+A decision …">
 <meta property="og:title" content>
-<meta property="og:description" content="title: &ldquo;gce/Gce Firewall Allows Ssh&rdquo; linkTitle: &ldquo;Gce Firewall Allows Ssh&rdquo; weight: 3 type: docs description: > Assesses the VPC network configuration to ensure it allows SSH traffic to the target VM. Product: Compute Engine
-Step Type: COMPOSITE STEP
-Description This diagnostic step checks for ingress firewall rules that permit SSH traffic based on the operational context, such as the use of IAP for SSH or direct access from a specified source IP.">
+<meta property="og:description" content="title: &ldquo;gce/Number Of Terminations&rdquo; linkTitle: &ldquo;Number Of Terminations&rdquo; weight: 3 type: docs description: > A decision point that determines the scope of VM terminations to investigation. Product: Compute Engine
+Step Type: GATEWAY
+Description This class decides whether an investigation should focus on a single termination or multiple terminations. It makes this determination based on the operational parameters provided to it, specifically checking if the investigation is scoped to a single virtual machine (VM).">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://gcpdiag.dev/runbook/steps/gce/gce-firewall-allows-ssh/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
+<meta property="og:url" content="https://gcpdiag.dev/runbook/steps/gce/number-of-terminations/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
 <meta property="article:modified_time" content="2024-03-26T14:14:34+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content>
-<meta itemprop=description content="title: &ldquo;gce/Gce Firewall Allows Ssh&rdquo; linkTitle: &ldquo;Gce Firewall Allows Ssh&rdquo; weight: 3 type: docs description: > Assesses the VPC network configuration to ensure it allows SSH traffic to the target VM. Product: Compute Engine
-Step Type: COMPOSITE STEP
-Description This diagnostic step checks for ingress firewall rules that permit SSH traffic based on the operational context, such as the use of IAP for SSH or direct access from a specified source IP.">
+<meta itemprop=description content="title: &ldquo;gce/Number Of Terminations&rdquo; linkTitle: &ldquo;Number Of Terminations&rdquo; weight: 3 type: docs description: > A decision point that determines the scope of VM terminations to investigation. Product: Compute Engine
+Step Type: GATEWAY
+Description This class decides whether an investigation should focus on a single termination or multiple terminations. It makes this determination based on the operational parameters provided to it, specifically checking if the investigation is scoped to a single virtual machine (VM).">
 <meta itemprop=dateModified content="2024-03-26T14:14:34+00:00">
-<meta itemprop=wordCount content="82"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=wordCount content="73"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content>
-<meta name=twitter:description content="title: &ldquo;gce/Gce Firewall Allows Ssh&rdquo; linkTitle: &ldquo;Gce Firewall Allows Ssh&rdquo; weight: 3 type: docs description: > Assesses the VPC network configuration to ensure it allows SSH traffic to the target VM. Product: Compute Engine
-Step Type: COMPOSITE STEP
-Description This diagnostic step checks for ingress firewall rules that permit SSH traffic based on the operational context, such as the use of IAP for SSH or direct access from a specified source IP.">
+<meta name=twitter:description content="title: &ldquo;gce/Number Of Terminations&rdquo; linkTitle: &ldquo;Number Of Terminations&rdquo; weight: 3 type: docs description: > A decision point that determines the scope of VM terminations to investigation. Product: Compute Engine
+Step Type: GATEWAY
+Description This class decides whether an investigation should focus on a single termination or multiple terminations. It makes this determination based on the operational parameters provided to it, specifically checking if the investigation is scoped to a single virtual machine (VM).">
 <link href=/scss/main.css rel=stylesheet>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
 </head>
@@ -72,18 +72,19 @@ Description This diagnostic step checks for ingress firewall rules that permit S
 <div class="container-fluid td-default td-outer">
 <main role=main class=td-main>
 <hr>
-<h2 id=assesses-the-vpc-network-configuration-to-ensure-it-allows-ssh-traffic-to-the-target-vm>title: &ldquo;gce/Gce Firewall Allows Ssh&rdquo;
-linkTitle: &ldquo;Gce Firewall Allows Ssh&rdquo;
+<h2 id=a-decision-point-that-determines-the-scope-of-vm-terminations-to-investigation>title: &ldquo;gce/Number Of Terminations&rdquo;
+linkTitle: &ldquo;Number Of Terminations&rdquo;
 weight: 3
 type: docs
 description: >
-Assesses the VPC network configuration to ensure it allows SSH traffic to the target VM.</h2>
+A decision point that determines the scope of VM terminations to investigation.</h2>
 <p><strong>Product</strong>: <a href=https://cloud.google.com/compute>Compute Engine</a><br>
-<strong>Step Type</strong>: COMPOSITE STEP</p>
+<strong>Step Type</strong>: GATEWAY</p>
 <h3 id=description>Description</h3>
-<p>This diagnostic step checks for ingress firewall rules that permit SSH traffic based on
-the operational context, such as the use of IAP for SSH or direct access from a specified
-source IP. It helps identify network configurations that might block SSH connections.</p>
+<p>This class decides whether an investigation should focus on a single termination or
+multiple terminations. It makes this determination based on the operational parameters
+provided to it, specifically checking if the investigation is scoped to a single virtual
+machine (VM).</p>
 </main>
 <footer class="bg-dark py-5 row d-print-none">
 <div class="container-fluid mx-sm-5">

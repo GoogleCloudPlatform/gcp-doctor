@@ -13,22 +13,29 @@
 <link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96>
 <link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
-<title>GCE | gcpdiag</title>
-<meta name=description content="All steps available in gce
+<title>gce/Vm Serial Logs Check | gcpdiag</title>
+<meta name=description content="Searches for predefined good or bad patterns in the serial logs of a GCE VM.
 ">
-<meta property="og:title" content="GCE">
-<meta property="og:description" content="Diagnostics for GCP">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://gcpdiag.dev/runbook/steps/gce/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="og:site_name" content="gcpdiag">
-<meta itemprop=name content="GCE">
-<meta itemprop=description content="Diagnostics for GCP"><meta name=twitter:card content="summary_large_image">
+<meta property="og:title" content="gce/Vm Serial Logs Check">
+<meta property="og:description" content="Searches for predefined good or bad patterns in the serial logs of a GCE VM.
+">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://gcpdiag.dev/runbook/steps/gce/vm-serial-logs-check/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
+<meta property="article:modified_time" content="2024-03-26T14:14:34+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta itemprop=name content="gce/Vm Serial Logs Check">
+<meta itemprop=description content="Searches for predefined good or bad patterns in the serial logs of a GCE VM.
+">
+<meta itemprop=dateModified content="2024-03-26T14:14:34+00:00">
+<meta itemprop=wordCount content="215"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
-<meta name=twitter:title content="GCE">
-<meta name=twitter:description content="Diagnostics for GCP">
+<meta name=twitter:title content="gce/Vm Serial Logs Check">
+<meta name=twitter:description content="Searches for predefined good or bad patterns in the serial logs of a GCE VM.
+">
 <link href=/scss/main.css rel=stylesheet>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
 </head>
-<body class=td-section>
+<body class=td-page>
 <header>
 <nav class="js-navbar-scroll navbar navbar-expand navbar-light nav-shadow flex-column flex-md-row td-navbar">
 <a id=gcpdiag-top class=navbar-brand href=/>
@@ -96,14 +103,14 @@
 <ul class="ul-2 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-runbookstepsgce-li>
 <input type=checkbox id=m-runbookstepsgce-check checked>
-<label for=m-runbookstepsgce-check><a href=/runbook/steps/gce/ title=GCE class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id=m-runbookstepsgce><span class=td-sidebar-nav-active-item>gce</span></a></label>
+<label for=m-runbookstepsgce-check><a href=/runbook/steps/gce/ title=GCE class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepsgce><span>gce</span></a></label>
 <ul class="ul-3 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcevm-metadata-check-li>
 <input type=checkbox id=m-runbookstepsgcevm-metadata-check-check>
 <label for=m-runbookstepsgcevm-metadata-check-check><a href=/runbook/steps/gce/vm-metadata-check/ title="gce/Vm Metadata Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcevm-metadata-check><span>Vm Metadata Check</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcevm-serial-logs-check-li>
-<input type=checkbox id=m-runbookstepsgcevm-serial-logs-check-check>
-<label for=m-runbookstepsgcevm-serial-logs-check-check><a href=/runbook/steps/gce/vm-serial-logs-check/ title="gce/Vm Serial Logs Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcevm-serial-logs-check><span>Vm Serial Logs Check</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-runbookstepsgcevm-serial-logs-check-li>
+<input type=checkbox id=m-runbookstepsgcevm-serial-logs-check-check checked>
+<label for=m-runbookstepsgcevm-serial-logs-check-check><a href=/runbook/steps/gce/vm-serial-logs-check/ title="gce/Vm Serial Logs Check" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcevm-serial-logs-check><span class=td-sidebar-nav-active-item>Vm Serial Logs Check</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgceauth-principal-cloud-console-permission-check-li>
 <input type=checkbox id=m-runbookstepsgceauth-principal-cloud-console-permission-check-check>
 <label for=m-runbookstepsgceauth-principal-cloud-console-permission-check-check><a href=/runbook/steps/gce/auth-principal-cloud-console-permission-check/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgceauth-principal-cloud-console-permission-check><span></span></a></label>
@@ -194,190 +201,70 @@
 </div>
 </aside>
 <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+<div class=td-toc><nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li><a href=#description>Description</a></li>
+<li><a href=#failure-reason>Failure Reason</a></li>
+<li><a href=#failure-remediation>Failure Remediation</a></li>
+<li><a href=#success-reason>Success Reason</a></li>
+<li><a href=#uncertain-reason>Uncertain Reason</a></li>
+<li><a href=#uncertain-remediation>Uncertain Remediation</a></li>
+</ul>
+</li>
+</ul>
+</nav></div>
 <div class="td-page-meta ml-0 pb-1 pt-0 mb-0">
-<a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/runbook/steps/gce/_index.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-<a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=GCE" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
+<a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/runbook/steps/gce/vm-serial-logs-check.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+<a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=gce/Vm%20Serial%20Logs%20Check" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
 </div>
 </aside>
 <main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
 <div class=td-content>
-<h1>GCE</h1>
+<h1>gce/Vm Serial Logs Check</h1>
+<div class=lead>Searches for predefined good or bad patterns in the serial logs of a GCE VM.</div>
 <header class=article-meta>
 </header>
-<p>All steps available in gce</p>
-<div class=section-index>
-<hr class=panel-line>
-<div class=entry>
-<h5>
-<a href=/runbook/steps/gce/vm-metadata-check/>gce/Vm Metadata Check</a>
-</h5>
-<p>Validates a specific boolean metadata key-value pair on a GCE VM instance.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/runbook/steps/gce/vm-serial-logs-check/>gce/Vm Serial Logs Check</a>
-</h5>
-<p>Searches for predefined good or bad patterns in the serial logs of a GCE VM.</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/runbook/steps/gce/auth-principal-cloud-console-permission-check/></a>
-</h5>
-<p></p>
-</div>
-<div class=entry>
-<h5>
-<a href=/runbook/steps/gce/auth-principal-has-compute-metadata-permissions-check/></a>
-</h5>
-<p></p>
-</div>
-<div class=entry>
-<h5>
-<a href=/runbook/steps/gce/auth-principal-has-iap-tunnel-user-permissions-check/></a>
-</h5>
-<p></p>
-</div>
-<div class=entry>
-<h5>
-<a href=/runbook/steps/gce/auth-principal-has-os-login-permissions-check/></a>
-</h5>
-<p></p>
-</div>
-<div class=entry>
-<h5>
-<a href=/runbook/steps/gce/auth-principal-has-permission-to-fetch-vm-check/></a>
-</h5>
-<p></p>
-</div>
-<div class=entry>
-<h5>
-<a href=/runbook/steps/gce/auth-principal-has-service-account-user-check/></a>
-</h5>
-<p></p>
-</div>
-<div class=entry>
-<h5>
-<a href=/runbook/steps/gce/gce-firewall-allows-ssh/></a>
-</h5>
-<p></p>
-</div>
-<div class=entry>
-<h5>
-<a href=/runbook/steps/gce/gce-vpc-connectivity-check/></a>
-</h5>
-<p></p>
-</div>
-<div class=entry>
-<h5>
-<a href=/runbook/steps/gce/gcp-ssh-permissions/></a>
-</h5>
-<p></p>
-</div>
-<div class=entry>
-<h5>
-<a href=/runbook/steps/gce/high-vm-cpu-utilization/></a>
-</h5>
-<p></p>
-</div>
-<div class=entry>
-<h5>
-<a href=/runbook/steps/gce/high-vm-disk-utilization/></a>
-</h5>
-<p></p>
-</div>
-<div class=entry>
-<h5>
-<a href=/runbook/steps/gce/high-vm-memory-utilization/></a>
-</h5>
-<p></p>
-</div>
-<div class=entry>
-<h5>
-<a href=/runbook/steps/gce/linux-guest-os-checks/></a>
-</h5>
-<p></p>
-</div>
-<div class=entry>
-<h5>
-<a href=/runbook/steps/gce/multiple-termination-check/></a>
-</h5>
-<p></p>
-</div>
-<div class=entry>
-<h5>
-<a href=/runbook/steps/gce/number-of-terminations/></a>
-</h5>
-<p></p>
-</div>
-<div class=entry>
-<h5>
-<a href=/runbook/steps/gce/os-login-status-check/></a>
-</h5>
-<p></p>
-</div>
-<div class=entry>
-<h5>
-<a href=/runbook/steps/gce/poxis-user-has-valid-ssh-key-check/></a>
-</h5>
-<p></p>
-</div>
-<div class=entry>
-<h5>
-<a href=/runbook/steps/gce/single-termination-check/></a>
-</h5>
-<p></p>
-</div>
-<div class=entry>
-<h5>
-<a href=/runbook/steps/gce/ssh-end/></a>
-</h5>
-<p></p>
-</div>
-<div class=entry>
-<h5>
-<a href=/runbook/steps/gce/ssh-start/></a>
-</h5>
-<p></p>
-</div>
-<div class=entry>
-<h5>
-<a href=/runbook/steps/gce/vm-guest-os-type/></a>
-</h5>
-<p></p>
-</div>
-<div class=entry>
-<h5>
-<a href=/runbook/steps/gce/vm-lifecycle-state/></a>
-</h5>
-<p></p>
-</div>
-<div class=entry>
-<h5>
-<a href=/runbook/steps/gce/vm-performance-checks/></a>
-</h5>
-<p></p>
-</div>
-<div class=entry>
-<h5>
-<a href=/runbook/steps/gce/vm-termination-end/></a>
-</h5>
-<p></p>
-</div>
-<div class=entry>
-<h5>
-<a href=/runbook/steps/gce/vm-termination-start/></a>
-</h5>
-<p></p>
-</div>
-<div class=entry>
-<h5>
-<a href=/runbook/steps/gce/windows-guest-os-checks/></a>
-</h5>
-<p></p>
-</div>
-</div>
+<p><strong>Product</strong>: <a href=https://cloud.google.com/compute>Compute Engine</a><br>
+<strong>Step Type</strong>: AUTOMATED STEP</p>
+<h3 id=description>Description</h3>
+<p>This diagnostic step checks the VM&rsquo;s serial logs for patterns that are indicative of successful
+operations (&lsquo;GOOD_PATTERN&rsquo;) or potential issues (&lsquo;BAD_PATTERN&rsquo;). Based on the presence of these
+patterns, the step categorizes the VM&rsquo;s status as &lsquo;OK&rsquo;, &lsquo;Failed&rsquo;, or &lsquo;Uncertain&rsquo;.</p>
+<h3 id=failure-reason>Failure Reason</h3>
+<p>Anomalies detected in the serial logs which align with the investigated bad patterns</p>
+<h3 id=failure-remediation>Failure Remediation</h3>
+<p>Investigate potential issues through the serial console.
+If GRUB_TIMEOUT is greater than 0, access the interactive session for more insights.
+Explore rescue options for inaccessible VMs or review possible guest OS issues,</p>
+<ul>
+<li>Interactive Serial Console: <a href=https://cloud.google.com/compute/docs/troubleshooting/troubleshooting-using-serial-console>https://cloud.google.com/compute/docs/troubleshooting/troubleshooting-using-serial-console</a></li>
+<li>Rescuing VMs: <a href=https://cloud.google.com/compute/docs/troubleshooting/rescue-vm>https://cloud.google.com/compute/docs/troubleshooting/rescue-vm</a></li>
+</ul>
+<p>If escalating Guest OS related issues to Google Cloud Support
+do check to ensure is in line with GCP&rsquo;s Guest OS support policy</p>
+<ul>
+<li>GCP Support Scope: <a href=https://cloud.google.com/compute/docs/images/support-maintenance-policy#support-scope>https://cloud.google.com/compute/docs/images/support-maintenance-policy#support-scope</a></li>
+</ul>
+<h3 id=success-reason>Success Reason</h3>
+<p>The VM&rsquo;s Linux OS shows no signs of interested anomalies,
+indicating a <em>likely</em> stable operational state.</p>
+<h3 id=uncertain-reason>Uncertain Reason</h3>
+<p>Lack of serial log data prevented a thorough assessment of the VM&rsquo;s operational state. Result is
+inconclusive</p>
+<h3 id=uncertain-remediation>Uncertain Remediation</h3>
+<p>Confirm the VM&rsquo;s operational status by reviewing available serial logs.
+Address any detected guest OS issues using the provided documentation,
+keeping in mind certain guest OS faults may be beyond GCP&rsquo;s support scope.</p>
+<ul>
+<li>Viewing Serial Port Output: <a href=https://cloud.google.com/compute/docs/troubleshooting/viewing-serial-port-output>https://cloud.google.com/compute/docs/troubleshooting/viewing-serial-port-output</a></li>
+<li>Resolving Kernel Panic:
+<a href=https://cloud.google.com/compute/docs/troubleshooting/kernel-panic#resolve_the_kernel_panic_error>https://cloud.google.com/compute/docs/troubleshooting/kernel-panic#resolve_the_kernel_panic_error</a></li>
+<li>GCP Support Scope: <a href=https://cloud.google.com/compute/docs/images/support-maintenance-policy#support-scope>https://cloud.google.com/compute/docs/images/support-maintenance-policy#support-scope</a></li>
+</ul>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified March 21, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/2584a19f1063e6f66c0a8eb5edeb4d7bbd92e3b4>Automating documentation generation for debugging trees and steps (2584a19f1)</a>
+Last modified March 26, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/53f8ea0ec2479237a9685c5e66d17f2f28352e6b>VM termination RCA runbook (53f8ea0ec)</a>
 </div>
 </div>
 </main>
