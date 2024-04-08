@@ -21,11 +21,11 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/steps/gce/auth-principal-has-iap-tunnel-user-permissions-check/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-04-06T01:28:43+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2024-04-08T19:25:34+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gce/Auth Principal Has Iap Tunnel User Permissions Check">
 <meta itemprop=description content="Verifies if the authenticated user has the required IAP roles to establish a tunnel to a VM.
 ">
-<meta itemprop=dateModified content="2024-04-06T01:28:43+00:00">
+<meta itemprop=dateModified content="2024-04-08T19:25:34+00:00">
 <meta itemprop=wordCount content="105"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
@@ -90,6 +90,9 @@
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookdiagnostic-treesgcessh-li>
 <input type=checkbox id=m-runbookdiagnostic-treesgcessh-check>
 <label for=m-runbookdiagnostic-treesgcessh-check><a href=/runbook/diagnostic-trees/gce/ssh/ title=gce/Ssh class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treesgcessh><span>gce/ssh</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookdiagnostic-treesgcevm-termination-li>
+<input type=checkbox id=m-runbookdiagnostic-treesgcevm-termination-check>
+<label for=m-runbookdiagnostic-treesgcevm-termination-check><a href=/runbook/diagnostic-trees/gce/vm-termination/ title="gce/Vm Termination" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treesgcevm-termination><span>gce/vm-termination</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookdiagnostic-treesgcevm_termination-li>
 <input type=checkbox id=m-runbookdiagnostic-treesgcevm_termination-check>
 <label for=m-runbookdiagnostic-treesgcevm_termination-check><a href=/runbook/diagnostic-trees/gce/vm_termination/ title="gce/Vm Termination" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treesgcevm_termination><span>gce/vm_termination</span></a></label>
@@ -101,7 +104,16 @@
 <input type=checkbox id=m-runbooksteps-check checked>
 <label for=m-runbooksteps-check><a href=/runbook/steps/ title="All Steps" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbooksteps><span>steps</span></a></label>
 <ul class="ul-2 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-runbookstepsgce-li>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepscrm-li>
+<input type=checkbox id=m-runbookstepscrm-check>
+<label for=m-runbookstepscrm-check><a href=/runbook/steps/crm/ title=CRM class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepscrm><span>crm</span></a></label>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepscrmorg-policy-check-li>
+<input type=checkbox id=m-runbookstepscrmorg-policy-check-check>
+<label for=m-runbookstepscrmorg-policy-check-check><a href=/runbook/steps/crm/org-policy-check/ title="crm/Org Policy Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepscrmorg-policy-check><span>Org Policy Check</span></a></label>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-runbookstepsgce-li>
 <input type=checkbox id=m-runbookstepsgce-check checked>
 <label for=m-runbookstepsgce-check><a href=/runbook/steps/gce/ title=GCE class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepsgce><span>gce</span></a></label>
 <ul class="ul-3 foldable">
@@ -185,6 +197,42 @@
 <label for=m-runbookstepsgcewindows-guest-os-checks-check><a href=/runbook/steps/gce/windows-guest-os-checks/ title="gce/Windows Guest Os Checks" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcewindows-guest-os-checks><span>Windows Guest Os Checks</span></a></label>
 </li>
 </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepsgcp-li>
+<input type=checkbox id=m-runbookstepsgcp-check>
+<label for=m-runbookstepsgcp-check><a href=/runbook/steps/gcp/ title=GCP class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepsgcp><span>gcp</span></a></label>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcphuman-task-li>
+<input type=checkbox id=m-runbookstepsgcphuman-task-check>
+<label for=m-runbookstepsgcphuman-task-check><a href=/runbook/steps/gcp/human-task/ title="gcp/Human Task" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcphuman-task><span>Human Task</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcpresource-attribute-check-li>
+<input type=checkbox id=m-runbookstepsgcpresource-attribute-check-check>
+<label for=m-runbookstepsgcpresource-attribute-check-check><a href=/runbook/steps/gcp/resource-attribute-check/ title="gcp/Resource Attribute Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcpresource-attribute-check><span>Resource Attribute Check</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcpservice-api-status-check-li>
+<input type=checkbox id=m-runbookstepsgcpservice-api-status-check-check>
+<label for=m-runbookstepsgcpservice-api-status-check-check><a href=/runbook/steps/gcp/service-api-status-check/ title="gcp/Service Api Status Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcpservice-api-status-check><span>Service Api Status Check</span></a></label>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepsiam-li>
+<input type=checkbox id=m-runbookstepsiam-check>
+<label for=m-runbookstepsiam-check><a href=/runbook/steps/iam/ title=IAM class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepsiam><span>iam</span></a></label>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsiamiam-policy-check-li>
+<input type=checkbox id=m-runbookstepsiamiam-policy-check-check>
+<label for=m-runbookstepsiamiam-policy-check-check><a href=/runbook/steps/iam/iam-policy-check/ title="iam/Iam Policy Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsiamiam-policy-check><span>Iam Policy Check</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsiamvm-has-an-active-service-account-li>
+<input type=checkbox id=m-runbookstepsiamvm-has-an-active-service-account-check>
+<label for=m-runbookstepsiamvm-has-an-active-service-account-check><a href=/runbook/steps/iam/vm-has-an-active-service-account/ title="iam/Vm Has An Active Service Account" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsiamvm-has-an-active-service-account><span>Vm Has An Active Service Account</span></a></label>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepsmonitoring-li>
+<input type=checkbox id=m-runbookstepsmonitoring-check>
+<label for=m-runbookstepsmonitoring-check><a href=/runbook/steps/monitoring/ title=MONITORING class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepsmonitoring><span>monitoring</span></a></label>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsmonitoringtime-series-check-li>
+<input type=checkbox id=m-runbookstepsmonitoringtime-series-check-check>
+<label for=m-runbookstepsmonitoringtime-series-check-check><a href=/runbook/steps/monitoring/time-series-check/ title="monitoring/Time Series Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsmonitoringtime-series-check><span>Time Series Check</span></a></label>
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -233,9 +281,9 @@ from higher-level resources.</p>
 <a href=https://cloud.google.com/compute/docs/oslogin/set-up-oslogin#configure_users>https://cloud.google.com/compute/docs/oslogin/set-up-oslogin#configure_users</a>
 <a href=https://cloud.google.com/iam/docs/manage-access-service-accounts#grant-single-role>https://cloud.google.com/iam/docs/manage-access-service-accounts#grant-single-role</a></p>
 <h3 id=success-reason>Success Reason</h3>
-<p>&ldquo;{auth_user}&rdquo; has the requisite &ldquo;{iap_role}&rdquo; role to tunell through IAP.</p>
+<p>&ldquo;{auth_user}&rdquo; has the requisite &ldquo;{iap_role}&rdquo; role to tunnel through IAP.</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified April 6, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/3e0e064b8400f5186f192360005306f83659d9b4>Fix documentation view issued due to md comment added at the top of runbooks (3e0e064b8)</a>
+Last modified April 8, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/c29f84642d111c60bcf73c689ce51f91626142ed>Merge changes I21c374c0,I8dcceef9 (c29f84642)</a>
 </div>
 </div>
 </main>

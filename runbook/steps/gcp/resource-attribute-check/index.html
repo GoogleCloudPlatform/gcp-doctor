@@ -13,24 +13,24 @@
 <link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96>
 <link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
-<title>gce/Vm Termination End | gcpdiag</title>
-<meta name=description content="Finalizes the diagnostics process for VM terminations.
+<title>gcp/Resource Attribute Check | gcpdiag</title>
+<meta name=description content="Generalized step used to verify the value of a GCP resource's attribute.
 ">
-<meta property="og:title" content="gce/Vm Termination End">
-<meta property="og:description" content="Finalizes the diagnostics process for VM terminations.
+<meta property="og:title" content="gcp/Resource Attribute Check">
+<meta property="og:description" content="Generalized step used to verify the value of a GCP resource's attribute.
 ">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://gcpdiag.dev/runbook/steps/gce/vm-termination-end/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-04-06T01:28:43+00:00"><meta property="og:site_name" content="gcpdiag">
-<meta itemprop=name content="gce/Vm Termination End">
-<meta itemprop=description content="Finalizes the diagnostics process for VM terminations.
+<meta property="og:url" content="https://gcpdiag.dev/runbook/steps/gcp/resource-attribute-check/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
+<meta property="article:modified_time" content="2024-04-08T19:25:34+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta itemprop=name content="gcp/Resource Attribute Check">
+<meta itemprop=description content="Generalized step used to verify the value of a GCP resource's attribute.
 ">
-<meta itemprop=dateModified content="2024-04-06T01:28:43+00:00">
-<meta itemprop=wordCount content="48"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2024-04-08T19:25:34+00:00">
+<meta itemprop=wordCount content="269"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
-<meta name=twitter:title content="gce/Vm Termination End">
-<meta name=twitter:description content="Finalizes the diagnostics process for VM terminations.
+<meta name=twitter:title content="gcp/Resource Attribute Check">
+<meta name=twitter:description content="Generalized step used to verify the value of a GCP resource's attribute.
 ">
 <link href=/scss/main.css rel=stylesheet>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
@@ -113,8 +113,8 @@
 <label for=m-runbookstepscrmorg-policy-check-check><a href=/runbook/steps/crm/org-policy-check/ title="crm/Org Policy Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepscrmorg-policy-check><span>Org Policy Check</span></a></label>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-runbookstepsgce-li>
-<input type=checkbox id=m-runbookstepsgce-check checked>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepsgce-li>
+<input type=checkbox id=m-runbookstepsgce-check>
 <label for=m-runbookstepsgce-check><a href=/runbook/steps/gce/ title=GCE class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepsgce><span>gce</span></a></label>
 <ul class="ul-3 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgceauth-principal-cloud-console-permission-check-li>
@@ -186,9 +186,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcevm-performance-checks-li>
 <input type=checkbox id=m-runbookstepsgcevm-performance-checks-check>
 <label for=m-runbookstepsgcevm-performance-checks-check><a href=/runbook/steps/gce/vm-performance-checks/ title="gce/Vm Performance Checks" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcevm-performance-checks><span>Vm Performance Checks</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-runbookstepsgcevm-termination-end-li>
-<input type=checkbox id=m-runbookstepsgcevm-termination-end-check checked>
-<label for=m-runbookstepsgcevm-termination-end-check><a href=/runbook/steps/gce/vm-termination-end/ title="gce/Vm Termination End" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcevm-termination-end><span class=td-sidebar-nav-active-item>Vm Termination End</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcevm-termination-end-li>
+<input type=checkbox id=m-runbookstepsgcevm-termination-end-check>
+<label for=m-runbookstepsgcevm-termination-end-check><a href=/runbook/steps/gce/vm-termination-end/ title="gce/Vm Termination End" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcevm-termination-end><span>Vm Termination End</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcevm-termination-start-li>
 <input type=checkbox id=m-runbookstepsgcevm-termination-start-check>
 <label for=m-runbookstepsgcevm-termination-start-check><a href=/runbook/steps/gce/vm-termination-start/ title="gce/Vm Termination Start" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcevm-termination-start><span>Vm Termination Start</span></a></label>
@@ -197,16 +197,16 @@
 <label for=m-runbookstepsgcewindows-guest-os-checks-check><a href=/runbook/steps/gce/windows-guest-os-checks/ title="gce/Windows Guest Os Checks" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcewindows-guest-os-checks><span>Windows Guest Os Checks</span></a></label>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepsgcp-li>
-<input type=checkbox id=m-runbookstepsgcp-check>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-runbookstepsgcp-li>
+<input type=checkbox id=m-runbookstepsgcp-check checked>
 <label for=m-runbookstepsgcp-check><a href=/runbook/steps/gcp/ title=GCP class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepsgcp><span>gcp</span></a></label>
 <ul class="ul-3 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcphuman-task-li>
 <input type=checkbox id=m-runbookstepsgcphuman-task-check>
 <label for=m-runbookstepsgcphuman-task-check><a href=/runbook/steps/gcp/human-task/ title="gcp/Human Task" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcphuman-task><span>Human Task</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcpresource-attribute-check-li>
-<input type=checkbox id=m-runbookstepsgcpresource-attribute-check-check>
-<label for=m-runbookstepsgcpresource-attribute-check-check><a href=/runbook/steps/gcp/resource-attribute-check/ title="gcp/Resource Attribute Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcpresource-attribute-check><span>Resource Attribute Check</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-runbookstepsgcpresource-attribute-check-li>
+<input type=checkbox id=m-runbookstepsgcpresource-attribute-check-check checked>
+<label for=m-runbookstepsgcpresource-attribute-check-check><a href=/runbook/steps/gcp/resource-attribute-check/ title="gcp/Resource Attribute Check" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcpresource-attribute-check><span class=td-sidebar-nav-active-item>Resource Attribute Check</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcpservice-api-status-check-li>
 <input type=checkbox id=m-runbookstepsgcpservice-api-status-check-check>
 <label for=m-runbookstepsgcpservice-api-status-check-check><a href=/runbook/steps/gcp/service-api-status-check/ title="gcp/Service Api Status Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcpservice-api-status-check><span>Service Api Status Check</span></a></label>
@@ -243,26 +243,85 @@
 </div>
 </aside>
 <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+<div class=td-toc><nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li><a href=#description>Description</a></li>
+<li><a href=#failure-reason>Failure Reason</a></li>
+<li><a href=#failure-remediation>Failure Remediation</a></li>
+<li><a href=#success-reason>Success Reason</a></li>
+</ul>
+</li>
+</ul>
+</nav></div>
 <div class="td-page-meta ml-0 pb-1 pt-0 mb-0">
-<a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/runbook/steps/gce/vm-termination-end.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-<a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=gce/Vm%20Termination%20End" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
+<a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/runbook/steps/gcp/resource-attribute-check.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+<a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=gcp/Resource%20Attribute%20Check" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
 </div>
 </aside>
 <main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
 <div class=td-content>
-<h1>gce/Vm Termination End</h1>
-<div class=lead>Finalizes the diagnostics process for VM terminations.</div>
+<h1>gcp/Resource Attribute Check</h1>
+<div class=lead>Generalized step used to verify the value of a GCP resource&rsquo;s attribute.</div>
 <header class=article-meta>
 </header>
-<p><strong>Product</strong>: <a href=https://cloud.google.com/compute>Compute Engine</a><br>
-<strong>Step Type</strong>: END</p>
+<p><strong>Product</strong>:<br>
+<strong>Step Type</strong>: AUTOMATED STEP</p>
 <h3 id=description>Description</h3>
-<p>This step prompts the user to confirm
-satisfaction with the Root Cause Analysis (RCA) performed for VM terminations.</p>
-<p>Depending on the user&rsquo;s response, it may conclude the runbook execution or trigger additional
-steps, such as generating a report of the findings.</p>
+<p>This step enables the flexible verification of attributes within any JSON-viewable GCP
+resource, such as GCE instances or Cloud Storage buckets. It checks if a specific resource&rsquo;s
+attribute matches an expected value and optionally supports custom evaluation logic for
+more complex verification scenarios.</p>
+<pre><code>Attributes:
+  resource_query (Callable): Function to fetch the target GCP resource. Must return
+      a `Resource` object. Typically, this is one of the `gcpdiag.queries.*` methods.
+  query_kwargs (dict): Keyword arguments to pass to `resource_query`.
+  resource (Resource): The GCP resource fetched by `resource_query`.
+  attribute (Optional[tuple]): Path to the nested attribute within the resource to be
+      verified, represented as a tuple of strings. Utilizes `boltons.iterutils.get_path`
+      for navigation.
+  evaluator (Optional[Callable]): A custom function for performing complex evaluations
+      on a resource attribute.
+      Should return a dict:
+        {'success_reason': {'key1': 'value1', ...}, 'failure_reason': {...}}
+  expected_value (str): The expected value of the target attribute.
+  expected_value_type (type): Data type of the expected attribute value. Defaults to `str`.
+  extract_args (dict): Configuration for extracting additional information for message
+      formatting, with keys specifying the argument name and values specifying the source
+      and attribute path.
+  message_args (dict): Extracted arguments used for formatting outcome messages.
+
+Usage:
+  An example to check the status of a GCE instance:
+
+  ```python
+  status_check = ResourceAttributeCheck()
+  status_check.resource_query = gce.get_instance
+  status_check.query_kwargs = {
+      'project_id': op.get(flags.PROJECT_ID),
+      'zone': op.get(flags.ZONE),
+      'instance_name': op.get(flags.NAME)
+  }
+  status_check.attribute = ('status',)
+  status_check.expected_value = 'RUNNING'
+  status_check.extract_args = {
+      'vm_name': {'source': models.Resource, 'attribute': 'name'},
+      'status': {'source': models.Resource, 'attribute': 'status'},
+      'resource_project_id': {'source': models.Parameter, 'attribute': 'project_id'}
+  }
+  ```
+
+`get_path`: https://boltons.readthedocs.io/en/latest/_modules/boltons/iterutils.html#get_path
+</code></pre>
+<h3 id=failure-reason>Failure Reason</h3>
+<p>Resource doesn&rsquo;t have the expected value</p>
+<h3 id=failure-remediation>Failure Remediation</h3>
+<p>Update the resource to have the expected value</p>
+<h3 id=success-reason>Success Reason</h3>
+<p>Resrouce has the expected value</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified April 6, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/3e0e064b8400f5186f192360005306f83659d9b4>Fix documentation view issued due to md comment added at the top of runbooks (3e0e064b8)</a>
+Last modified April 8, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/c29f84642d111c60bcf73c689ce51f91626142ed>Merge changes I21c374c0,I8dcceef9 (c29f84642)</a>
 </div>
 </div>
 </main>
