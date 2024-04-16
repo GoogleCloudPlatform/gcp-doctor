@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/steps/gce/auth-principal-cloud-console-permission-check/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-04-06T01:28:43+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2024-04-16T21:35:41+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gce/Auth Principal Cloud Console Permission Check">
 <meta itemprop=description content="Validates if the user has the 'compute.projects.get' permission within the GCP Project.
 ">
-<meta itemprop=dateModified content="2024-04-06T01:28:43+00:00">
-<meta itemprop=wordCount content="79"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2024-04-16T21:35:41+00:00">
+<meta itemprop=wordCount content="30"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="gce/Auth Principal Cloud Console Permission Check">
@@ -180,6 +180,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcessh-end-li>
 <input type=checkbox id=m-runbookstepsgcessh-end-check>
 <label for=m-runbookstepsgcessh-end-check><a href=/runbook/steps/gce/ssh-end/ title="gce/Ssh End" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcessh-end><span>Ssh End</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcessh-in-browser-check-li>
+<input type=checkbox id=m-runbookstepsgcessh-in-browser-check-check>
+<label for=m-runbookstepsgcessh-in-browser-check-check><a href=/runbook/steps/gce/ssh-in-browser-check/ title="gce/Ssh In Browser Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcessh-in-browser-check><span>Ssh In Browser Check</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcessh-start-li>
 <input type=checkbox id=m-runbookstepsgcessh-start-check>
 <label for=m-runbookstepsgcessh-start-check><a href=/runbook/steps/gce/ssh-start/ title="gce/Ssh Start" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcessh-start><span>Ssh Start</span></a></label>
@@ -189,9 +192,15 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcevm-lifecycle-state-li>
 <input type=checkbox id=m-runbookstepsgcevm-lifecycle-state-check>
 <label for=m-runbookstepsgcevm-lifecycle-state-check><a href=/runbook/steps/gce/vm-lifecycle-state/ title="gce/Vm Lifecycle State" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcevm-lifecycle-state><span>Vm Lifecycle State</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcevm-metadata-check-li>
+<input type=checkbox id=m-runbookstepsgcevm-metadata-check-check>
+<label for=m-runbookstepsgcevm-metadata-check-check><a href=/runbook/steps/gce/vm-metadata-check/ title="gce/Vm Metadata Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcevm-metadata-check><span>Vm Metadata Check</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcevm-performance-checks-li>
 <input type=checkbox id=m-runbookstepsgcevm-performance-checks-check>
 <label for=m-runbookstepsgcevm-performance-checks-check><a href=/runbook/steps/gce/vm-performance-checks/ title="gce/Vm Performance Checks" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcevm-performance-checks><span>Vm Performance Checks</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcevm-serial-logs-check-li>
+<input type=checkbox id=m-runbookstepsgcevm-serial-logs-check-check>
+<label for=m-runbookstepsgcevm-serial-logs-check-check><a href=/runbook/steps/gce/vm-serial-logs-check/ title="gce/Vm Serial Logs Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcevm-serial-logs-check><span>Vm Serial Logs Check</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcevm-termination-end-li>
 <input type=checkbox id=m-runbookstepsgcevm-termination-end-check>
 <label for=m-runbookstepsgcevm-termination-end-check><a href=/runbook/steps/gce/vm-termination-end/ title="gce/Vm Termination End" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcevm-termination-end><span>Vm Termination End</span></a></label>
@@ -279,18 +288,6 @@
 </div>
 </aside>
 <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
-<div class=td-toc><nav id=TableOfContents>
-<ul>
-<li>
-<ul>
-<li><a href=#description>Description</a></li>
-<li><a href=#failure-reason>Failure Reason</a></li>
-<li><a href=#failure-remediation>Failure Remediation</a></li>
-<li><a href=#success-reason>Success Reason</a></li>
-</ul>
-</li>
-</ul>
-</nav></div>
 <div class="td-page-meta ml-0 pb-1 pt-0 mb-0">
 <a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/runbook/steps/gce/auth-principal-cloud-console-permission-check.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
 <a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=gce/Auth%20Principal%20Cloud%20Console%20Permission%20Check" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
@@ -307,16 +304,8 @@
 <h3 id=description>Description</h3>
 <p>This permission is essential to be able to use SSH in browser and
 viewing the Compute Engine resources in the Cloud Console.</p>
-<h3 id=failure-reason>Failure Reason</h3>
-<p>To access Compute Engine via the Google Cloud console (i.e. SSH-in-browser),
-the user must have &ldquo;compute.projects.get&rdquo; permission.</p>
-<h3 id=failure-remediation>Failure Remediation</h3>
-<p>Review the permissions guide for accessing Compute Engine resources:
-<a href=https://cloud.google.com/compute/docs/access/iam#console_permission>https://cloud.google.com/compute/docs/access/iam#console_permission</a></p>
-<h3 id=success-reason>Success Reason</h3>
-<p>The user is authorized to view the Google Cloud console which will allow SSH-in-browser use case</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified April 6, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/3e0e064b8400f5186f192360005306f83659d9b4>Fix documentation view issued due to md comment added at the top of runbooks (3e0e064b8)</a>
+Last modified April 16, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/85485f8856026401119d990671df30aeed39d495>Merge "SSH runbook enhancements." -- Branch commit log -- commit 124b1c61b034cf534d55a0c0e2a96ad24b712a29 Author: Kwesi Graham &lt;akyen@google.com> Date: 2024-04-09T22:11:02Z (85485f885)</a>
 </div>
 </div>
 </main>

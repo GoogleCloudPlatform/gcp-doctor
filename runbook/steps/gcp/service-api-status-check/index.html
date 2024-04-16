@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/steps/gcp/service-api-status-check/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-04-08T19:25:34+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2024-04-16T21:35:41+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gcp/Service Api Status Check">
 <meta itemprop=description content="Check whether or not a service has been enabled for use by a consumer
 ">
-<meta itemprop=dateModified content="2024-04-08T19:25:34+00:00">
-<meta itemprop=wordCount content="120"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2024-04-16T21:35:41+00:00">
+<meta itemprop=wordCount content="121"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="gcp/Service Api Status Check">
@@ -180,6 +180,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcessh-end-li>
 <input type=checkbox id=m-runbookstepsgcessh-end-check>
 <label for=m-runbookstepsgcessh-end-check><a href=/runbook/steps/gce/ssh-end/ title="gce/Ssh End" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcessh-end><span>Ssh End</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcessh-in-browser-check-li>
+<input type=checkbox id=m-runbookstepsgcessh-in-browser-check-check>
+<label for=m-runbookstepsgcessh-in-browser-check-check><a href=/runbook/steps/gce/ssh-in-browser-check/ title="gce/Ssh In Browser Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcessh-in-browser-check><span>Ssh In Browser Check</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcessh-start-li>
 <input type=checkbox id=m-runbookstepsgcessh-start-check>
 <label for=m-runbookstepsgcessh-start-check><a href=/runbook/steps/gce/ssh-start/ title="gce/Ssh Start" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcessh-start><span>Ssh Start</span></a></label>
@@ -189,9 +192,15 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcevm-lifecycle-state-li>
 <input type=checkbox id=m-runbookstepsgcevm-lifecycle-state-check>
 <label for=m-runbookstepsgcevm-lifecycle-state-check><a href=/runbook/steps/gce/vm-lifecycle-state/ title="gce/Vm Lifecycle State" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcevm-lifecycle-state><span>Vm Lifecycle State</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcevm-metadata-check-li>
+<input type=checkbox id=m-runbookstepsgcevm-metadata-check-check>
+<label for=m-runbookstepsgcevm-metadata-check-check><a href=/runbook/steps/gce/vm-metadata-check/ title="gce/Vm Metadata Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcevm-metadata-check><span>Vm Metadata Check</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcevm-performance-checks-li>
 <input type=checkbox id=m-runbookstepsgcevm-performance-checks-check>
 <label for=m-runbookstepsgcevm-performance-checks-check><a href=/runbook/steps/gce/vm-performance-checks/ title="gce/Vm Performance Checks" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcevm-performance-checks><span>Vm Performance Checks</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcevm-serial-logs-check-li>
+<input type=checkbox id=m-runbookstepsgcevm-serial-logs-check-check>
+<label for=m-runbookstepsgcevm-serial-logs-check-check><a href=/runbook/steps/gce/vm-serial-logs-check/ title="gce/Vm Serial Logs Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcevm-serial-logs-check><span>Vm Serial Logs Check</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcevm-termination-end-li>
 <input type=checkbox id=m-runbookstepsgcevm-termination-end-check>
 <label for=m-runbookstepsgcevm-termination-end-check><a href=/runbook/steps/gce/vm-termination-end/ title="gce/Vm Termination End" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcevm-termination-end><span>Vm Termination End</span></a></label>
@@ -314,7 +323,7 @@ against the actual service state retrieved during
 execution. API state has to be one of the value of
 gcp.constants.APIState</p>
 <h3 id=failure-reason>Failure Reason</h3>
-<p>The <code>{service}</code> service is not in the exptected state <code>{expected_state}</code></p>
+<p>The <code>{service_name}</code> service is not in the exptected state <code>{expected_state}</code></p>
 <h3 id=failure-remediation>Failure Remediation</h3>
 <p>This service is expected to be enabled.
 Execute the command below to enable {service_name} in {project_id}</p>
@@ -322,9 +331,9 @@ Execute the command below to enable {service_name} in {project_id}</p>
 <p>Resources
 <a href=https://cloud.google.com/service-usage/docs/enable-disable#enabling>https://cloud.google.com/service-usage/docs/enable-disable#enabling</a></p>
 <h3 id=success-reason>Success Reason</h3>
-<p>The <code>{service}</code> service is currently in the expected <code>{expected_state}</code>.</p>
+<p>The <code>{service_name}</code> service is currently in the expected state: <code>{expected_state}</code>.</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified April 8, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/c29f84642d111c60bcf73c689ce51f91626142ed>Merge changes I21c374c0,I8dcceef9 (c29f84642)</a>
+Last modified April 16, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/85485f8856026401119d990671df30aeed39d495>Merge "SSH runbook enhancements." -- Branch commit log -- commit 124b1c61b034cf534d55a0c0e2a96ad24b712a29 Author: Kwesi Graham &lt;akyen@google.com> Date: 2024-04-09T22:11:02Z (85485f885)</a>
 </div>
 </div>
 </main>
