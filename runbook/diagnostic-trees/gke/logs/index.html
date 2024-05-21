@@ -13,21 +13,29 @@
 <link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96>
 <link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
-<title>Debugging Trees | gcpdiag</title>
-<meta name=description content>
-<meta property="og:title" content="Debugging Trees">
-<meta property="og:description" content="Diagnostics for GCP">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://gcpdiag.dev/runbook/diagnostic-trees/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="og:site_name" content="gcpdiag">
-<meta itemprop=name content="Debugging Trees">
-<meta itemprop=description content="Diagnostics for GCP"><meta name=twitter:card content="summary_large_image">
+<title>gke/Logs | gcpdiag</title>
+<meta name=description content="Provides a methodical approach to troubleshooting GKE logging issues.
+">
+<meta property="og:title" content="gke/Logs">
+<meta property="og:description" content="Provides a methodical approach to troubleshooting GKE logging issues.
+">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://gcpdiag.dev/runbook/diagnostic-trees/gke/logs/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
+<meta property="article:modified_time" content="2024-05-17T10:00:32+01:00"><meta property="og:site_name" content="gcpdiag">
+<meta itemprop=name content="gke/Logs">
+<meta itemprop=description content="Provides a methodical approach to troubleshooting GKE logging issues.
+">
+<meta itemprop=dateModified content="2024-05-17T10:00:32+01:00">
+<meta itemprop=wordCount content="263"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
-<meta name=twitter:title content="Debugging Trees">
-<meta name=twitter:description content="Diagnostics for GCP">
+<meta name=twitter:title content="gke/Logs">
+<meta name=twitter:description content="Provides a methodical approach to troubleshooting GKE logging issues.
+">
 <link href=/scss/main.css rel=stylesheet>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
 </head>
-<body class=td-section>
+<body class=td-page>
 <header>
 <nav class="js-navbar-scroll navbar navbar-expand navbar-light nav-shadow flex-column flex-md-row td-navbar">
 <a id=gcpdiag-top class=navbar-brand href=/>
@@ -73,7 +81,7 @@
 <ul class=ul-1>
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-runbookdiagnostic-trees-li>
 <input type=checkbox id=m-runbookdiagnostic-trees-check checked>
-<label for=m-runbookdiagnostic-trees-check><a href=/runbook/diagnostic-trees/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id=m-runbookdiagnostic-trees><span class=td-sidebar-nav-active-item>Debugging Trees</span></a></label>
+<label for=m-runbookdiagnostic-trees-check><a href=/runbook/diagnostic-trees/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookdiagnostic-trees><span>Debugging Trees</span></a></label>
 <ul class="ul-2 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookdiagnostic-treesgce-li>
 <input type=checkbox id=m-runbookdiagnostic-treesgce-check>
@@ -87,16 +95,16 @@
 <label for=m-runbookdiagnostic-treesgcevm-termination-check><a href=/runbook/diagnostic-trees/gce/vm-termination/ title="gce/Vm Termination" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treesgcevm-termination><span>gce/vm-termination</span></a></label>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookdiagnostic-treesgke-li>
-<input type=checkbox id=m-runbookdiagnostic-treesgke-check>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-runbookdiagnostic-treesgke-li>
+<input type=checkbox id=m-runbookdiagnostic-treesgke-check checked>
 <label for=m-runbookdiagnostic-treesgke-check><a href=/runbook/diagnostic-trees/gke/ title=GKE class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookdiagnostic-treesgke><span>gke</span></a></label>
 <ul class="ul-3 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookdiagnostic-treesgkecluster-autoscaler-li>
 <input type=checkbox id=m-runbookdiagnostic-treesgkecluster-autoscaler-check>
 <label for=m-runbookdiagnostic-treesgkecluster-autoscaler-check><a href=/runbook/diagnostic-trees/gke/cluster-autoscaler/ title="gke/Cluster Autoscaler" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treesgkecluster-autoscaler><span>gke/cluster-autoscaler</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookdiagnostic-treesgkelogs-li>
-<input type=checkbox id=m-runbookdiagnostic-treesgkelogs-check>
-<label for=m-runbookdiagnostic-treesgkelogs-check><a href=/runbook/diagnostic-trees/gke/logs/ title=gke/Logs class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treesgkelogs><span>gke/logs</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-runbookdiagnostic-treesgkelogs-li>
+<input type=checkbox id=m-runbookdiagnostic-treesgkelogs-check checked>
+<label for=m-runbookdiagnostic-treesgkelogs-check><a href=/runbook/diagnostic-trees/gke/logs/ title=gke/Logs class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treesgkelogs><span class=td-sidebar-nav-active-item>gke/logs</span></a></label>
 </li>
 </ul>
 </li>
@@ -304,33 +312,129 @@
 </div>
 </aside>
 <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+<div class=td-toc><nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li><a href=#description>Description</a></li>
+<li><a href=#executing-this-runbook>Executing this runbook</a></li>
+<li><a href=#potential-steps>Potential Steps</a></li>
+</ul>
+</li>
+</ul>
+</nav></div>
 <div class="td-page-meta ml-0 pb-1 pt-0 mb-0">
-<a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/runbook/diagnostic-trees/_index.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-<a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=Debugging%20Trees" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
+<a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/runbook/diagnostic-trees/gke/logs.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+<a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=gke/Logs" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
 </div>
 </aside>
 <main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
 <div class=td-content>
-<h1>Debugging Trees</h1>
+<h1>gke/Logs</h1>
+<div class=lead>Provides a methodical approach to troubleshooting GKE logging issues.</div>
 <header class=article-meta>
 </header>
-<div class=section-index>
-<hr class=panel-line>
-<div class=entry>
-<h5>
-<a href=/runbook/diagnostic-trees/gce/>GCE</a>
-</h5>
-<p></p>
-</div>
-<div class=entry>
-<h5>
-<a href=/runbook/diagnostic-trees/gke/>GKE</a>
-</h5>
-<p></p>
-</div>
-</div>
+<p><strong>Product</strong>: <a href=https://cloud.google.com/kubernetes-engine>Google Kubernetes Engine</a>
+<strong>Kind</strong>: Debugging Tree</p>
+<h3 id=description>Description</h3>
+<p>This runbook guides you through a systematic investigation of potential
+causes when logs from the Google Kubernetes Engine (GKE) cluster are missing
+or incomplete. The focus is on core configuration settings that are essential
+for proper logging functionality.</p>
+<p>The following areas are examined:</p>
+<ul>
+<li>
+<p><strong>Project-Level Logging:</strong> Ensures that the Google Cloud project housing
+the GKE cluster has the Cloud Logging API enabled.</p>
+</li>
+<li>
+<p><strong>Cluster-Level Logging:</strong> Verifies that logging is explicitly enabled
+within the GKE cluster&rsquo;s configuration.</p>
+</li>
+<li>
+<p><strong>Node Pool Permissions:</strong> Confirms that the nodes within the cluster&rsquo;s
+node pools have the &lsquo;Cloud Logging Write&rsquo; scope enabled, allowing them to send
+log data.</p>
+</li>
+<li>
+<p><strong>Service Account Permissions:</strong> Validates that the service account used
+by the node pools possesses the necessary IAM permissions to interact with
+Cloud Logging. Specifically, the &ldquo;roles/logging.logWriter&rdquo; role is typically
+required.</p>
+</li>
+<li>
+<p><strong>Cloud Logging API Wtite Quotas:</strong> Verifies that Cloud Logging API Write
+quotas have not been exceeded within the specified timeframe.</p>
+</li>
+</ul>
+<h3 id=executing-this-runbook>Executing this runbook</h3>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>gcpdiag runbook gke/logs <span style=color:#4e9a06>\
+</span><span style=color:#4e9a06></span>  -p <span style=color:#000>project_id</span> <span style=color:#ce5c00;font-weight:700>=</span> value <span style=color:#4e9a06>\
+</span><span style=color:#4e9a06></span>  -p <span style=color:#000>name</span> <span style=color:#ce5c00;font-weight:700>=</span> value <span style=color:#4e9a06>\
+</span><span style=color:#4e9a06></span>  -p <span style=color:#000>location</span> <span style=color:#ce5c00;font-weight:700>=</span> value
+</code></pre></div><h4 id=parameters>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Required</th>
+<th>Default</th>
+<th>Type</th>
+<th>Help</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>project_id</code></td>
+<td>True</td>
+<td>None</td>
+<td>str</td>
+<td>The ID of the project hosting the GKE Cluster</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>True</td>
+<td>None</td>
+<td>str</td>
+<td>(Optional) The name of the GKE cluster, to limit search only for this cluster</td>
+</tr>
+<tr>
+<td><code>location</code></td>
+<td>True</td>
+<td>None</td>
+<td>str</td>
+<td>The zone or region of the GKE cluster</td>
+</tr>
+</tbody>
+</table>
+<p>Get help on available commands</p>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>gcpdiag runbook --help
+</code></pre></div><h3 id=potential-steps>Potential Steps</h3>
+<ul>
+<li>
+<p><a href=/runbook/steps/gke/logs-start>Logs Start</a></p>
+</li>
+<li>
+<p><a href=/runbook/steps/gke/logging-api-enabled>Logging Api Enabled</a></p>
+</li>
+<li>
+<p><a href=/runbook/steps/gke/cluster-level-logging-enabled>Cluster Level Logging Enabled</a></p>
+</li>
+<li>
+<p><a href=/runbook/steps/gke/node-pool-cloud-logging-access-scope>Node Pool Cloud Logging Access Scope</a></p>
+</li>
+<li>
+<p><a href=/runbook/steps/gke/service-account-logging-permission>Service Account Logging Permission</a></p>
+</li>
+<li>
+<p><a href=/runbook/steps/gke/logging-write-api-quota-exceeded>Logging Write Api Quota Exceeded</a></p>
+</li>
+<li>
+<p><a href=/runbook/steps/gke/logs-end>Logs End</a></p>
+</li>
+</ul>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified March 21, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/2584a19f1063e6f66c0a8eb5edeb4d7bbd92e3b4>Automating documentation generation for debugging trees and steps (2584a19f1)</a>
+Last modified May 17, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/8fe375d5d6b638f7166eaf2222d3ca4f335b5dae>NEW runbook: GKE logs (8fe375d5d)</a>
 </div>
 </div>
 </main>
