@@ -13,24 +13,24 @@
 <link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96>
 <link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
-<title>dataflow/ERR/2024_003 | gcpdiag</title>
-<meta name=description content="Streaming Dataflow jobs are not using WRITE_TRUNCATE when working with unbounded PCollections.
+<title>pubsub/ERR/2024_003 | gcpdiag</title>
+<meta name=description content="Pub/Sub Snapshot creation fails if subscription backlog is too old.
 ">
-<meta property="og:title" content="dataflow/ERR/2024_003">
-<meta property="og:description" content="Streaming Dataflow jobs are not using WRITE_TRUNCATE when working with unbounded PCollections.
+<meta property="og:title" content="pubsub/ERR/2024_003">
+<meta property="og:description" content="Pub/Sub Snapshot creation fails if subscription backlog is too old.
 ">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://gcpdiag.dev/rules/dataflow/ERR/2024_003/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="rules">
-<meta property="article:modified_time" content="2024-04-29T08:32:31+00:00"><meta property="og:site_name" content="gcpdiag">
-<meta itemprop=name content="dataflow/ERR/2024_003">
-<meta itemprop=description content="Streaming Dataflow jobs are not using WRITE_TRUNCATE when working with unbounded PCollections.
+<meta property="og:url" content="https://gcpdiag.dev/rules/pubsub/ERR/2024_003/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="rules">
+<meta property="article:modified_time" content="2024-06-18T15:47:00+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta itemprop=name content="pubsub/ERR/2024_003">
+<meta itemprop=description content="Pub/Sub Snapshot creation fails if subscription backlog is too old.
 ">
-<meta itemprop=dateModified content="2024-04-29T08:32:31+00:00">
-<meta itemprop=wordCount content="137"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2024-06-18T15:47:00+00:00">
+<meta itemprop=wordCount content="92"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
-<meta name=twitter:title content="dataflow/ERR/2024_003">
-<meta name=twitter:description content="Streaming Dataflow jobs are not using WRITE_TRUNCATE when working with unbounded PCollections.
+<meta name=twitter:title content="pubsub/ERR/2024_003">
+<meta name=twitter:description content="Pub/Sub Snapshot creation fails if subscription backlog is too old.
 ">
 <link href=/scss/main.css rel=stylesheet>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
@@ -370,8 +370,8 @@
 <label for=m-rulescomposerwarn2024_003-check><a href=/rules/composer/WARN/2024_003/ title=composer/WARN/2024_003 class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-rulescomposerwarn2024_003><span>WARN/2024_003</span></a></label>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-rulesdataflow-li>
-<input type=checkbox id=m-rulesdataflow-check checked>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-rulesdataflow-li>
+<input type=checkbox id=m-rulesdataflow-check>
 <label for=m-rulesdataflow-check><a href=/rules/dataflow/ title=DATAFLOW class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-rulesdataflow><span>dataflow</span></a></label>
 <ul class="ul-2 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-rulesdataflowerr2023_001-li>
@@ -419,9 +419,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-rulesdataflowerr2024_002-li>
 <input type=checkbox id=m-rulesdataflowerr2024_002-check>
 <label for=m-rulesdataflowerr2024_002-check><a href=/rules/dataflow/ERR/2024_002/ title=dataflow/ERR/2024_002 class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-rulesdataflowerr2024_002><span>ERR/2024_002</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-rulesdataflowerr2024_003-li>
-<input type=checkbox id=m-rulesdataflowerr2024_003-check checked>
-<label for=m-rulesdataflowerr2024_003-check><a href=/rules/dataflow/ERR/2024_003/ title=dataflow/ERR/2024_003 class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-rulesdataflowerr2024_003><span class=td-sidebar-nav-active-item>ERR/2024_003</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-rulesdataflowerr2024_003-li>
+<input type=checkbox id=m-rulesdataflowerr2024_003-check>
+<label for=m-rulesdataflowerr2024_003-check><a href=/rules/dataflow/ERR/2024_003/ title=dataflow/ERR/2024_003 class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-rulesdataflowerr2024_003><span>ERR/2024_003</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-rulesdataflowerr2024_004-li>
 <input type=checkbox id=m-rulesdataflowerr2024_004-check>
 <label for=m-rulesdataflowerr2024_004-check><a href=/rules/dataflow/ERR/2024_004/ title=dataflow/ERR/2024_004 class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-rulesdataflowerr2024_004><span>ERR/2024_004</span></a></label>
@@ -1021,8 +1021,8 @@
 <label for=m-rulesnotebookswarn2023_003-check><a href=/rules/notebooks/WARN/2023_003/ title=notebooks/WARN/2023_003 class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-rulesnotebookswarn2023_003><span>WARN/2023_003</span></a></label>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-rulespubsub-li>
-<input type=checkbox id=m-rulespubsub-check>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-rulespubsub-li>
+<input type=checkbox id=m-rulespubsub-check checked>
 <label for=m-rulespubsub-check><a href=/rules/pubsub/ title=PUBSUB class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-rulespubsub><span>pubsub</span></a></label>
 <ul class="ul-2 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-rulespubsubbp2024_001-li>
@@ -1031,9 +1031,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-rulespubsuberr2024_001-li>
 <input type=checkbox id=m-rulespubsuberr2024_001-check>
 <label for=m-rulespubsuberr2024_001-check><a href=/rules/pubsub/ERR/2024_001/ title=pubsub/ERR/2024_001 class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-rulespubsuberr2024_001><span>ERR/2024_001</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-rulespubsuberr2024_003-li>
-<input type=checkbox id=m-rulespubsuberr2024_003-check>
-<label for=m-rulespubsuberr2024_003-check><a href=/rules/pubsub/ERR/2024_003/ title=pubsub/ERR/2024_003 class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-rulespubsuberr2024_003><span>ERR/2024_003</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-rulespubsuberr2024_003-li>
+<input type=checkbox id=m-rulespubsuberr2024_003-check checked>
+<label for=m-rulespubsuberr2024_003-check><a href=/rules/pubsub/ERR/2024_003/ title=pubsub/ERR/2024_003 class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-rulespubsuberr2024_003><span class=td-sidebar-nav-active-item>ERR/2024_003</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-rulespubsubwarn2023_001-li>
 <input type=checkbox id=m-rulespubsubwarn2023_001-check>
 <label for=m-rulespubsubwarn2023_001-check><a href=/rules/pubsub/WARN/2023_001/ title=pubsub/WARN/2023_001 class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-rulespubsubwarn2023_001><span>WARN/2023_001</span></a></label>
@@ -1128,31 +1128,30 @@
 </ul>
 </nav></div>
 <div class="td-page-meta ml-0 pb-1 pt-0 mb-0">
-<a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/rules/dataflow/ERR/2024_003.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-<a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=dataflow/ERR/2024_003" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
+<a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/rules/pubsub/ERR/2024_003.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+<a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=pubsub/ERR/2024_003" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
 </div>
 </aside>
 <main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
 <div class=td-content>
-<h1>dataflow/ERR/2024_003</h1>
-<div class=lead>Streaming Dataflow jobs are not using WRITE_TRUNCATE when working with unbounded PCollections.</div>
+<h1>pubsub/ERR/2024_003</h1>
+<div class=lead>Pub/Sub Snapshot creation fails if subscription backlog is too old.</div>
 <header class=article-meta>
 </header>
-<p><strong>Product</strong>: <a href=https://cloud.google.com/dataflow>Dataflow</a><br>
-<strong>Rule class</strong>: ERR - Something that is very likely to be wrong</p>
+<p><strong>Product</strong>: <a href=https://cloud.google.com/pubsub/>Cloud Pub/Sub</a><br>
+<strong>Rule class</strong>: ERR - Something that is possibly wrong</p>
 <h3 id=description>Description</h3>
-<p>Dataflow jobs when using WRITE_TRUNCATE with unbounded PCollections sources
-would return the below warning:</p>
-<pre tabindex=0><code>WriteDisposition.WRITE_TRUNCATE is not supported for an unbounded PCollection
-</code></pre><h3 id=remediation>Remediation</h3>
-<p>BigQueryIO doesn&rsquo;t support streaming query (or an unbounded source) to BigQuery with the &ldquo;Overwrite table&rdquo; (WriteDisposition.WRITE_TRUNCATE) option. If the user selects a Pub/Sub topic as the source, in the Create Dataflow job panel under the path Destination > BigQuery > Write disposition, it will not show <code>Overwrite table</code> option but only the options <code>Write if empty</code> and <code>Append to table</code>.</p>
-<p>This is an intended behavior to prevent the exception mentioned above. If you are manually setting this parameter in your code base, the above warning is thrown, which will lead to stuckness on the job.</p>
+<p>Pub/Sub Snapshot creation fails if subscription backlog is too old.</p>
+<p>Unable to create snapshot if the subscription backlog is too old and message of
+&lsquo;subscription&rsquo;s backlog is too old&rsquo; is displayed on the cloud console.</p>
+<h3 id=remediation>Remediation</h3>
+<p>Create the snapshot well before its maximum expiry time of 7days. The exact lifetime of snapshot
+is 7 days - (age of oldest unacked message in the subscription).</p>
 <h3 id=further-information>Further information</h3>
-<ul>
-<li><a href=https://cloud.google.com/bigquery/docs/reference/rest/v2/Job>BigQuery job</a></li>
-</ul>
+<p>Please find below for more information about the snapshot creation.
+<a href=https://cloud.google.com/pubsub/docs/reference/rest/v1/Snapshot>Pub/Sub Snapshot Creation</a></p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified April 29, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/33b2796eefb624c7bf675bf7cda15405e843748c>new rule: streaming dataflow jobs are not using write_truncate when working with unbounded pcollections (33b2796ee)</a>
+Last modified June 18, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/5f2e3c0ba494ef20b22bdba15070681a8974e12b>Merge "new rule: snapshot creation fails if backlog is too old" -- Branch commit log -- commit 8b554030eeb25050237c9407a7bf43ae729e6a3b Author: Rajkumar Gupta &lt;rajkumargupta@google.com> Date: 2024-05-30T11:01:02Z (5f2e3c0ba)</a>
 </div>
 </div>
 </main>
