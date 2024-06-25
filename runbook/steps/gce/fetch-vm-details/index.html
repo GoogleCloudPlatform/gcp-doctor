@@ -13,24 +13,24 @@
 <link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96>
 <link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
-<title>gce/Os Login Status Check | gcpdiag</title>
-<meta name=description content="Checks for OS Login setup and and non OS login setup on a VM to guide further diagnostics.
+<title>gce/Fetch Vm Details | gcpdiag</title>
+<meta name=description content="Fetching VM details ...
 ">
-<meta property="og:title" content="gce/Os Login Status Check">
-<meta property="og:description" content="Checks for OS Login setup and and non OS login setup on a VM to guide further diagnostics.
+<meta property="og:title" content="gce/Fetch Vm Details">
+<meta property="og:description" content="Fetching VM details ...
 ">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://gcpdiag.dev/runbook/steps/gce/os-login-status-check/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-05-29T19:21:56+00:00"><meta property="og:site_name" content="gcpdiag">
-<meta itemprop=name content="gce/Os Login Status Check">
-<meta itemprop=description content="Checks for OS Login setup and and non OS login setup on a VM to guide further diagnostics.
+<meta property="og:url" content="https://gcpdiag.dev/runbook/steps/gce/fetch-vm-details/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
+<meta property="article:modified_time" content="2024-06-25T10:18:59+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta itemprop=name content="gce/Fetch Vm Details">
+<meta itemprop=description content="Fetching VM details ...
 ">
-<meta itemprop=dateModified content="2024-05-29T19:21:56+00:00">
-<meta itemprop=wordCount content="24"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2024-06-25T10:18:59+00:00">
+<meta itemprop=wordCount content="89"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
-<meta name=twitter:title content="gce/Os Login Status Check">
-<meta name=twitter:description content="Checks for OS Login setup and and non OS login setup on a VM to guide further diagnostics.
+<meta name=twitter:title content="gce/Fetch Vm Details">
+<meta name=twitter:description content="Fetching VM details ...
 ">
 <link href=/scss/main.css rel=stylesheet>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
@@ -171,9 +171,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcecustom-step-li>
 <input type=checkbox id=m-runbookstepsgcecustom-step-check>
 <label for=m-runbookstepsgcecustom-step-check><a href=/runbook/steps/gce/custom-step/ title="gce/Custom Step" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcecustom-step><span>Custom Step</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcefetch-vm-details-li>
-<input type=checkbox id=m-runbookstepsgcefetch-vm-details-check>
-<label for=m-runbookstepsgcefetch-vm-details-check><a href=/runbook/steps/gce/fetch-vm-details/ title="gce/Fetch Vm Details" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcefetch-vm-details><span>Fetch Vm Details</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-runbookstepsgcefetch-vm-details-li>
+<input type=checkbox id=m-runbookstepsgcefetch-vm-details-check checked>
+<label for=m-runbookstepsgcefetch-vm-details-check><a href=/runbook/steps/gce/fetch-vm-details/ title="gce/Fetch Vm Details" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcefetch-vm-details><span class=td-sidebar-nav-active-item>Fetch Vm Details</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcegce-firewall-allows-ssh-li>
 <input type=checkbox id=m-runbookstepsgcegce-firewall-allows-ssh-check>
 <label for=m-runbookstepsgcegce-firewall-allows-ssh-check><a href=/runbook/steps/gce/gce-firewall-allows-ssh/ title="gce/Gce Firewall Allows Ssh" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcegce-firewall-allows-ssh><span>Gce Firewall Allows Ssh</span></a></label>
@@ -210,9 +210,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgceops-agent-start-li>
 <input type=checkbox id=m-runbookstepsgceops-agent-start-check>
 <label for=m-runbookstepsgceops-agent-start-check><a href=/runbook/steps/gce/ops-agent-start/ title="gce/Ops Agent Start" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgceops-agent-start><span>Ops Agent Start</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-runbookstepsgceos-login-status-check-li>
-<input type=checkbox id=m-runbookstepsgceos-login-status-check-check checked>
-<label for=m-runbookstepsgceos-login-status-check-check><a href=/runbook/steps/gce/os-login-status-check/ title="gce/Os Login Status Check" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgceos-login-status-check><span class=td-sidebar-nav-active-item>Os Login Status Check</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgceos-login-status-check-li>
+<input type=checkbox id=m-runbookstepsgceos-login-status-check-check>
+<label for=m-runbookstepsgceos-login-status-check-check><a href=/runbook/steps/gce/os-login-status-check/ title="gce/Os Login Status Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgceos-login-status-check><span>Os Login Status Check</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcepoxis-user-has-valid-ssh-key-check-li>
 <input type=checkbox id=m-runbookstepsgcepoxis-user-has-valid-ssh-key-check-check>
 <label for=m-runbookstepsgcepoxis-user-has-valid-ssh-key-check-check><a href=/runbook/steps/gce/poxis-user-has-valid-ssh-key-check/ title="gce/Poxis User Has Valid Ssh Key Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcepoxis-user-has-valid-ssh-key-check><span>Poxis User Has Valid Ssh Key Check</span></a></label>
@@ -402,24 +402,47 @@
 </div>
 </aside>
 <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+<div class=td-toc><nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li><a href=#description>Description</a></li>
+<li><a href=#failure-reason>Failure Reason</a></li>
+<li><a href=#failure-remediation>Failure Remediation</a></li>
+<li><a href=#success-reason>Success Reason</a></li>
+</ul>
+</li>
+</ul>
+</nav></div>
 <div class="td-page-meta ml-0 pb-1 pt-0 mb-0">
-<a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/runbook/steps/gce/os-login-status-check.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-<a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=gce/Os%20Login%20Status%20Check" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
+<a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/runbook/steps/gce/fetch-vm-details.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+<a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=gce/Fetch%20Vm%20Details" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
 </div>
 </aside>
 <main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
 <div class=td-content>
-<h1>gce/Os Login Status Check</h1>
-<div class=lead>Checks for OS Login setup and and non OS login setup on a VM to guide further diagnostics.</div>
+<h1>gce/Fetch Vm Details</h1>
+<div class=lead>Fetching VM details &mldr;</div>
 <header class=article-meta>
 </header>
 <p><strong>Product</strong>: <a href=https://cloud.google.com/compute>Compute Engine</a><br>
-<strong>Step Type</strong>: GATEWAY</p>
+<strong>Step Type</strong>: START</p>
 <h3 id=description>Description</h3>
-<p>If using OS Login investigates OS Login related configuration and permission and if not
-Checks Keybased Configuration.</p>
+<p>None</p>
+<h3 id=failure-reason>Failure Reason</h3>
+<p>The GCE VM {vm_name} is in an undesired state: {status}.</p>
+<h3 id=failure-remediation>Failure Remediation</h3>
+<p>This step failed because GCE Virtual Machine {vm_name} is expected to be in a RUNNING state:</p>
+<p>To initiate the lifecycle transition from {status} to RUNNING state follow guide [1]</p>
+<p>If you encounter any difficulties during the startup process, consult the troubleshooting
+documentation to identify and resolve potential startup issues [2]
+Resources:
+[1] <a href=https://cloud.google.com/compute/docs/instances/stop-start-instance#restart-vm>https://cloud.google.com/compute/docs/instances/stop-start-instance#restart-vm</a>
+[2] <a href=https://cloud.google.com/compute/docs/troubleshooting/vm-startup#identify_the_reason_why_the_boot_disk_isnt_booting>https://cloud.google.com/compute/docs/troubleshooting/vm-startup#identify_the_reason_why_the_boot_disk_isnt_booting</a></p>
+<h3 id=success-reason>Success Reason</h3>
+<p>The GCE VM {vm_name} is in the expected state: {status}.</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified May 29, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/04597c23b9ae7e0aedfa1b08334b9e9aec6222e7>Merge "spell check and corrections" -- Branch commit log -- commit 12be01778fc37f8cc299e80cbeb598d2385ba794 Author: Rodney Peck &lt;ropeck@google.com> Date: 2024-05-22T12:02:54-07:00 (04597c23b)</a>
+Last modified June 25, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/07b85ac29f016825dd5d0ed590d401e14b890da4>Merge "Runbook for analysing Serial console logs" -- Branch commit log -- commit 31db153fcd675c72e2c40f49c124c37eccdc0db9 Author: Vinay Gahlout &lt;vinaygahlout@google.com> Date: 2024-06-18T14:40:20Z (07b85ac29)</a>
 </div>
 </div>
 </main>
