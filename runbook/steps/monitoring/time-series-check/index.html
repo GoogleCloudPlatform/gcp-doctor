@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/steps/monitoring/time-series-check/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-04-08T19:25:34+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2024-06-26T15:59:34+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="monitoring/Time Series Check">
 <meta itemprop=description content="Assess if a given metric is has expected values..
 ">
-<meta itemprop=dateModified content="2024-04-08T19:25:34+00:00">
-<meta itemprop=wordCount content="24"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2024-06-26T15:59:34+00:00">
+<meta itemprop=wordCount content="122"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="monitoring/Time Series Check">
@@ -462,6 +462,20 @@
 </div>
 </aside>
 <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+<div class=td-toc><nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li><a href=#description>Description</a></li>
+<li><a href=#failure-reason>Failure Reason</a></li>
+<li><a href=#failure-remediation>Failure Remediation</a></li>
+<li><a href=#success-reason>Success Reason</a></li>
+<li><a href=#uncertain-reason>Uncertain Reason</a></li>
+<li><a href=#uncertain-remediation>Uncertain Remediation</a></li>
+</ul>
+</li>
+</ul>
+</nav></div>
 <div class="td-page-meta ml-0 pb-1 pt-0 mb-0">
 <a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/runbook/steps/monitoring/time-series-check.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
 <a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=monitoring/Time%20Series%20Check" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
@@ -473,7 +487,7 @@
 <div class=lead>Assess if a given metric is has expected values..</div>
 <header class=article-meta>
 </header>
-<p><strong>Product</strong>:<br>
+<p><strong>Product</strong>: <a href=https://cloud.google.com/monitoring>https://cloud.google.com/monitoring</a><br>
 <strong>Step Type</strong>: AUTOMATED STEP</p>
 <h3 id=description>Description</h3>
 <p>Currently checks if an attribute</p>
@@ -481,8 +495,24 @@
 <li>Currently checks if metrics exists indicating a problem</li>
 <li>Improve to be more flexible.</li>
 </ul>
+<h3 id=failure-reason>Failure Reason</h3>
+<p>A known bad value is present within the checked metric collection indicating a problem</p>
+<h3 id=failure-remediation>Failure Remediation</h3>
+<p>View Cloud Monitoring to get more details of how to what is causing this issue.</p>
+<p>Run the following cloud logging query in GCP.</p>
+<p>Query:
+{query}</p>
+<h3 id=success-reason>Success Reason</h3>
+<p>The expected good value is present within the checked metric collection.</p>
+<h3 id=uncertain-reason>Uncertain Reason</h3>
+<p>We are not sure of the outcome manually check this cloud logging</p>
+<h3 id=uncertain-remediation>Uncertain Remediation</h3>
+<p>View Cloud logging to get more details of how to what is causing this issue.</p>
+<p>Run the following cloud logging query in GCP.</p>
+<p>Query:
+{query}</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified April 8, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/c29f84642d111c60bcf73c689ce51f91626142ed>Merge changes I21c374c0,I8dcceef9 (c29f84642)</a>
+Last modified June 26, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/f6374bd459ec7fd59c135ccfa9a4cbd1e10db7da>Merge "Adding Cloud Monitoring to the list of supported products" -- Branch commit log -- commit 52abc6961c68bf466169d2fb274a88efe71ab510 Author: gcpdiag team &lt;noreply@google.com> Date: 2024-06-25T21:01:59Z (f6374bd45)</a>
 </div>
 </div>
 </main>
