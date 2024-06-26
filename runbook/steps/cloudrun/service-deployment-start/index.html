@@ -13,24 +13,24 @@
 <link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96>
 <link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
-<title>vpc/Internal Interface Check | gcpdiag</title>
-<meta name=description content="Check connectivity to external endpoint when the VM source NIC is an internal interface.
+<title>cloudrun/Service Deployment Start | gcpdiag</title>
+<meta name=description content="Prepare the parameters for cloudrun/service-deployment runbook.
 ">
-<meta property="og:title" content="vpc/Internal Interface Check">
-<meta property="og:description" content="Check connectivity to external endpoint when the VM source NIC is an internal interface.
+<meta property="og:title" content="cloudrun/Service Deployment Start">
+<meta property="og:description" content="Prepare the parameters for cloudrun/service-deployment runbook.
 ">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://gcpdiag.dev/runbook/steps/vpc/internal-interface-check/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-06-02T02:37:16+00:00"><meta property="og:site_name" content="gcpdiag">
-<meta itemprop=name content="vpc/Internal Interface Check">
-<meta itemprop=description content="Check connectivity to external endpoint when the VM source NIC is an internal interface.
+<meta property="og:url" content="https://gcpdiag.dev/runbook/steps/cloudrun/service-deployment-start/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
+<meta property="article:modified_time" content="2024-06-26T12:45:37+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta itemprop=name content="cloudrun/Service Deployment Start">
+<meta itemprop=description content="Prepare the parameters for cloudrun/service-deployment runbook.
 ">
-<meta itemprop=dateModified content="2024-06-02T02:37:16+00:00">
-<meta itemprop=wordCount content="34"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2024-06-26T12:45:37+00:00">
+<meta itemprop=wordCount content="17"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
-<meta name=twitter:title content="vpc/Internal Interface Check">
-<meta name=twitter:description content="Check connectivity to external endpoint when the VM source NIC is an internal interface.
+<meta name=twitter:title content="cloudrun/Service Deployment Start">
+<meta name=twitter:description content="Prepare the parameters for cloudrun/service-deployment runbook.
 ">
 <link href=/scss/main.css rel=stylesheet>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
@@ -137,13 +137,13 @@
 <input type=checkbox id=m-runbooksteps-check checked>
 <label for=m-runbooksteps-check><a href=/runbook/steps/ title="All Steps" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbooksteps><span>steps</span></a></label>
 <ul class="ul-2 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepscloudrun-li>
-<input type=checkbox id=m-runbookstepscloudrun-check>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-runbookstepscloudrun-li>
+<input type=checkbox id=m-runbookstepscloudrun-check checked>
 <label for=m-runbookstepscloudrun-check><a href=/runbook/steps/cloudrun/ title=CLOUDRUN class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepscloudrun><span>cloudrun</span></a></label>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepscloudrunservice-deployment-start-li>
-<input type=checkbox id=m-runbookstepscloudrunservice-deployment-start-check>
-<label for=m-runbookstepscloudrunservice-deployment-start-check><a href=/runbook/steps/cloudrun/service-deployment-start/ title="cloudrun/Service Deployment Start" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepscloudrunservice-deployment-start><span>Service Deployment Start</span></a></label>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-runbookstepscloudrunservice-deployment-start-li>
+<input type=checkbox id=m-runbookstepscloudrunservice-deployment-start-check checked>
+<label for=m-runbookstepscloudrunservice-deployment-start-check><a href=/runbook/steps/cloudrun/service-deployment-start/ title="cloudrun/Service Deployment Start" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-runbookstepscloudrunservice-deployment-start><span class=td-sidebar-nav-active-item>Service Deployment Start</span></a></label>
 </li>
 </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepscrm-li>
@@ -413,16 +413,16 @@
 <label for=m-runbookstepsvertexworkbench-instance-stuck-in-provisioning-start-check><a href=/runbook/steps/vertex/workbench-instance-stuck-in-provisioning-start/ title="vertex/Workbench Instance Stuck In Provisioning Start" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsvertexworkbench-instance-stuck-in-provisioning-start><span>Workbench Instance Stuck In Provisioning Start</span></a></label>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-runbookstepsvpc-li>
-<input type=checkbox id=m-runbookstepsvpc-check checked>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepsvpc-li>
+<input type=checkbox id=m-runbookstepsvpc-check>
 <label for=m-runbookstepsvpc-check><a href=/runbook/steps/vpc/ title=VPC class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepsvpc><span>vpc</span></a></label>
 <ul class="ul-3 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsvpcexternal-interface-check-li>
 <input type=checkbox id=m-runbookstepsvpcexternal-interface-check-check>
 <label for=m-runbookstepsvpcexternal-interface-check-check><a href=/runbook/steps/vpc/external-interface-check/ title="vpc/External Interface Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsvpcexternal-interface-check><span>External Interface Check</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-runbookstepsvpcinternal-interface-check-li>
-<input type=checkbox id=m-runbookstepsvpcinternal-interface-check-check checked>
-<label for=m-runbookstepsvpcinternal-interface-check-check><a href=/runbook/steps/vpc/internal-interface-check/ title="vpc/Internal Interface Check" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-runbookstepsvpcinternal-interface-check><span class=td-sidebar-nav-active-item>Internal Interface Check</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsvpcinternal-interface-check-li>
+<input type=checkbox id=m-runbookstepsvpcinternal-interface-check-check>
+<label for=m-runbookstepsvpcinternal-interface-check-check><a href=/runbook/steps/vpc/internal-interface-check/ title="vpc/Internal Interface Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsvpcinternal-interface-check><span>Internal Interface Check</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsvpcnat-dropped-received-packet-check-li>
 <input type=checkbox id=m-runbookstepsvpcnat-dropped-received-packet-check-check>
 <label for=m-runbookstepsvpcnat-dropped-received-packet-check-check><a href=/runbook/steps/vpc/nat-dropped-received-packet-check/ title="vpc/Nat Dropped Received Packet Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsvpcnat-dropped-received-packet-check><span>Nat Dropped Received Packet Check</span></a></label>
@@ -463,23 +463,22 @@
 </aside>
 <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
 <div class="td-page-meta ml-0 pb-1 pt-0 mb-0">
-<a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/runbook/steps/vpc/internal-interface-check.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-<a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=vpc/Internal%20Interface%20Check" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
+<a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/runbook/steps/cloudrun/service-deployment-start.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+<a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=cloudrun/Service%20Deployment%20Start" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
 </div>
 </aside>
 <main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
 <div class=td-content>
-<h1>vpc/Internal Interface Check</h1>
-<div class=lead>Check connectivity to external endpoint when the VM source NIC is an internal interface.</div>
+<h1>cloudrun/Service Deployment Start</h1>
+<div class=lead>Prepare the parameters for cloudrun/service-deployment runbook.</div>
 <header class=article-meta>
 </header>
-<p><strong>Product</strong>: <a href=https://cloud.google.com/vpc>Virtual Private Cloud</a><br>
-<strong>Step Type</strong>: COMPOSITE STEP</p>
+<p><strong>Product</strong>: <a href=https://cloud.google.com/run>Cloud Run</a><br>
+<strong>Step Type</strong>: START</p>
 <h3 id=description>Description</h3>
-<p>This step checks firewall and routing rules exist to allow for connnectity to the external
-IP address. It also runs and reports a connectivity test.</p>
+<p>Looks up the cloud run service making sure it exists.</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified June 2, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/5eb6370752be66d909e5594870de7560c5d6e124>new runbook: vm external ip connectivity runbook (5eb637075)</a>
+Last modified June 26, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/32465ee70c6fbdb4124980bedf617858cae48862>Start Cloud Run deployment runbook. (32465ee70)</a>
 </div>
 </div>
 </main>
