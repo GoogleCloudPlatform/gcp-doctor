@@ -21,11 +21,11 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/steps/gce/poxis-user-has-valid-ssh-key-check/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-05-29T19:21:56+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2024-07-01T15:03:31+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gce/Poxis User Has Valid Ssh Key Check">
 <meta itemprop=description content="Verifies the existence of a valid SSH key for the specified local Proxy user on a (VM).
 ">
-<meta itemprop=dateModified content="2024-05-29T19:21:56+00:00">
+<meta itemprop=dateModified content="2024-07-01T15:03:31+00:00">
 <meta itemprop=wordCount content="115"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
@@ -511,15 +511,15 @@ is essential for secure SSH access. The check is performed against the SSH keys 
 the VM&rsquo;s metadata. A successful verification indicates that the user is likely able to SSH into
 the VM using their key.</p>
 <h3 id=failure-reason>Failure Reason</h3>
-<p>The local user "" lacks at least one valid SSH key for VM: &ldquo;&rdquo;.</p>
+<p>The local user &ldquo;{local_user}&rdquo; lacks at least one valid SSH key for VM: &ldquo;{vm_name}&rdquo;.</p>
 <h3 id=failure-remediation>Failure Remediation</h3>
-<p>Ensure "" has a valid SSH key by following the guide:
+<p>Ensure &ldquo;{local_user}&rdquo; has a valid SSH key by following the guide:
 <a href=https://cloud.google.com/compute/docs/connect/add-ssh-keys#add_ssh_keys_to_instance_metadata>https://cloud.google.com/compute/docs/connect/add-ssh-keys#add_ssh_keys_to_instance_metadata</a></p>
 <h3 id=success-reason>Success Reason</h3>
-<p>The local user "" is confirmed to have at least one valid SSH key
-configured on the GCE VM: &ldquo;&rdquo;.</p>
+<p>The local user &ldquo;{local_user}&rdquo; is confirmed to have at least one valid SSH key
+configured on the GCE VM: &ldquo;{vm_name}&rdquo;.</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified May 29, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/04597c23b9ae7e0aedfa1b08334b9e9aec6222e7>Merge "spell check and corrections" -- Branch commit log -- commit 12be01778fc37f8cc299e80cbeb598d2385ba794 Author: Rodney Peck &lt;ropeck@google.com> Date: 2024-05-22T12:02:54-07:00 (04597c23b)</a>
+Last modified July 1, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/e8dac50fe3bef2ed431422f1290b8fe6d9f4c5b0>Merge "Improve Error handling." -- Branch commit log -- commit 409f3bf2571dd2bca46ee67d2b4b29150951681e Author: Kwesi Graham &lt;akyen@google.com> Date: 2024-06-27T16:21:11Z (e8dac50fe)</a>
 </div>
 </div>
 </main>

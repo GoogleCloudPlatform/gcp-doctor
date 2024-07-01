@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/diagnostic-trees/vpc/vm-external-ip-connectivity/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-06-02T02:37:16+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2024-07-01T15:03:31+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="vpc/Vm External Ip Connectivity">
 <meta itemprop=description content="Troubleshooting for common issues which affect VM connectivity to external IP addresses.
 ">
-<meta itemprop=dateModified content="2024-06-02T02:37:16+00:00">
-<meta itemprop=wordCount content="302"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2024-07-01T15:03:31+00:00">
+<meta itemprop=wordCount content="286"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="vpc/Vm External Ip Connectivity">
@@ -530,14 +530,14 @@ verify the VM is served by a Public NAT Gateway and check there are no issues on
 </ul>
 <h3 id=executing-this-runbook>Executing this runbook</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>gcpdiag runbook vpc/vm-external-ip-connectivity <span style=color:#4e9a06>\
-</span><span style=color:#4e9a06></span>  -p <span style=color:#000>project_id</span> <span style=color:#ce5c00;font-weight:700>=</span> value <span style=color:#4e9a06>\
-</span><span style=color:#4e9a06></span>  -p <span style=color:#000>name</span> <span style=color:#ce5c00;font-weight:700>=</span> value <span style=color:#4e9a06>\
-</span><span style=color:#4e9a06></span>  -p <span style=color:#000>id</span> <span style=color:#ce5c00;font-weight:700>=</span> value <span style=color:#4e9a06>\
-</span><span style=color:#4e9a06></span>  -p <span style=color:#000>dest_ip</span> <span style=color:#ce5c00;font-weight:700>=</span> value <span style=color:#4e9a06>\
-</span><span style=color:#4e9a06></span>  -p <span style=color:#000>dest_port</span> <span style=color:#ce5c00;font-weight:700>=</span> value <span style=color:#4e9a06>\
-</span><span style=color:#4e9a06></span>  -p <span style=color:#000>protocol_type</span> <span style=color:#ce5c00;font-weight:700>=</span> value <span style=color:#4e9a06>\
-</span><span style=color:#4e9a06></span>  -p <span style=color:#000>src_nic</span> <span style=color:#ce5c00;font-weight:700>=</span> value <span style=color:#4e9a06>\
-</span><span style=color:#4e9a06></span>  -p <span style=color:#000>zone</span> <span style=color:#ce5c00;font-weight:700>=</span> value
+</span><span style=color:#4e9a06></span>  -p <span style=color:#000>project_id</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
+</span><span style=color:#4e9a06></span>  -p <span style=color:#000>name</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
+</span><span style=color:#4e9a06></span>  -p <span style=color:#000>id</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
+</span><span style=color:#4e9a06></span>  -p <span style=color:#000>dest_ip</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
+</span><span style=color:#4e9a06></span>  -p <span style=color:#000>dest_port</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
+</span><span style=color:#4e9a06></span>  -p <span style=color:#000>protocol_type</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
+</span><span style=color:#4e9a06></span>  -p <span style=color:#000>src_nic</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
+</span><span style=color:#4e9a06></span>  -p <span style=color:#000>zone</span><span style=color:#ce5c00;font-weight:700>=</span>value
 </code></pre></div><h4 id=parameters>Parameters</h4>
 <table>
 <thead>
@@ -632,7 +632,7 @@ verify the VM is served by a Public NAT Gateway and check there are no issues on
 </li>
 </ul>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified June 2, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/5eb6370752be66d909e5594870de7560c5d6e124>new runbook: vm external ip connectivity runbook (5eb637075)</a>
+Last modified July 1, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/e8dac50fe3bef2ed431422f1290b8fe6d9f4c5b0>Merge "Improve Error handling." -- Branch commit log -- commit 409f3bf2571dd2bca46ee67d2b4b29150951681e Author: Kwesi Graham &lt;akyen@google.com> Date: 2024-06-27T16:21:11Z (e8dac50fe)</a>
 </div>
 </div>
 </main>
