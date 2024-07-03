@@ -13,29 +13,22 @@
 <link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96>
 <link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
-<title>gce/Serial Log Analyser | gcpdiag</title>
-<meta name=description content="GCE VM Serial log analyser
+<title>NAT | gcpdiag</title>
+<meta name=description content="All steps available in nat
 ">
-<meta property="og:title" content="gce/Serial Log Analyser">
-<meta property="og:description" content="GCE VM Serial log analyser
-">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://gcpdiag.dev/runbook/diagnostic-trees/gce/serial-log-analyser/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-07-01T15:03:31+00:00"><meta property="og:site_name" content="gcpdiag">
-<meta itemprop=name content="gce/Serial Log Analyser">
-<meta itemprop=description content="GCE VM Serial log analyser
-">
-<meta itemprop=dateModified content="2024-07-01T15:03:31+00:00">
-<meta itemprop=wordCount content="342"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
-<meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
+<meta property="og:title" content="NAT">
+<meta property="og:description" content="Diagnostics for GCP">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gcpdiag.dev/runbook/steps/nat/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="og:site_name" content="gcpdiag">
+<meta itemprop=name content="NAT">
+<meta itemprop=description content="Diagnostics for GCP"><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
-<meta name=twitter:title content="gce/Serial Log Analyser">
-<meta name=twitter:description content="GCE VM Serial log analyser
-">
+<meta name=twitter:title content="NAT">
+<meta name=twitter:description content="Diagnostics for GCP">
 <link href=/scss/main.css rel=stylesheet>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
 </head>
-<body class=td-page>
+<body class=td-section>
 <header>
 <nav class="js-navbar-scroll navbar navbar-expand navbar-light nav-shadow flex-column flex-md-row td-navbar">
 <a id=gcpdiag-top class=navbar-brand href=/>
@@ -79,11 +72,20 @@
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-runbook-li>
 <a href=/runbook/ title="Runbook Rules" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id=m-runbook><span>Runbook</span></a>
 <ul class=ul-1>
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-runbookdiagnostic-trees-li>
-<input type=checkbox id=m-runbookdiagnostic-trees-check checked>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookdiagnostic-trees-li>
+<input type=checkbox id=m-runbookdiagnostic-trees-check>
 <label for=m-runbookdiagnostic-trees-check><a href=/runbook/diagnostic-trees/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookdiagnostic-trees><span>Debugging Trees</span></a></label>
 <ul class="ul-2 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookdiagnostic-treesdataflow-li>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookdiagnostic-treescloudrun-li>
+<input type=checkbox id=m-runbookdiagnostic-treescloudrun-check>
+<label for=m-runbookdiagnostic-treescloudrun-check><a href=/runbook/diagnostic-trees/cloudrun/ title=CLOUDRUN class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookdiagnostic-treescloudrun><span>cloudrun</span></a></label>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookdiagnostic-treescloudrunservice-deployment-li>
+<input type=checkbox id=m-runbookdiagnostic-treescloudrunservice-deployment-check>
+<label for=m-runbookdiagnostic-treescloudrunservice-deployment-check><a href=/runbook/diagnostic-trees/cloudrun/service-deployment/ title="cloudrun/Service Deployment" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treescloudrunservice-deployment><span>cloudrun/service-deployment</span></a></label>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookdiagnostic-treesdataflow-li>
 <input type=checkbox id=m-runbookdiagnostic-treesdataflow-check>
 <label for=m-runbookdiagnostic-treesdataflow-check><a href=/runbook/diagnostic-trees/dataflow/ title=DATAFLOW class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookdiagnostic-treesdataflow><span>dataflow</span></a></label>
 <ul class="ul-3 foldable">
@@ -92,16 +94,16 @@
 <label for=m-runbookdiagnostic-treesdataflowfailed-streaming-pipeline-check><a href=/runbook/diagnostic-trees/dataflow/failed-streaming-pipeline/ title="dataflow/Failed Streaming Pipeline" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treesdataflowfailed-streaming-pipeline><span>dataflow/failed-streaming-pipeline</span></a></label>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-runbookdiagnostic-treesgce-li>
-<input type=checkbox id=m-runbookdiagnostic-treesgce-check checked>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookdiagnostic-treesgce-li>
+<input type=checkbox id=m-runbookdiagnostic-treesgce-check>
 <label for=m-runbookdiagnostic-treesgce-check><a href=/runbook/diagnostic-trees/gce/ title=GCE class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookdiagnostic-treesgce><span>gce</span></a></label>
 <ul class="ul-3 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookdiagnostic-treesgceops-agent-li>
 <input type=checkbox id=m-runbookdiagnostic-treesgceops-agent-check>
 <label for=m-runbookdiagnostic-treesgceops-agent-check><a href=/runbook/diagnostic-trees/gce/ops-agent/ title="gce/Ops Agent" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treesgceops-agent><span>gce/ops-agent</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-runbookdiagnostic-treesgceserial-log-analyser-li>
-<input type=checkbox id=m-runbookdiagnostic-treesgceserial-log-analyser-check checked>
-<label for=m-runbookdiagnostic-treesgceserial-log-analyser-check><a href=/runbook/diagnostic-trees/gce/serial-log-analyser/ title="gce/Serial Log Analyser" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treesgceserial-log-analyser><span class=td-sidebar-nav-active-item>gce/serial-log-analyser</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookdiagnostic-treesgceserial-log-analyzer-li>
+<input type=checkbox id=m-runbookdiagnostic-treesgceserial-log-analyzer-check>
+<label for=m-runbookdiagnostic-treesgceserial-log-analyzer-check><a href=/runbook/diagnostic-trees/gce/serial-log-analyzer/ title="gce/Serial Log Analyzer" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treesgceserial-log-analyzer><span>gce/serial-log-analyzer</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookdiagnostic-treesgcessh-li>
 <input type=checkbox id=m-runbookdiagnostic-treesgcessh-check>
 <label for=m-runbookdiagnostic-treesgcessh-check><a href=/runbook/diagnostic-trees/gce/ssh/ title=gce/Ssh class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treesgcessh><span>gce/ssh</span></a></label>
@@ -145,15 +147,21 @@
 </ul>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbooksteps-li>
-<input type=checkbox id=m-runbooksteps-check>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-runbooksteps-li>
+<input type=checkbox id=m-runbooksteps-check checked>
 <label for=m-runbooksteps-check><a href=/runbook/steps/ title="All Steps" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbooksteps><span>steps</span></a></label>
 <ul class="ul-2 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepscloudrun-li>
 <input type=checkbox id=m-runbookstepscloudrun-check>
 <label for=m-runbookstepscloudrun-check><a href=/runbook/steps/cloudrun/ title=CLOUDRUN class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepscloudrun><span>cloudrun</span></a></label>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepscloudrunservice-deployment-start-li>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepscloudruncontainer-failed-to-start-step-li>
+<input type=checkbox id=m-runbookstepscloudruncontainer-failed-to-start-step-check>
+<label for=m-runbookstepscloudruncontainer-failed-to-start-step-check><a href=/runbook/steps/cloudrun/container-failed-to-start-step/ title="cloudrun/Container Failed To Start Step" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepscloudruncontainer-failed-to-start-step><span>Container Failed To Start Step</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepscloudrunservice-deployment-code-step-li>
+<input type=checkbox id=m-runbookstepscloudrunservice-deployment-code-step-check>
+<label for=m-runbookstepscloudrunservice-deployment-code-step-check><a href=/runbook/steps/cloudrun/service-deployment-code-step/ title="cloudrun/Service Deployment Code Step" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepscloudrunservice-deployment-code-step><span>Service Deployment Code Step</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepscloudrunservice-deployment-start-li>
 <input type=checkbox id=m-runbookstepscloudrunservice-deployment-start-check>
 <label for=m-runbookstepscloudrunservice-deployment-start-check><a href=/runbook/steps/cloudrun/service-deployment-start/ title="cloudrun/Service Deployment Start" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepscloudrunservice-deployment-start><span>Service Deployment Start</span></a></label>
 </li>
@@ -422,6 +430,15 @@
 <label for=m-runbookstepsiamvm-has-an-active-service-account-check><a href=/runbook/steps/iam/vm-has-an-active-service-account/ title="iam/Vm Has An Active Service Account" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsiamvm-has-an-active-service-account><span>Vm Has An Active Service Account</span></a></label>
 </li>
 </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepslogs-li>
+<input type=checkbox id=m-runbookstepslogs-check>
+<label for=m-runbookstepslogs-check><a href=/runbook/steps/logs/ title=LOGS class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepslogs><span>logs</span></a></label>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslogslogs-check-li>
+<input type=checkbox id=m-runbookstepslogslogs-check-check>
+<label for=m-runbookstepslogslogs-check-check><a href=/runbook/steps/logs/logs-check/ title="logs/Logs Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslogslogs-check><span>Logs Check</span></a></label>
+</li>
+</ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepsmonitoring-li>
 <input type=checkbox id=m-runbookstepsmonitoring-check>
 <label for=m-runbookstepsmonitoring-check><a href=/runbook/steps/monitoring/ title=MONITORING class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepsmonitoring><span>monitoring</span></a></label>
@@ -429,6 +446,21 @@
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsmonitoringtime-series-check-li>
 <input type=checkbox id=m-runbookstepsmonitoringtime-series-check-check>
 <label for=m-runbookstepsmonitoringtime-series-check-check><a href=/runbook/steps/monitoring/time-series-check/ title="monitoring/Time Series Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsmonitoringtime-series-check><span>Time Series Check</span></a></label>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-runbookstepsnat-li>
+<input type=checkbox id=m-runbookstepsnat-check checked>
+<label for=m-runbookstepsnat-check><a href=/runbook/steps/nat/ title=NAT class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id=m-runbookstepsnat><span class=td-sidebar-nav-active-item>nat</span></a></label>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsnatnat-dropped-received-packet-check-li>
+<input type=checkbox id=m-runbookstepsnatnat-dropped-received-packet-check-check>
+<label for=m-runbookstepsnatnat-dropped-received-packet-check-check><a href=/runbook/steps/nat/nat-dropped-received-packet-check/ title="nat/Nat Dropped Received Packet Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsnatnat-dropped-received-packet-check><span>Nat Dropped Received Packet Check</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsnatnat-ip-exhaustion-check-li>
+<input type=checkbox id=m-runbookstepsnatnat-ip-exhaustion-check-check>
+<label for=m-runbookstepsnatnat-ip-exhaustion-check-check><a href=/runbook/steps/nat/nat-ip-exhaustion-check/ title="nat/Nat Ip Exhaustion Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsnatnat-ip-exhaustion-check><span>Nat Ip Exhaustion Check</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsnatnat-resource-exhaustion-check-li>
+<input type=checkbox id=m-runbookstepsnatnat-resource-exhaustion-check-check>
+<label for=m-runbookstepsnatnat-resource-exhaustion-check-check><a href=/runbook/steps/nat/nat-resource-exhaustion-check/ title="nat/Nat Resource Exhaustion Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsnatnat-resource-exhaustion-check><span>Nat Resource Exhaustion Check</span></a></label>
 </li>
 </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepsvertex-li>
@@ -522,150 +554,40 @@
 </div>
 </aside>
 <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
-<div class=td-toc><nav id=TableOfContents>
-<ul>
-<li>
-<ul>
-<li><a href=#description>Description</a></li>
-<li><a href=#executing-this-runbook>Executing this runbook</a></li>
-<li><a href=#potential-steps>Potential Steps</a></li>
-</ul>
-</li>
-</ul>
-</nav></div>
 <div class="td-page-meta ml-0 pb-1 pt-0 mb-0">
-<a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/runbook/diagnostic-trees/gce/serial-log-analyser.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-<a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=gce/Serial%20Log%20Analyser" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
+<a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/runbook/steps/nat/_index.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+<a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=NAT" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
 </div>
 </aside>
 <main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
 <div class=td-content>
-<h1>gce/Serial Log Analyser</h1>
-<div class=lead>GCE VM Serial log analyser</div>
+<h1>NAT</h1>
 <header class=article-meta>
 </header>
-<p><strong>Product</strong>: <a href=https://cloud.google.com/compute>Compute Engine</a>
-<strong>Kind</strong>: Debugging Tree</p>
-<h3 id=description>Description</h3>
-<p>This runbook is designed to assist you in investigating the serial console logs of a vm.</p>
-<pre><code>Key Investigation Areas:
-
-Boot Issues:
-    - Check for Boot issues happening due to Kernel Panics
-    - Check for GRUB related issues.
-    - Check if system failed to find boot disk.
-    - Check if Filesystem corruption is causing issues with system boot.
-    - Check if &quot;/&quot; Filesystem consumption is causing issues with system boot.
-
-Memory crunch issues:
-    - Check if OOM kills happened on the VM or any other memory related issues.
-
-Network related issues:
-    - Check if metadata server became unreachable since last boot.
-    - Check if there are any time sync related errors.
-
-SSHD checks:
-    - Check if we have logs related to scuccessful startup of SSHD service.
-
-Google Guest Agent checks:
-    - Check if we have logs related to scuccessful startup of Google Guest Agent.
-</code></pre>
-<h3 id=executing-this-runbook>Executing this runbook</h3>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>gcpdiag runbook gce/serial-log-analyser <span style=color:#4e9a06>\
-</span><span style=color:#4e9a06></span>  -p <span style=color:#000>project_id</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
-</span><span style=color:#4e9a06></span>  -p <span style=color:#000>name</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
-</span><span style=color:#4e9a06></span>  -p <span style=color:#000>id</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
-</span><span style=color:#4e9a06></span>  -p <span style=color:#000>zone</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
-</span><span style=color:#4e9a06></span>  -p <span style=color:#000>serial_console_file</span><span style=color:#ce5c00;font-weight:700>=</span>value
-</code></pre></div><h4 id=parameters>Parameters</h4>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Required</th>
-<th>Default</th>
-<th>Type</th>
-<th>Help</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>project_id</code></td>
-<td>True</td>
-<td>None</td>
-<td>str</td>
-<td>The Project ID associated with the VM for which you want to analyse the Serial logs.</td>
-</tr>
-<tr>
-<td><code>name</code></td>
-<td>True</td>
-<td>None</td>
-<td>str</td>
-<td>The name of the VM, for which you want to analyse the Serial logs. Or provide the id i.e -p name=</td>
-</tr>
-<tr>
-<td><code>id</code></td>
-<td>False</td>
-<td>None</td>
-<td>str</td>
-<td>The instance-id of the VM, for which you want to analyse the Serial logs. Or provide the id i.e -p id=</td>
-</tr>
-<tr>
-<td><code>zone</code></td>
-<td>True</td>
-<td>None</td>
-<td>str</td>
-<td>The Google Cloud zone where the VM is located.</td>
-</tr>
-<tr>
-<td><code>serial_console_file</code></td>
-<td>False</td>
-<td>None</td>
-<td>str</td>
-<td>Absolute path of files contailing the Serial console logs, in case if gcpdiag is not able to reach the VM Serial logs. i.e -p serial_console_file=&ldquo;filepath1,filepath2&rdquo;</td>
-</tr>
-</tbody>
-</table>
-<p>Get help on available commands</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>gcpdiag runbook --help
-</code></pre></div><h3 id=potential-steps>Potential Steps</h3>
-<ul>
-<li>
-<p><a href=/runbook/steps/gce/fetch-vm-details>Fetch Vm Details</a></p>
-</li>
-<li>
-<p><a href=/runbook/steps/gce/vm-serial-logs-check>Vm Serial Logs Check</a></p>
-</li>
-<li>
-<p><a href=/runbook/steps/gce/vm-serial-logs-check>Vm Serial Logs Check</a></p>
-</li>
-<li>
-<p><a href=/runbook/steps/gce/vm-serial-logs-check>Vm Serial Logs Check</a></p>
-</li>
-<li>
-<p><a href=/runbook/steps/gce/vm-serial-logs-check>Vm Serial Logs Check</a></p>
-</li>
-<li>
-<p><a href=/runbook/steps/gce/vm-serial-logs-check>Vm Serial Logs Check</a></p>
-</li>
-<li>
-<p><a href=/runbook/steps/gce/vm-serial-logs-check>Vm Serial Logs Check</a></p>
-</li>
-<li>
-<p><a href=/runbook/steps/gce/vm-serial-logs-check>Vm Serial Logs Check</a></p>
-</li>
-<li>
-<p><a href=/runbook/steps/gce/vm-serial-logs-check>Vm Serial Logs Check</a></p>
-</li>
-<li>
-<p><a href=/runbook/steps/gce/vm-serial-logs-check>Vm Serial Logs Check</a></p>
-</li>
-<li>
-<p><a href=/runbook/steps/gce/analysing-serial-logs-end>Analysing Serial Logs End</a></p>
-</li>
-</ul>
+<p>All steps available in nat</p>
+<div class=section-index>
+<hr class=panel-line>
+<div class=entry>
+<h5>
+<a href=/runbook/steps/nat/nat-dropped-received-packet-check/>nat/Nat Dropped Received Packet Check</a>
+</h5>
+<p>Evaluates NATGW received_packets_dropped metric for issues.</p>
+</div>
+<div class=entry>
+<h5>
+<a href=/runbook/steps/nat/nat-ip-exhaustion-check/>nat/Nat Ip Exhaustion Check</a>
+</h5>
+<p>Evaluates NATGW for NAT IP exhaustion/allocation issues.</p>
+</div>
+<div class=entry>
+<h5>
+<a href=/runbook/steps/nat/nat-resource-exhaustion-check/>nat/Nat Resource Exhaustion Check</a>
+</h5>
+<p>Evaluates NATGW for OUT_OF_RESOURCES and ENDPOINT_INDEPENDENCE_CONFLICT issues.</p>
+</div>
+</div>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified July 1, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/e8dac50fe3bef2ed431422f1290b8fe6d9f4c5b0>Merge "Improve Error handling." -- Branch commit log -- commit 409f3bf2571dd2bca46ee67d2b4b29150951681e Author: Kwesi Graham &lt;akyen@google.com> Date: 2024-06-27T16:21:11Z (e8dac50fe)</a>
+Last modified June 7, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/e7428350211476d9bfb6ebe57dc76ca2be8d3983>spelling corrections (e74283502)</a>
 </div>
 </div>
 </main>
