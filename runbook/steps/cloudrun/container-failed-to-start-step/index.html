@@ -21,11 +21,11 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/steps/cloudrun/container-failed-to-start-step/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-06-07T13:53:04-07:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2024-07-10T07:15:22+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="cloudrun/Container Failed To Start Step">
 <meta itemprop=description content="Checks if the deployment error was caused by container failed to start error.
 ">
-<meta itemprop=dateModified content="2024-06-07T13:53:04-07:00">
+<meta itemprop=dateModified content="2024-07-10T07:15:22+00:00">
 <meta itemprop=wordCount content="48"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
@@ -132,6 +132,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookdiagnostic-treesgkelogs-li>
 <input type=checkbox id=m-runbookdiagnostic-treesgkelogs-check>
 <label for=m-runbookdiagnostic-treesgkelogs-check><a href=/runbook/diagnostic-trees/gke/logs/ title=gke/Logs class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treesgkelogs><span>gke/logs</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookdiagnostic-treesgkenode-bootstrapping-li>
+<input type=checkbox id=m-runbookdiagnostic-treesgkenode-bootstrapping-check>
+<label for=m-runbookdiagnostic-treesgkenode-bootstrapping-check><a href=/runbook/diagnostic-trees/gke/node-bootstrapping/ title="gke/Node Bootstrapping" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treesgkenode-bootstrapping><span>gke/node-bootstrapping</span></a></label>
 </li>
 </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookdiagnostic-treesvertex-li>
@@ -456,12 +459,24 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkelogs-start-li>
 <input type=checkbox id=m-runbookstepsgkelogs-start-check>
 <label for=m-runbookstepsgkelogs-start-check><a href=/runbook/steps/gke/logs-start/ title="gke/Logs Start" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkelogs-start><span>Logs Start</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkenode-bootstrapping-end-li>
+<input type=checkbox id=m-runbookstepsgkenode-bootstrapping-end-check>
+<label for=m-runbookstepsgkenode-bootstrapping-end-check><a href=/runbook/steps/gke/node-bootstrapping-end/ title="gke/Node Bootstrapping End" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkenode-bootstrapping-end><span>Node Bootstrapping End</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkenode-bootstrapping-start-li>
+<input type=checkbox id=m-runbookstepsgkenode-bootstrapping-start-check>
+<label for=m-runbookstepsgkenode-bootstrapping-start-check><a href=/runbook/steps/gke/node-bootstrapping-start/ title="gke/Node Bootstrapping Start" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkenode-bootstrapping-start><span>Node Bootstrapping Start</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkenode-insert-check-li>
+<input type=checkbox id=m-runbookstepsgkenode-insert-check-check>
+<label for=m-runbookstepsgkenode-insert-check-check><a href=/runbook/steps/gke/node-insert-check/ title="gke/Node Insert Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkenode-insert-check><span>Node Insert Check</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkenode-ip-range-exhaustion-li>
 <input type=checkbox id=m-runbookstepsgkenode-ip-range-exhaustion-check>
 <label for=m-runbookstepsgkenode-ip-range-exhaustion-check><a href=/runbook/steps/gke/node-ip-range-exhaustion/ title="gke/Node Ip Range Exhaustion" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkenode-ip-range-exhaustion><span>Node Ip Range Exhaustion</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkenode-pool-cloud-logging-access-scope-li>
 <input type=checkbox id=m-runbookstepsgkenode-pool-cloud-logging-access-scope-check>
 <label for=m-runbookstepsgkenode-pool-cloud-logging-access-scope-check><a href=/runbook/steps/gke/node-pool-cloud-logging-access-scope/ title="gke/Node Pool Cloud Logging Access Scope" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkenode-pool-cloud-logging-access-scope><span>Node Pool Cloud Logging Access Scope</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkenode-registration-success-li>
+<input type=checkbox id=m-runbookstepsgkenode-registration-success-check>
+<label for=m-runbookstepsgkenode-registration-success-check><a href=/runbook/steps/gke/node-registration-success/ title="gke/Node Registration Success" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkenode-registration-success><span>Node Registration Success</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkepod-ip-range-exhaustion-li>
 <input type=checkbox id=m-runbookstepsgkepod-ip-range-exhaustion-check>
 <label for=m-runbookstepsgkepod-ip-range-exhaustion-check><a href=/runbook/steps/gke/pod-ip-range-exhaustion/ title="gke/Pod Ip Range Exhaustion" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkepod-ip-range-exhaustion><span>Pod Ip Range Exhaustion</span></a></label>
@@ -633,13 +648,13 @@
 <h3 id=description>Description</h3>
 <p>This step will check if the error is present and link to additional troubleshooting steps.</p>
 <h3 id=failure-reason>Failure Reason</h3>
-<p>Container failed to start in service { name }</p>
+<p>Container failed to start in service { name }.</p>
 <h3 id=failure-remediation>Failure Remediation</h3>
 <p>The container failed to start. Please check
 <a href=https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start>https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start</a>
 for the next steps.</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified June 7, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/e7428350211476d9bfb6ebe57dc76ca2be8d3983>spelling corrections (e74283502)</a>
+Last modified July 10, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/0540bec8e476d2c1ea1bd44e9c9dedd9e18f062b>Merge "new GKE Node Bootstrapping runbook" -- Branch commit log -- commit a1a3215ffaabbd1987564b5f2dd8b3e12d6de4b5 Author: Ebenezer Ejukorlem &lt;joekorlems@google.com> Date: 2024-06-28T03:44:13Z (0540bec8e)</a>
 </div>
 </div>
 </main>
