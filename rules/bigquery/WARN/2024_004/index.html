@@ -13,24 +13,24 @@
 <link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96>
 <link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
-<title>gke/ERR/2021_008 | gcpdiag</title>
-<meta name=description content="Google APIs service agent has Editor role.
+<title>bigquery/WARN/2024_004 | gcpdiag</title>
+<meta name=description content="BigQuery job not exceeding the concurrent queries limit for remote functions.
 ">
-<meta property="og:title" content="gke/ERR/2021_008">
-<meta property="og:description" content="Google APIs service agent has Editor role.
+<meta property="og:title" content="bigquery/WARN/2024_004">
+<meta property="og:description" content="BigQuery job not exceeding the concurrent queries limit for remote functions.
 ">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://gcpdiag.dev/rules/gke/ERR/2021_008/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="rules">
-<meta property="article:modified_time" content="2021-10-26T18:24:02+02:00"><meta property="og:site_name" content="gcpdiag">
-<meta itemprop=name content="gke/ERR/2021_008">
-<meta itemprop=description content="Google APIs service agent has Editor role.
+<meta property="og:url" content="https://gcpdiag.dev/rules/bigquery/WARN/2024_004/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="rules">
+<meta property="article:modified_time" content="2024-07-11T05:49:36+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta itemprop=name content="bigquery/WARN/2024_004">
+<meta itemprop=description content="BigQuery job not exceeding the concurrent queries limit for remote functions.
 ">
-<meta itemprop=dateModified content="2021-10-26T18:24:02+02:00">
-<meta itemprop=wordCount content="63"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2024-07-11T05:49:36+00:00">
+<meta itemprop=wordCount content="64"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
-<meta name=twitter:title content="gke/ERR/2021_008">
-<meta name=twitter:description content="Google APIs service agent has Editor role.
+<meta name=twitter:title content="bigquery/WARN/2024_004">
+<meta name=twitter:description content="BigQuery job not exceeding the concurrent queries limit for remote functions.
 ">
 <link href=/scss/main.css rel=stylesheet>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
@@ -139,8 +139,8 @@
 <label for=m-rulesasmwarn2024_001-check><a href=/rules/asm/WARN/2024_001/ title=asm/WARN/2024_001 class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-rulesasmwarn2024_001><span>WARN/2024_001</span></a></label>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-rulesbigquery-li>
-<input type=checkbox id=m-rulesbigquery-check>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-rulesbigquery-li>
+<input type=checkbox id=m-rulesbigquery-check checked>
 <label for=m-rulesbigquery-check><a href=/rules/bigquery/ title=BIGQUERY class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-rulesbigquery><span>bigquery</span></a></label>
 <ul class="ul-2 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-rulesbigqueryerr2022_001-li>
@@ -218,9 +218,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-rulesbigquerywarn2024_003-li>
 <input type=checkbox id=m-rulesbigquerywarn2024_003-check>
 <label for=m-rulesbigquerywarn2024_003-check><a href=/rules/bigquery/WARN/2024_003/ title=bigquery/WARN/2024_003 class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-rulesbigquerywarn2024_003><span>WARN/2024_003</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-rulesbigquerywarn2024_004-li>
-<input type=checkbox id=m-rulesbigquerywarn2024_004-check>
-<label for=m-rulesbigquerywarn2024_004-check><a href=/rules/bigquery/WARN/2024_004/ title=bigquery/WARN/2024_004 class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-rulesbigquerywarn2024_004><span>WARN/2024_004</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-rulesbigquerywarn2024_004-li>
+<input type=checkbox id=m-rulesbigquerywarn2024_004-check checked>
+<label for=m-rulesbigquerywarn2024_004-check><a href=/rules/bigquery/WARN/2024_004/ title=bigquery/WARN/2024_004 class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-rulesbigquerywarn2024_004><span class=td-sidebar-nav-active-item>WARN/2024_004</span></a></label>
 </li>
 </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-rulesbilling-li>
@@ -781,8 +781,8 @@
 <label for=m-rulesgcsbp2022_001-check><a href=/rules/gcs/BP/2022_001/ title=gcs/BP/2022_001 class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-rulesgcsbp2022_001><span>BP/2022_001</span></a></label>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-rulesgke-li>
-<input type=checkbox id=m-rulesgke-check checked>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-rulesgke-li>
+<input type=checkbox id=m-rulesgke-check>
 <label for=m-rulesgke-check><a href=/rules/gke/ title=GKE class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-rulesgke><span>gke</span></a></label>
 <ul class="ul-2 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-rulesgkebp2021_001-li>
@@ -842,9 +842,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-rulesgkeerr2021_007-li>
 <input type=checkbox id=m-rulesgkeerr2021_007-check>
 <label for=m-rulesgkeerr2021_007-check><a href=/rules/gke/ERR/2021_007/ title=gke/ERR/2021_007 class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-rulesgkeerr2021_007><span>ERR/2021_007</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-rulesgkeerr2021_008-li>
-<input type=checkbox id=m-rulesgkeerr2021_008-check checked>
-<label for=m-rulesgkeerr2021_008-check><a href=/rules/gke/ERR/2021_008/ title=gke/ERR/2021_008 class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-rulesgkeerr2021_008><span class=td-sidebar-nav-active-item>ERR/2021_008</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-rulesgkeerr2021_008-li>
+<input type=checkbox id=m-rulesgkeerr2021_008-check>
+<label for=m-rulesgkeerr2021_008-check><a href=/rules/gke/ERR/2021_008/ title=gke/ERR/2021_008 class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-rulesgkeerr2021_008><span>ERR/2021_008</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-rulesgkeerr2021_009-li>
 <input type=checkbox id=m-rulesgkeerr2021_009-check>
 <label for=m-rulesgkeerr2021_009-check><a href=/rules/gke/ERR/2021_009/ title=gke/ERR/2021_009 class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-rulesgkeerr2021_009><span>ERR/2021_009</span></a></label>
@@ -1143,34 +1143,29 @@
 </ul>
 </nav></div>
 <div class="td-page-meta ml-0 pb-1 pt-0 mb-0">
-<a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/rules/gke/ERR/2021_008.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-<a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=gke/ERR/2021_008" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
+<a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/rules/bigquery/WARN/2024_004.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+<a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=bigquery/WARN/2024_004" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
 </div>
 </aside>
 <main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
 <div class=td-content>
-<h1>gke/ERR/2021_008</h1>
-<div class=lead>Google APIs service agent has Editor role.</div>
+<h1>bigquery/WARN/2024_004</h1>
+<div class=lead>BigQuery job not exceeding the concurrent queries limit for remote functions.</div>
 <header class=article-meta>
 </header>
-<p><strong>Product</strong>: <a href=https://cloud.google.com/kubernetes-engine>Google Kubernetes Engine</a><br>
-<strong>Rule class</strong>: ERR - Something that is very likely to be wrong</p>
+<p><strong>Product</strong>: <a href=https://cloud.google.com/bigquery>BigQuery</a><br>
+<strong>Rule class</strong>: WARN - Something that is possibly wrong</p>
 <h3 id=description>Description</h3>
-<p>The Google API service agent <a href=mailto:project-number@cloudservices.gserviceaccount.com>project-number@cloudservices.gserviceaccount.com</a>
-runs internal Google processes on your behalf. It is automatically granted the
-Editor role on the project.</p>
+<p>BigQuery encountered a &ldquo;Exceeded rate limits&rdquo; error. This means the number of
+queries simultaneously using remote functions surpassed a predefined
+threshold to ensure system stability. To avoid overloading the system,
+BigQuery restricts the number of concurrent operations.</p>
 <h3 id=remediation>Remediation</h3>
-<p>Make sure that you have the following role binding in the IAM policy:</p>
-<ul>
-<li>Principal: <code>serviceAccount:PROJECTNR@cloudservices.gserviceaccount.com</code></li>
-<li>Role: <code>roles/editor</code></li>
-</ul>
+<p><a href=https://cloud.google.com/bigquery/docs/troubleshoot-quotas#ts-maximum-number-of-concurrent-remote-functions>Maximum number of concurrent queries that contain remote functions</a></p>
 <h3 id=further-information>Further information</h3>
-<ul>
-<li><a href=https://cloud.google.com/iam/docs/service-accounts#google-managed>Google-managed service accounts</a></li>
-</ul>
+<p><a href=https://cloud.google.com/bigquery/quotas#remote_function_limits>Remote function limits.</a></p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified October 26, 2021: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/5bf944dbc6e862a6df64f101d19a8cc0e04d6b41>improve rules documentation. (5bf944dbc)</a>
+Last modified July 11, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/7968843a3c226703aa8fb696c937393a798c2446>Merge "new rule:Bigquery remote function concurrent queries" -- Branch commit log -- commit 632ef640810015a5e73d95f2fa343b4ff33e5375 Author: gcpdiag team &lt;noreply@google.com> Date: 2024-07-05T06:08:45Z (7968843a3)</a>
 </div>
 </div>
 </main>
