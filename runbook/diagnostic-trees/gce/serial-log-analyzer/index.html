@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/diagnostic-trees/gce/serial-log-analyzer/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-06-07T13:53:04-07:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2024-07-25T12:50:55+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gce/Serial Log Analyzer">
 <meta itemprop=description content="GCE VM Serial log analyzer
 ">
-<meta itemprop=dateModified content="2024-06-07T13:53:04-07:00">
-<meta itemprop=wordCount content="342"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2024-07-25T12:50:55+00:00">
+<meta itemprop=wordCount content="361"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="gce/Serial Log Analyzer">
@@ -689,6 +689,9 @@ SSHD checks:
 
 Google Guest Agent checks:
     - Check if we have logs related to successful startup of Google Guest Agent.
+
+SSH guard check:
+    - Check if SSHGuard is active and may be blocking IP addresses
 </code></pre>
 <h3 id=executing-this-runbook>Executing this runbook</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>gcpdiag runbook gce/serial-log-analyzer <span style=color:#4e9a06>\
@@ -781,11 +784,14 @@ Google Guest Agent checks:
 <p><a href=/runbook/steps/gce/vm-serial-logs-check>Vm Serial Logs Check</a></p>
 </li>
 <li>
+<p><a href=/runbook/steps/gce/vm-serial-logs-check>Vm Serial Logs Check</a></p>
+</li>
+<li>
 <p><a href=/runbook/steps/gce/analysing-serial-logs-end>Analysing Serial Logs End</a></p>
 </li>
 </ul>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified June 7, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/e7428350211476d9bfb6ebe57dc76ca2be8d3983>spelling corrections (e74283502)</a>
+Last modified July 25, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/5ef181be8f75be1079933d4339fb80b2d55d6fda>Merge "Extend runbooks to catch metadata connection errors + few more tweaks" -- Branch commit log -- commit 0fd603ad577efaf16e1e42978c8289976ace6a69 Author: gcpdiag team &lt;noreply@google.com> Date: 2024-07-24T08:04:57Z (5ef181be8)</a>
 </div>
 </div>
 </main>
