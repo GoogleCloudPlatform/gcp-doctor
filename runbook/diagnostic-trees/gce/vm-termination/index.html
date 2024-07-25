@@ -21,11 +21,11 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/diagnostic-trees/gce/vm-termination/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-07-01T15:03:31+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2024-07-25T06:27:52+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gce/Vm Termination">
 <meta itemprop=description content="GCE VM shutdowns and reboots Root Cause Analysis (RCA)
 ">
-<meta itemprop=dateModified content="2024-07-01T15:03:31+00:00">
+<meta itemprop=dateModified content="2024-07-25T06:27:52+00:00">
 <meta itemprop=wordCount content="273"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
@@ -709,7 +709,7 @@ to prevent future occurrences where applicable.</p>
 </tr>
 <tr>
 <td><code>name</code></td>
-<td>False</td>
+<td>True</td>
 <td>None</td>
 <td>str</td>
 <td>The name of the terminated VM. Or provide the id i.e -p id=</td>
@@ -723,7 +723,7 @@ to prevent future occurrences where applicable.</p>
 </tr>
 <tr>
 <td><code>zone</code></td>
-<td>False</td>
+<td>True</td>
 <td>None</td>
 <td>str</td>
 <td>The Google Cloud zone where the terminated VM is located.</td>
@@ -765,7 +765,7 @@ to prevent future occurrences where applicable.</p>
 </li>
 </ul>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified July 1, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/e8dac50fe3bef2ed431422f1290b8fe6d9f4c5b0>Merge "Improve Error handling." -- Branch commit log -- commit 409f3bf2571dd2bca46ee67d2b4b29150951681e Author: Kwesi Graham &lt;akyen@google.com> Date: 2024-06-27T16:21:11Z (e8dac50fe)</a>
+Last modified July 25, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/4dd0a6b1850a14a3fc68471df442df9b9b301e79>Merge "making vm name and zone as mandatory fields for vm-termination runbook" -- Branch commit log -- commit 1ba6203aa3e2846eb585d62abe43b13aafe1e947 Author: Vinay Gahlout &lt;vinaygahlout@google.com> Date: 2024-07-24T16:35:47Z (4dd0a6b18)</a>
 </div>
 </div>
 </main>
