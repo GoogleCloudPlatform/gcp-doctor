@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/steps/gce/high-vm-memory-utilization/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-04-06T01:28:43+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2024-07-06T13:03:51+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gce/High Vm Memory Utilization">
 <meta itemprop=description content="Diagnoses high memory utilization issues in a Compute Engine VM.
 ">
-<meta itemprop=dateModified content="2024-04-06T01:28:43+00:00">
-<meta itemprop=wordCount content="165"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2024-07-06T13:03:51+00:00">
+<meta itemprop=wordCount content="174"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="gce/High Vm Memory Utilization">
@@ -123,6 +123,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookdiagnostic-treesgcessh-li>
 <input type=checkbox id=m-runbookdiagnostic-treesgcessh-check>
 <label for=m-runbookdiagnostic-treesgcessh-check><a href=/runbook/diagnostic-trees/gce/ssh/ title=gce/Ssh class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treesgcessh><span>gce/ssh</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookdiagnostic-treesgcevm-performance-li>
+<input type=checkbox id=m-runbookdiagnostic-treesgcevm-performance-check>
+<label for=m-runbookdiagnostic-treesgcevm-performance-check><a href=/runbook/diagnostic-trees/gce/vm-performance/ title="gce/Vm Performance" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treesgcevm-performance><span>gce/vm-performance</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookdiagnostic-treesgcevm-termination-li>
 <input type=checkbox id=m-runbookdiagnostic-treesgcevm-termination-check>
 <label for=m-runbookdiagnostic-treesgcevm-termination-check><a href=/runbook/diagnostic-trees/gce/vm-termination/ title="gce/Vm Termination" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treesgcevm-termination><span>gce/vm-termination</span></a></label>
@@ -336,12 +339,21 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgceauth-principal-has-service-account-user-check-li>
 <input type=checkbox id=m-runbookstepsgceauth-principal-has-service-account-user-check-check>
 <label for=m-runbookstepsgceauth-principal-has-service-account-user-check-check><a href=/runbook/steps/gce/auth-principal-has-service-account-user-check/ title="gce/Auth Principal Has Service Account User Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgceauth-principal-has-service-account-user-check><span>Auth Principal Has Service Account User Check</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcecheck-live-migrations-li>
+<input type=checkbox id=m-runbookstepsgcecheck-live-migrations-check>
+<label for=m-runbookstepsgcecheck-live-migrations-check><a href=/runbook/steps/gce/check-live-migrations/ title="gce/Check Live Migrations" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcecheck-live-migrations><span>Check Live Migrations</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcecheck-serial-port-logging-li>
 <input type=checkbox id=m-runbookstepsgcecheck-serial-port-logging-check>
 <label for=m-runbookstepsgcecheck-serial-port-logging-check><a href=/runbook/steps/gce/check-serial-port-logging/ title="gce/Check Serial Port Logging" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcecheck-serial-port-logging><span>Check Serial Port Logging</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcecpu-overcommitment-check-li>
+<input type=checkbox id=m-runbookstepsgcecpu-overcommitment-check-check>
+<label for=m-runbookstepsgcecpu-overcommitment-check-check><a href=/runbook/steps/gce/cpu-overcommitment-check/ title="gce/Cpu Overcommitment Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcecpu-overcommitment-check><span>Cpu Overcommitment Check</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcecustom-step-li>
 <input type=checkbox id=m-runbookstepsgcecustom-step-check>
 <label for=m-runbookstepsgcecustom-step-check><a href=/runbook/steps/gce/custom-step/ title="gce/Custom Step" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcecustom-step><span>Custom Step</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcedisk-iops-throughput-utilisation-checks-li>
+<input type=checkbox id=m-runbookstepsgcedisk-iops-throughput-utilisation-checks-check>
+<label for=m-runbookstepsgcedisk-iops-throughput-utilisation-checks-check><a href=/runbook/steps/gce/disk-iops-throughput-utilisation-checks/ title="gce/Disk Iops Throughput Utilisation Checks" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcedisk-iops-throughput-utilisation-checks><span>Disk Iops Throughput Utilisation Checks</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcefetch-vm-details-li>
 <input type=checkbox id=m-runbookstepsgcefetch-vm-details-check>
 <label for=m-runbookstepsgcefetch-vm-details-check><a href=/runbook/steps/gce/fetch-vm-details/ title="gce/Fetch Vm Details" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcefetch-vm-details><span>Fetch Vm Details</span></a></label>
@@ -417,6 +429,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcevm-performance-checks-li>
 <input type=checkbox id=m-runbookstepsgcevm-performance-checks-check>
 <label for=m-runbookstepsgcevm-performance-checks-check><a href=/runbook/steps/gce/vm-performance-checks/ title="gce/Vm Performance Checks" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcevm-performance-checks><span>Vm Performance Checks</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcevm-performance-end-li>
+<input type=checkbox id=m-runbookstepsgcevm-performance-end-check>
+<label for=m-runbookstepsgcevm-performance-end-check><a href=/runbook/steps/gce/vm-performance-end/ title="gce/Vm Performance End" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcevm-performance-end><span>Vm Performance End</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcevm-scope-li>
 <input type=checkbox id=m-runbookstepsgcevm-scope-check>
 <label for=m-runbookstepsgcevm-scope-check><a href=/runbook/steps/gce/vm-scope/ title="gce/Vm Scope" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcevm-scope><span>Vm Scope</span></a></label>
@@ -686,6 +701,7 @@
 <li><a href=#failure-reason>Failure Reason</a></li>
 <li><a href=#failure-remediation>Failure Remediation</a></li>
 <li><a href=#success-reason>Success Reason</a></li>
+<li><a href=#skipped-reason>Skipped Reason</a></li>
 </ul>
 </li>
 </ul>
@@ -724,8 +740,10 @@ For deeper analysis of memory issues:</li>
 <a href=https://cloud.google.com/compute/docs/troubleshooting/troubleshooting-using-serial-console>https://cloud.google.com/compute/docs/troubleshooting/troubleshooting-using-serial-console</a></p>
 <h3 id=success-reason>Success Reason</h3>
 <p>Memory utilization on this VM is within optimal range.</p>
+<h3 id=skipped-reason>Skipped Reason</h3>
+<p>There are no logs to examine !</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified April 6, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/3e0e064b8400f5186f192360005306f83659d9b4>Fix documentation view issued due to md comment added at the top of runbooks (3e0e064b8)</a>
+Last modified July 6, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/9f84bc0ab7fdc376a57fc8d6082317d064bdf1ec>Runbook for analysing GCE VM performance (9f84bc0ab)</a>
 </div>
 </div>
 </main>
