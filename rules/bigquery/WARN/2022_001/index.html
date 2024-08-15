@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/rules/bigquery/WARN/2022_001/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="rules">
-<meta property="article:modified_time" content="2022-06-02T07:47:51+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2024-08-15T05:19:23+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="bigquery/ERR/2022_001">
 <meta itemprop=description content="BigQuery does not exceed rate limits
 ">
-<meta itemprop=dateModified content="2022-06-02T07:47:51+00:00">
-<meta itemprop=wordCount content="105"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2024-08-15T05:19:23+00:00">
+<meta itemprop=wordCount content="210"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="bigquery/ERR/2022_001">
@@ -1175,17 +1175,40 @@
 requests. These quotas exist both to protect the backend systems, and to help
 guard against unexpected billing if you submit large jobs.</p>
 <h3 id=remediation>Remediation</h3>
-<p>To resolve these limit issues, retry the operation after few seconds. Use
-exponential backoff between retry attempts. If you consistently reach one of
-these longer-term quota limits, you should analyze your workload for ways to
-mitigate the issue. Mitigations can include optimizing your workload or
-requesting a quota increase.</p>
+<p>Slow down the request rate. To resolve these limit issues, retry the operation
+after few seconds. Use exponential backoff between retry attempts. If you
+consistently reach one of these longer-term quota limits, you should analyze
+your workload for ways to mitigate the issue. Mitigations can include optimizing
+your workload or requesting a quota increase.</p>
 <h3 id=further-information>Further information</h3>
+<p>To diagnose issues, do the following:</p>
 <ul>
-<li><a href=https://cloud.google.com/bigquery/docs/troubleshoot-quotas#concurrent_queries_quota_errors>Troubleshoot BigQuery quota errors</a></li>
+<li>Use INFORMATION_SCHEMA views to analyze the underlying issue. These views
+contain metadata about your BigQuery resources, including jobs, reservations,
+and streaming inserts. For example, the following query uses the
+INFORMATION_SCHEMA.JOBS view to list all quota-related errors within the past
+day:</li>
+</ul>
+<pre tabindex=0><code>SELECT
+ job_id,
+ creation_time,
+ error_result
+FROM `region-us`.INFORMATION_SCHEMA.JOBS
+WHERE creation_time &gt; TIMESTAMP_SUB(CURRENT_TIMESTAMP, INTERVAL 1 DAY) AND
+      error_result.reason IN ('rateLimitExceeded', 'quotaExceeded')
+</code></pre><ul>
+<li>View errors in Cloud Audit Logs
+Using Logs Explorer, the following query returns errors with either Quota
+exceeded or limit in the message string:</li>
+</ul>
+<pre tabindex=0><code>resource.type = (&quot;bigquery_project&quot; OR &quot;bigquery_dataset&quot;)
+protoPayload.status.code =&quot;7&quot;
+protoPayload.status.message: (&quot;Quota exceeded&quot; OR &quot;limit&quot;)
+</code></pre><ul>
+<li><a href=https://cloud.google.com/bigquery/docs/troubleshoot-quotas#overview>Troubleshoot BigQuery quota errors</a></li>
 </ul>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified June 2, 2022: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/3d9f5f7dd8fe8eb9bfc3ec1e796ad74df2d023cd>Merge "new rule: BigQuery is not violate column level security" -- Branch commit log -- commit b3ee9a5873bb294413cbbf1d046212f81deff048 Author: gcpdiag team &lt;noreply@google.com> Date: 2022-06-01T12:26:35+09:00 (3d9f5f7dd)</a>
+Last modified August 15, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/0c2a0fb33963135beb4e5d9777a3f8fe701958eb>Merge "Adding Diagnostics steps for Rate limit exceeded" -- Branch commit log -- commit 95626e6c1705909520b333d8f6cd2cf25700a8be Author: Surmay Bhavsar &lt;surmayb@google.com> Date: 2024-08-12T16:59:45Z (0c2a0fb33)</a>
 </div>
 </div>
 </main>
