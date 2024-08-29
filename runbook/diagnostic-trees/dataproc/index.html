@@ -13,29 +13,22 @@
 <link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96>
 <link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
-<title>dataflow/Job State Step | gcpdiag</title>
-<meta name=description content="Checks if the job is in a failed state.
+<title>DATAPROC | gcpdiag</title>
+<meta name=description content="All diagnostic tree available in dataproc
 ">
-<meta property="og:title" content="dataflow/Job State Step">
-<meta property="og:description" content="Checks if the job is in a failed state.
-">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://gcpdiag.dev/runbook/steps/dataflow/job-state-step/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-07-02T12:02:06+00:00"><meta property="og:site_name" content="gcpdiag">
-<meta itemprop=name content="dataflow/Job State Step">
-<meta itemprop=description content="Checks if the job is in a failed state.
-">
-<meta itemprop=dateModified content="2024-07-02T12:02:06+00:00">
-<meta itemprop=wordCount content="15"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
-<meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
+<meta property="og:title" content="DATAPROC">
+<meta property="og:description" content="Diagnostics for GCP">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gcpdiag.dev/runbook/diagnostic-trees/dataproc/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="og:site_name" content="gcpdiag">
+<meta itemprop=name content="DATAPROC">
+<meta itemprop=description content="Diagnostics for GCP"><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
-<meta name=twitter:title content="dataflow/Job State Step">
-<meta name=twitter:description content="Checks if the job is in a failed state.
-">
+<meta name=twitter:title content="DATAPROC">
+<meta name=twitter:description content="Diagnostics for GCP">
 <link href=/scss/main.css rel=stylesheet>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
 </head>
-<body class=td-page>
+<body class=td-section>
 <header>
 <nav class="js-navbar-scroll navbar navbar-expand navbar-light nav-shadow flex-column flex-md-row td-navbar">
 <a id=gcpdiag-top class=navbar-brand href=/>
@@ -79,8 +72,8 @@
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-runbook-li>
 <a href=/runbook/ title="Runbook Rules" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id=m-runbook><span>Runbook</span></a>
 <ul class=ul-1>
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookdiagnostic-trees-li>
-<input type=checkbox id=m-runbookdiagnostic-trees-check>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-runbookdiagnostic-trees-li>
+<input type=checkbox id=m-runbookdiagnostic-trees-check checked>
 <label for=m-runbookdiagnostic-trees-check><a href=/runbook/diagnostic-trees/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookdiagnostic-trees><span>Debugging Trees</span></a></label>
 <ul class="ul-2 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookdiagnostic-treescloudrun-li>
@@ -102,6 +95,15 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookdiagnostic-treesdataflowfailed-streaming-pipeline-li>
 <input type=checkbox id=m-runbookdiagnostic-treesdataflowfailed-streaming-pipeline-check>
 <label for=m-runbookdiagnostic-treesdataflowfailed-streaming-pipeline-check><a href=/runbook/diagnostic-trees/dataflow/failed-streaming-pipeline/ title="dataflow/Failed Streaming Pipeline" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treesdataflowfailed-streaming-pipeline><span>dataflow/failed-streaming-pipeline</span></a></label>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-runbookdiagnostic-treesdataproc-li>
+<input type=checkbox id=m-runbookdiagnostic-treesdataproc-check checked>
+<label for=m-runbookdiagnostic-treesdataproc-check><a href=/runbook/diagnostic-trees/dataproc/ title=DATAPROC class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id=m-runbookdiagnostic-treesdataproc><span class=td-sidebar-nav-active-item>dataproc</span></a></label>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookdiagnostic-treesdataproccluster-creation-li>
+<input type=checkbox id=m-runbookdiagnostic-treesdataproccluster-creation-check>
+<label for=m-runbookdiagnostic-treesdataproccluster-creation-check><a href=/runbook/diagnostic-trees/dataproc/cluster-creation/ title="dataproc/Cluster Creation" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treesdataproccluster-creation><span>dataproc/cluster-creation</span></a></label>
 </li>
 </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookdiagnostic-treesgce-li>
@@ -182,13 +184,10 @@
 <label for=m-runbookdiagnostic-treesvpcvm-external-ip-connectivity-check><a href=/runbook/diagnostic-trees/vpc/vm-external-ip-connectivity/ title="vpc/Vm External Ip Connectivity" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treesvpcvm-external-ip-connectivity><span>vpc/vm-external-ip-connectivity</span></a></label>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookdiagnostic-treesdataproccluster-creation-li>
-<input type=checkbox id=m-runbookdiagnostic-treesdataproccluster-creation-check>
-<label for=m-runbookdiagnostic-treesdataproccluster-creation-check><a href=/runbook/diagnostic-trees/dataproc/cluster-creation/ title="dataproc/Cluster Creation" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treesdataproccluster-creation><span>dataproc/cluster-creation</span></a></label>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-runbooksteps-li>
-<input type=checkbox id=m-runbooksteps-check checked>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbooksteps-li>
+<input type=checkbox id=m-runbooksteps-check>
 <label for=m-runbooksteps-check><a href=/runbook/steps/ title="All Steps" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbooksteps><span>steps</span></a></label>
 <ul class="ul-2 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepscloudrun-li>
@@ -221,8 +220,8 @@
 <label for=m-runbookstepscrmorg-policy-check-check><a href=/runbook/steps/crm/org-policy-check/ title="crm/Org Policy Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepscrmorg-policy-check><span>Org Policy Check</span></a></label>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-runbookstepsdataflow-li>
-<input type=checkbox id=m-runbookstepsdataflow-check checked>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepsdataflow-li>
+<input type=checkbox id=m-runbookstepsdataflow-check>
 <label for=m-runbookstepsdataflow-check><a href=/runbook/steps/dataflow/ title=DATAFLOW class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepsdataflow><span>dataflow</span></a></label>
 <ul class="ul-3 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsdataflowdataflow-permissions-end-li>
@@ -255,15 +254,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsdataflowjob-state-li>
 <input type=checkbox id=m-runbookstepsdataflowjob-state-check>
 <label for=m-runbookstepsdataflowjob-state-check><a href=/runbook/steps/dataflow/job-state/ title="dataflow/Job State" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsdataflowjob-state><span>Job State</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-runbookstepsdataflowjob-state-step-li>
-<input type=checkbox id=m-runbookstepsdataflowjob-state-step-check checked>
-<label for=m-runbookstepsdataflowjob-state-step-check><a href=/runbook/steps/dataflow/job-state-step/ title="dataflow/Job State Step" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-runbookstepsdataflowjob-state-step><span class=td-sidebar-nav-active-item>Job State Step</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsdataflowvalid-sdk-li>
 <input type=checkbox id=m-runbookstepsdataflowvalid-sdk-check>
 <label for=m-runbookstepsdataflowvalid-sdk-check><a href=/runbook/steps/dataflow/valid-sdk/ title="dataflow/Valid Sdk" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsdataflowvalid-sdk><span>Valid Sdk</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsdataflowvalid_sdk-li>
-<input type=checkbox id=m-runbookstepsdataflowvalid_sdk-check>
-<label for=m-runbookstepsdataflowvalid_sdk-check><a href=/runbook/steps/dataflow/valid_sdk/ title=dataflow/Valid_Sdk class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsdataflowvalid_sdk><span>Valid_Sdk</span></a></label>
 </li>
 </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepsdataproc-li>
@@ -312,30 +305,9 @@
 <input type=checkbox id=m-runbookstepsgce-check>
 <label for=m-runbookstepsgce-check><a href=/runbook/steps/gce/ title=GCE class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepsgce><span>gce</span></a></label>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgceanalysing-serial-logs-li>
-<input type=checkbox id=m-runbookstepsgceanalysing-serial-logs-check>
-<label for=m-runbookstepsgceanalysing-serial-logs-check><a href=/runbook/steps/gce/analysing-serial-logs/ title="gce/Analysing Serial Logs" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgceanalysing-serial-logs><span>Analysing Serial Logs</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgceanalysing-serial-logs-end-li>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgceanalysing-serial-logs-end-li>
 <input type=checkbox id=m-runbookstepsgceanalysing-serial-logs-end-check>
 <label for=m-runbookstepsgceanalysing-serial-logs-end-check><a href=/runbook/steps/gce/analysing-serial-logs-end/ title="gce/Analysing Serial Logs End" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgceanalysing-serial-logs-end><span>Analysing Serial Logs End</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgceauth-principal-cloud-console-permission-check-li>
-<input type=checkbox id=m-runbookstepsgceauth-principal-cloud-console-permission-check-check>
-<label for=m-runbookstepsgceauth-principal-cloud-console-permission-check-check><a href=/runbook/steps/gce/auth-principal-cloud-console-permission-check/ title="gce/Auth Principal Cloud Console Permission Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgceauth-principal-cloud-console-permission-check><span>Auth Principal Cloud Console Permission Check</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgceauth-principal-has-compute-metadata-permissions-check-li>
-<input type=checkbox id=m-runbookstepsgceauth-principal-has-compute-metadata-permissions-check-check>
-<label for=m-runbookstepsgceauth-principal-has-compute-metadata-permissions-check-check><a href=/runbook/steps/gce/auth-principal-has-compute-metadata-permissions-check/ title="gce/Auth Principal Has Compute Metadata Permissions Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgceauth-principal-has-compute-metadata-permissions-check><span>Auth Principal Has Compute Metadata Permissions Check</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgceauth-principal-has-iap-tunnel-user-permissions-check-li>
-<input type=checkbox id=m-runbookstepsgceauth-principal-has-iap-tunnel-user-permissions-check-check>
-<label for=m-runbookstepsgceauth-principal-has-iap-tunnel-user-permissions-check-check><a href=/runbook/steps/gce/auth-principal-has-iap-tunnel-user-permissions-check/ title="gce/Auth Principal Has Iap Tunnel User Permissions Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgceauth-principal-has-iap-tunnel-user-permissions-check><span>Auth Principal Has Iap Tunnel User Permissions Check</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgceauth-principal-has-os-login-permissions-check-li>
-<input type=checkbox id=m-runbookstepsgceauth-principal-has-os-login-permissions-check-check>
-<label for=m-runbookstepsgceauth-principal-has-os-login-permissions-check-check><a href=/runbook/steps/gce/auth-principal-has-os-login-permissions-check/ title="gce/Auth Principal Has Os Login Permissions Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgceauth-principal-has-os-login-permissions-check><span>Auth Principal Has Os Login Permissions Check</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgceauth-principal-has-permission-to-fetch-vm-check-li>
-<input type=checkbox id=m-runbookstepsgceauth-principal-has-permission-to-fetch-vm-check-check>
-<label for=m-runbookstepsgceauth-principal-has-permission-to-fetch-vm-check-check><a href=/runbook/steps/gce/auth-principal-has-permission-to-fetch-vm-check/ title="gce/Auth Principal Has Permission To Fetch Vm Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgceauth-principal-has-permission-to-fetch-vm-check><span>Auth Principal Has Permission To Fetch Vm Check</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgceauth-principal-has-service-account-user-check-li>
-<input type=checkbox id=m-runbookstepsgceauth-principal-has-service-account-user-check-check>
-<label for=m-runbookstepsgceauth-principal-has-service-account-user-check-check><a href=/runbook/steps/gce/auth-principal-has-service-account-user-check/ title="gce/Auth Principal Has Service Account User Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgceauth-principal-has-service-account-user-check><span>Auth Principal Has Service Account User Check</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcecheck-live-migrations-li>
 <input type=checkbox id=m-runbookstepsgcecheck-live-migrations-check>
 <label for=m-runbookstepsgcecheck-live-migrations-check><a href=/runbook/steps/gce/check-live-migrations/ title="gce/Check Live Migrations" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcecheck-live-migrations><span>Check Live Migrations</span></a></label>
@@ -345,9 +317,6 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcecpu-overcommitment-check-li>
 <input type=checkbox id=m-runbookstepsgcecpu-overcommitment-check-check>
 <label for=m-runbookstepsgcecpu-overcommitment-check-check><a href=/runbook/steps/gce/cpu-overcommitment-check/ title="gce/Cpu Overcommitment Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcecpu-overcommitment-check><span>Cpu Overcommitment Check</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcecustom-step-li>
-<input type=checkbox id=m-runbookstepsgcecustom-step-check>
-<label for=m-runbookstepsgcecustom-step-check><a href=/runbook/steps/gce/custom-step/ title="gce/Custom Step" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcecustom-step><span>Custom Step</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcedisk-iops-throughput-utilisation-checks-li>
 <input type=checkbox id=m-runbookstepsgcedisk-iops-throughput-utilisation-checks-check>
 <label for=m-runbookstepsgcedisk-iops-throughput-utilisation-checks-check><a href=/runbook/steps/gce/disk-iops-throughput-utilisation-checks/ title="gce/Disk Iops Throughput Utilisation Checks" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcedisk-iops-throughput-utilisation-checks><span>Disk Iops Throughput Utilisation Checks</span></a></label>
@@ -450,13 +419,7 @@
 <input type=checkbox id=m-runbookstepsgcp-check>
 <label for=m-runbookstepsgcp-check><a href=/runbook/steps/gcp/ title=GCP class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepsgcp><span>gcp</span></a></label>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcphuman-task-li>
-<input type=checkbox id=m-runbookstepsgcphuman-task-check>
-<label for=m-runbookstepsgcphuman-task-check><a href=/runbook/steps/gcp/human-task/ title="gcp/Human Task" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcphuman-task><span>Human Task</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcpresource-attribute-check-li>
-<input type=checkbox id=m-runbookstepsgcpresource-attribute-check-check>
-<label for=m-runbookstepsgcpresource-attribute-check-check><a href=/runbook/steps/gcp/resource-attribute-check/ title="gcp/Resource Attribute Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcpresource-attribute-check><span>Resource Attribute Check</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcpservice-api-status-check-li>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcpservice-api-status-check-li>
 <input type=checkbox id=m-runbookstepsgcpservice-api-status-check-check>
 <label for=m-runbookstepsgcpservice-api-status-check-check><a href=/runbook/steps/gcp/service-api-status-check/ title="gcp/Service Api Status Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcpservice-api-status-check><span>Service Api Status Check</span></a></label>
 </li>
@@ -549,12 +512,6 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkeimage-pull-start-li>
 <input type=checkbox id=m-runbookstepsgkeimage-pull-start-check>
 <label for=m-runbookstepsgkeimage-pull-start-check><a href=/runbook/steps/gke/image-pull-start/ title="gke/Image Pull Start" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkeimage-pull-start><span>Image Pull Start</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkeimage_pull-end-li>
-<input type=checkbox id=m-runbookstepsgkeimage_pull-end-check>
-<label for=m-runbookstepsgkeimage_pull-end-check><a href=/runbook/steps/gke/image_pull-end/ title="gke/Image_Pull End" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkeimage_pull-end><span>Image_Pull End</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkeimage_pull-start-li>
-<input type=checkbox id=m-runbookstepsgkeimage_pull-start-check>
-<label for=m-runbookstepsgkeimage_pull-start-check><a href=/runbook/steps/gke/image_pull-start/ title="gke/Image_Pull Start" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkeimage_pull-start><span>Image_Pull Start</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkeip-exhaustion-end-li>
 <input type=checkbox id=m-runbookstepsgkeip-exhaustion-end-check>
 <label for=m-runbookstepsgkeip-exhaustion-end-check><a href=/runbook/steps/gke/ip-exhaustion-end/ title="gke/Ip Exhaustion End" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkeip-exhaustion-end><span>Ip Exhaustion End</span></a></label>
@@ -606,9 +563,6 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkenode-registration-success-li>
 <input type=checkbox id=m-runbookstepsgkenode-registration-success-check>
 <label for=m-runbookstepsgkenode-registration-success-check><a href=/runbook/steps/gke/node-registration-success/ title="gke/Node Registration Success" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkenode-registration-success><span>Node Registration Success</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkenode-unhealthy-li>
-<input type=checkbox id=m-runbookstepsgkenode-unhealthy-check>
-<label for=m-runbookstepsgkenode-unhealthy-check><a href=/runbook/steps/gke/node-unhealthy/ title="gke/Node Unhealthy" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkenode-unhealthy><span>Node Unhealthy</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkenodeproblem-li>
 <input type=checkbox id=m-runbookstepsgkenodeproblem-check>
 <label for=m-runbookstepsgkenodeproblem-check><a href=/runbook/steps/gke/nodeproblem/ title=gke/Nodeproblem class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkenodeproblem><span>Nodeproblem</span></a></label>
@@ -624,6 +578,15 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkeresource-quotas-start-li>
 <input type=checkbox id=m-runbookstepsgkeresource-quotas-start-check>
 <label for=m-runbookstepsgkeresource-quotas-start-check><a href=/runbook/steps/gke/resource-quotas-start/ title="gke/Resource Quotas Start" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkeresource-quotas-start><span>Resource Quotas Start</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkeservice-account-logging-permission-li>
+<input type=checkbox id=m-runbookstepsgkeservice-account-logging-permission-check>
+<label for=m-runbookstepsgkeservice-account-logging-permission-check><a href=/runbook/steps/gke/service-account-logging-permission/ title="gke/Service Account Logging Permission" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkeservice-account-logging-permission><span>Service Account Logging Permission</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkestandard-ip-masq-end-li>
+<input type=checkbox id=m-runbookstepsgkestandard-ip-masq-end-check>
+<label for=m-runbookstepsgkestandard-ip-masq-end-check><a href=/runbook/steps/gke/standard-ip-masq-end/ title="gke/Standard Ip Masq End" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkestandard-ip-masq-end><span>Standard Ip Masq End</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkeunallocatable-gpu-li>
+<input type=checkbox id=m-runbookstepsgkeunallocatable-gpu-check>
+<label for=m-runbookstepsgkeunallocatable-gpu-check><a href=/runbook/steps/gke/unallocatable-gpu/ title="gke/Unallocatable Gpu" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkeunallocatable-gpu><span>Unallocatable Gpu</span></a></label>
 </li>
 </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepsiam-li>
@@ -677,15 +640,6 @@
 <label for=m-runbookstepslbverify-health-check-logging-enabled-check><a href=/runbook/steps/lb/verify-health-check-logging-enabled/ title="lb/Verify Health Check Logging Enabled" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbverify-health-check-logging-enabled><span>Verify Health Check Logging Enabled</span></a></label>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepslogs-li>
-<input type=checkbox id=m-runbookstepslogs-check>
-<label for=m-runbookstepslogs-check><a href=/runbook/steps/logs/ title=LOGS class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepslogs><span>logs</span></a></label>
-<ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslogslogs-check-li>
-<input type=checkbox id=m-runbookstepslogslogs-check-check>
-<label for=m-runbookstepslogslogs-check-check><a href=/runbook/steps/logs/logs-check/ title="logs/Logs Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslogslogs-check><span>Logs Check</span></a></label>
-</li>
-</ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepsmonitoring-li>
 <input type=checkbox id=m-runbookstepsmonitoring-check>
 <label for=m-runbookstepsmonitoring-check><a href=/runbook/steps/monitoring/ title=MONITORING class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepsmonitoring><span>monitoring</span></a></label>
@@ -693,21 +647,6 @@
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsmonitoringtime-series-check-li>
 <input type=checkbox id=m-runbookstepsmonitoringtime-series-check-check>
 <label for=m-runbookstepsmonitoringtime-series-check-check><a href=/runbook/steps/monitoring/time-series-check/ title="monitoring/Time Series Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsmonitoringtime-series-check><span>Time Series Check</span></a></label>
-</li>
-</ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepsnat-li>
-<input type=checkbox id=m-runbookstepsnat-check>
-<label for=m-runbookstepsnat-check><a href=/runbook/steps/nat/ title=NAT class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepsnat><span>nat</span></a></label>
-<ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsnatnat-dropped-received-packet-check-li>
-<input type=checkbox id=m-runbookstepsnatnat-dropped-received-packet-check-check>
-<label for=m-runbookstepsnatnat-dropped-received-packet-check-check><a href=/runbook/steps/nat/nat-dropped-received-packet-check/ title="nat/Nat Dropped Received Packet Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsnatnat-dropped-received-packet-check><span>Nat Dropped Received Packet Check</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsnatnat-ip-exhaustion-check-li>
-<input type=checkbox id=m-runbookstepsnatnat-ip-exhaustion-check-check>
-<label for=m-runbookstepsnatnat-ip-exhaustion-check-check><a href=/runbook/steps/nat/nat-ip-exhaustion-check/ title="nat/Nat Ip Exhaustion Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsnatnat-ip-exhaustion-check><span>Nat Ip Exhaustion Check</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsnatnat-resource-exhaustion-check-li>
-<input type=checkbox id=m-runbookstepsnatnat-resource-exhaustion-check-check>
-<label for=m-runbookstepsnatnat-resource-exhaustion-check-check><a href=/runbook/steps/nat/nat-resource-exhaustion-check/ title="nat/Nat Resource Exhaustion Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsnatnat-resource-exhaustion-check><span>Nat Resource Exhaustion Check</span></a></label>
 </li>
 </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepsvertex-li>
@@ -762,15 +701,6 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsvpcinternal-interface-check-li>
 <input type=checkbox id=m-runbookstepsvpcinternal-interface-check-check>
 <label for=m-runbookstepsvpcinternal-interface-check-check><a href=/runbook/steps/vpc/internal-interface-check/ title="vpc/Internal Interface Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsvpcinternal-interface-check><span>Internal Interface Check</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsvpcnat-dropped-received-packet-check-li>
-<input type=checkbox id=m-runbookstepsvpcnat-dropped-received-packet-check-check>
-<label for=m-runbookstepsvpcnat-dropped-received-packet-check-check><a href=/runbook/steps/vpc/nat-dropped-received-packet-check/ title="vpc/Nat Dropped Received Packet Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsvpcnat-dropped-received-packet-check><span>Nat Dropped Received Packet Check</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsvpcnat-ip-exhaustion-check-li>
-<input type=checkbox id=m-runbookstepsvpcnat-ip-exhaustion-check-check>
-<label for=m-runbookstepsvpcnat-ip-exhaustion-check-check><a href=/runbook/steps/vpc/nat-ip-exhaustion-check/ title="vpc/Nat Ip Exhaustion Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsvpcnat-ip-exhaustion-check><span>Nat Ip Exhaustion Check</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsvpcnat-resource-exhaustion-check-li>
-<input type=checkbox id=m-runbookstepsvpcnat-resource-exhaustion-check-check>
-<label for=m-runbookstepsvpcnat-resource-exhaustion-check-check><a href=/runbook/steps/vpc/nat-resource-exhaustion-check/ title="vpc/Nat Resource Exhaustion Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsvpcnat-resource-exhaustion-check><span>Nat Resource Exhaustion Check</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsvpcvm-external-ip-connectivity-end-li>
 <input type=checkbox id=m-runbookstepsvpcvm-external-ip-connectivity-end-check>
 <label for=m-runbookstepsvpcvm-external-ip-connectivity-end-check><a href=/runbook/steps/vpc/vm-external-ip-connectivity-end/ title="vpc/Vm External Ip Connectivity End" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsvpcvm-external-ip-connectivity-end><span>Vm External Ip Connectivity End</span></a></label>
@@ -802,22 +732,27 @@
 </aside>
 <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
 <div class="td-page-meta ml-0 pb-1 pt-0 mb-0">
-<a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/runbook/steps/dataflow/job-state-step.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-<a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=dataflow/Job%20State%20Step" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
+<a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/runbook/diagnostic-trees/dataproc/_index.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+<a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=DATAPROC" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
 </div>
 </aside>
 <main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
 <div class=td-content>
-<h1>dataflow/Job State Step</h1>
-<div class=lead>Checks if the job is in a failed state.</div>
+<h1>DATAPROC</h1>
 <header class=article-meta>
 </header>
-<p><strong>Product</strong>: <a href=https://cloud.google.com/dataflow>Dataflow</a><br>
-<strong>Step Type</strong>: AUTOMATED STEP</p>
-<h3 id=description>Description</h3>
-<p>This evaluates the current state of the job.</p>
+<p>All diagnostic tree available in dataproc</p>
+<div class=section-index>
+<hr class=panel-line>
+<div class=entry>
+<h5>
+<a href=/runbook/diagnostic-trees/dataproc/cluster-creation/>dataproc/Cluster Creation</a>
+</h5>
+<p>Provides a comprehensive analysis of common issues which affects Dataproc cluster creation.</p>
+</div>
+</div>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified July 2, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/cb623f1fe3ec0eb440613e561876bd4cd0302a45>Merge "new runbook: Job state runbook bug 337955443" -- Branch commit log -- commit a176c44727bfa7910cea219e2d6ce46806a96690 Author: Ian Mburu &lt;mburuian@google.com> Date: 2024-06-24T15:59:42Z (cb623f1fe)</a>
+Last modified August 29, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/7981fad2a2312ba3ee3c4a6fbdbcb9990f510a80>Merge "Clean up: Correct wrongly configured dummy projects" -- Branch commit log -- commit 63bc8895cff729ad38ab028d7899e265229a4931 Author: Kwesi Graham &lt;akyen@google.com> Date: 2024-08-16T12:18:27Z (7981fad2a)</a>
 </div>
 </div>
 </main>
