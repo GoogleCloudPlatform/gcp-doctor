@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/steps/gke/nodeproblem/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-07-02T09:24:04-04:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2024-09-08T22:37:04+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gke/Nodeproblem">
 <meta itemprop=description content="This will confirm if there is any VPC flow logs to destination IP.
 ">
-<meta itemprop=dateModified content="2024-07-02T09:24:04-04:00">
-<meta itemprop=wordCount content="114"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2024-09-08T22:37:04+00:00">
+<meta itemprop=wordCount content="113"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="gke/Nodeproblem">
@@ -766,15 +766,17 @@
 <h3 id=description>Description</h3>
 <p>This will either rule out ip-masq issue or points to ip-mas-agent issue.</p>
 <h3 id=failure-reason>Failure Reason</h3>
-<p>There are no egress traffic to Destination IP which indicates that GKE NODE is also having issue to connect to destination IP.
-{LOG_ENTRY}</p>
+<p>There are no egress traffic to Destination IP which indicates that GKE NODE is also having issue to connect to
+destination IP.</p>
 <h3 id=failure-remediation>Failure Remediation</h3>
 <p>Enable VPC flow logs by following the documentation and look if traffic id going out to destination:
 <a href=https://cloud.google.com/vpc/docs/using-flow-logs#enable-logging-existing>https://cloud.google.com/vpc/docs/using-flow-logs#enable-logging-existing</a></p>
 <h3 id=success-reason>Success Reason</h3>
-<p>When VPC flow logs shows traffic is going out, then GKE IP masquerading may be working as intended. If the end-to-end case is still failing, the problem is likely to be somewhere in the networking path between Dest-IP and node on which impacted Pod is scheduled.</p>
+<p>When VPC flow logs shows traffic is going out, then GKE IP masquerading may be working as intended. If the end-to-end
+case is still failing, the problem is likely to be somewhere in the networking path between Dest-IP and node on which
+impacted Pod is scheduled.</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified July 2, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/2569c1f1b37d38aff00ab7b1598ef8c6256dd56b>ip-masq (2569c1f1b)</a>
+Last modified September 8, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/583768b6023c19c993f482940a5d2b71549c6bb8>Merge "Create and retrieve metadata related to steps" -- Branch commit log -- commit bd018d14f9489ceb2189e77e26dd796e8c8a54d2 Author: Kwesi Graham &lt;akyen@google.com> Date: 2024-09-01T17:49:48Z (583768b60)</a>
 </div>
 </div>
 </main>
