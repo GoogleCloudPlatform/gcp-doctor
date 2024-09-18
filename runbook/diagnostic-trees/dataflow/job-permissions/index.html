@@ -13,24 +13,24 @@
 <link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96>
 <link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
-<title>dataflow/Dataflow Permissions | gcpdiag</title>
-<meta name=description content="Analysis and Resolution of Dataflow Permissions issues.
+<title>dataflow/Job Permissions | gcpdiag</title>
+<meta name=description content="Analysis and Resolution of Dataflow Jobs Permissions issues.
 ">
-<meta property="og:title" content="dataflow/Dataflow Permissions">
-<meta property="og:description" content="Analysis and Resolution of Dataflow Permissions issues.
+<meta property="og:title" content="dataflow/Job Permissions">
+<meta property="og:description" content="Analysis and Resolution of Dataflow Jobs Permissions issues.
 ">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://gcpdiag.dev/runbook/diagnostic-trees/dataflow/dataflow-permissions/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-08-20T11:17:25+00:00"><meta property="og:site_name" content="gcpdiag">
-<meta itemprop=name content="dataflow/Dataflow Permissions">
-<meta itemprop=description content="Analysis and Resolution of Dataflow Permissions issues.
+<meta property="og:url" content="https://gcpdiag.dev/runbook/diagnostic-trees/dataflow/job-permissions/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
+<meta property="article:modified_time" content="2024-09-18T14:56:51+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta itemprop=name content="dataflow/Job Permissions">
+<meta itemprop=description content="Analysis and Resolution of Dataflow Jobs Permissions issues.
 ">
-<meta itemprop=dateModified content="2024-08-20T11:17:25+00:00">
-<meta itemprop=wordCount content="184"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2024-09-18T14:56:51+00:00">
+<meta itemprop=wordCount content="288"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
-<meta name=twitter:title content="dataflow/Dataflow Permissions">
-<meta name=twitter:description content="Analysis and Resolution of Dataflow Permissions issues.
+<meta name=twitter:title content="dataflow/Job Permissions">
+<meta name=twitter:description content="Analysis and Resolution of Dataflow Jobs Permissions issues.
 ">
 <link href=/scss/main.css rel=stylesheet>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
@@ -96,12 +96,12 @@
 <input type=checkbox id=m-runbookdiagnostic-treesdataflow-check checked>
 <label for=m-runbookdiagnostic-treesdataflow-check><a href=/runbook/diagnostic-trees/dataflow/ title=DATAFLOW class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookdiagnostic-treesdataflow><span>dataflow</span></a></label>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-runbookdiagnostic-treesdataflowdataflow-permissions-li>
-<input type=checkbox id=m-runbookdiagnostic-treesdataflowdataflow-permissions-check checked>
-<label for=m-runbookdiagnostic-treesdataflowdataflow-permissions-check><a href=/runbook/diagnostic-trees/dataflow/dataflow-permissions/ title="dataflow/Dataflow Permissions" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treesdataflowdataflow-permissions><span class=td-sidebar-nav-active-item>dataflow/dataflow-permissions</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookdiagnostic-treesdataflowfailed-streaming-pipeline-li>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookdiagnostic-treesdataflowfailed-streaming-pipeline-li>
 <input type=checkbox id=m-runbookdiagnostic-treesdataflowfailed-streaming-pipeline-check>
 <label for=m-runbookdiagnostic-treesdataflowfailed-streaming-pipeline-check><a href=/runbook/diagnostic-trees/dataflow/failed-streaming-pipeline/ title="dataflow/Failed Streaming Pipeline" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treesdataflowfailed-streaming-pipeline><span>dataflow/failed-streaming-pipeline</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-runbookdiagnostic-treesdataflowjob-permissions-li>
+<input type=checkbox id=m-runbookdiagnostic-treesdataflowjob-permissions-check checked>
+<label for=m-runbookdiagnostic-treesdataflowjob-permissions-check><a href=/runbook/diagnostic-trees/dataflow/job-permissions/ title="dataflow/Job Permissions" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treesdataflowjob-permissions><span class=td-sidebar-nav-active-item>dataflow/job-permissions</span></a></label>
 </li>
 </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookdiagnostic-treesdataproc-li>
@@ -789,14 +789,14 @@
 </ul>
 </nav></div>
 <div class="td-page-meta ml-0 pb-1 pt-0 mb-0">
-<a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/runbook/diagnostic-trees/dataflow/dataflow-permissions.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-<a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=dataflow/Dataflow%20Permissions" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
+<a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/runbook/diagnostic-trees/dataflow/job-permissions.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+<a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=dataflow/Job%20Permissions" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
 </div>
 </aside>
 <main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
 <div class=td-content>
-<h1>dataflow/Dataflow Permissions</h1>
-<div class=lead>Analysis and Resolution of Dataflow Permissions issues.</div>
+<h1>dataflow/Job Permissions</h1>
+<div class=lead>Analysis and Resolution of Dataflow Jobs Permissions issues.</div>
 <header class=article-meta>
 </header>
 <p><strong>Product</strong>: <a href=https://cloud.google.com/dataflow>Dataflow</a>
@@ -804,14 +804,29 @@
 <h3 id=description>Description</h3>
 <p>This runbook investigates Dataflow permissions and recommends remediation steps.</p>
 <p>Areas Examined:</p>
-<ol>
-<li>Dataflow user account permissions</li>
-<li>Dataflow Service Account</li>
-<li>Dataflow Worker Service Account</li>
-<li>Dataflow Resource Permissions</li>
-</ol>
+<ul>
+<li>
+<p>Dataflow User Account Permissions: Verify that individual Dataflow users have the necessary
+permissions to access and manage Dataflow jobs (e.g., create,update,cancel).</p>
+</li>
+<li>
+<p>Dataflow Service Account Permissions: Verify that the Dataflow Service Account has the required
+permissions to execute and manage the Dataflow jobs</p>
+</li>
+<li>
+<p>Dataflow Worker Service Account: Verify that the Dataflow Worker Service Account has the
+necessary permissions for worker instances within a Dataflow job to access input and
+output resources during job execution.</p>
+</li>
+<li>
+<p>Dataflow Resource Permissions: Verify that Dataflow resources (e.g., Cloud Storage buckets,
+BigQuery datasets) have the necessary permissions to be accessed and used by Dataflow jobs.</p>
+</li>
+</ul>
+<p>By ensuring that Dataflow resources have the necessary permissions, you
+can prevent errors and ensure that your jobs run smoothly.</p>
 <h3 id=executing-this-runbook>Executing this runbook</h3>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>gcpdiag runbook dataflow/dataflow-permissions <span style=color:#4e9a06>\
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>gcpdiag runbook dataflow/job-permissions <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>project_id</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>principal</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>worker_service_account</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
@@ -847,7 +862,7 @@
 <td>True</td>
 <td>None</td>
 <td>str</td>
-<td>Dataflow Service Account used for Dataflow Job Creation and execution</td>
+<td>Dataflow Worker Service Account used for Dataflow Job Creationand execution</td>
 </tr>
 <tr>
 <td><code>cross_project_id</code></td>
@@ -903,7 +918,7 @@
 </li>
 </ul>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified August 20, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/7ff44a2d36cc6cf839a56f911feea4b99707f41d>new runbook:dataflow permissions (7ff44a2d3)</a>
+Last modified September 18, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/87bf38aaf78db2c64a46f3abe3a25544979f86cf>Merge "update dataflow job permissions doc strings" -- Branch commit log -- commit fd297cccf05ea4e442656b4672d56ffe95388719 Author: gcpdiag team &lt;noreply@google.com> Date: 2024-09-18T11:31:07Z (87bf38aaf)</a>
 </div>
 </div>
 </main>
