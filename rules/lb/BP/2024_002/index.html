@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/rules/lb/BP/2024_002/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="rules">
-<meta property="article:modified_time" content="2024-02-13T10:02:18+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2024-09-20T06:21:25+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="lb/BP/2024_002">
 <meta itemprop=description content="Global Access enabled on Regional Internal Load Balancer
 ">
-<meta itemprop=dateModified content="2024-02-13T10:02:18+00:00">
-<meta itemprop=wordCount content="90"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2024-09-20T06:21:25+00:00">
+<meta itemprop=wordCount content="100"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="lb/BP/2024_002">
@@ -1174,7 +1174,7 @@
 <p><strong>Product</strong>: <a href=https://cloud.google.com/load-balancing>Load Balancing</a><br>
 <strong>Rule class</strong>: BP - Best practice, opinionated recommendation</p>
 <h3 id=description>Description</h3>
-<p>When global access is not on, resources in other location might not be able to visit the Internal Load Balancer(iLB).
+<p>When global access is not on, resources/clients in other location might not be able to visit the Internal Load Balancer(iLB).
 It&rsquo;s recommended to enable the global access in regional iLB.</p>
 <h3 id=remediation>Remediation</h3>
 <p>By default global access is not enabled in regional iLB. You have to <a href=https://cloud.google.com/load-balancing/docs/l7-internal/setting-up-l7-internal#global-access>enable global access</a> to allow clients from any region to access your load balancer. Backends must also be in the same region as the load balancer.</p>
@@ -1182,9 +1182,11 @@ It&rsquo;s recommended to enable the global access in regional iLB.</p>
 <ul>
 <li><a href=https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts>Forwarding rules</a></li>
 <li><a href=https://cloud.google.com/load-balancing/docs/l7-internal>Internal Application Load Balancer</a></li>
+<li><a href=https://cloud.google.com/load-balancing/docs/tcp/internal-proxy>Internal Proxy Network Load Balancer</a></li>
+<li><a href=https://cloud.google.com/load-balancing/docs/internal>Internal Passthrough Network Load Balancer</a></li>
 </ul>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified February 13, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/f20326881cdd5c4cd28ae04d8f303a537ce642d5>Merge "new rule:Check if global access is on for the regional iLB" -- Branch commit log -- commit b638f83b1e709bfacdffeda1b40538f0fb8e8eb5 Author: gcpdiag team &lt;noreply@google.com> Date: 2024-02-06T05:58:53Z (f20326881)</a>
+Last modified September 20, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/0aff6f5efc89e046224734c335be23562aa488fb>Merge "bug fixed: regional iLB filter" -- Branch commit log -- commit 60696c8651bd662d58473611da85fc44d4488eb8 Author: gcpdiag team &lt;noreply@google.com> Date: 2024-08-30T06:39:08Z (0aff6f5ef)</a>
 </div>
 </div>
 </main>
