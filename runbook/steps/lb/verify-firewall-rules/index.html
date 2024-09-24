@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/steps/lb/verify-firewall-rules/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-08-05T10:17:04+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2024-09-24T17:10:23+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="lb/Verify Firewall Rules">
 <meta itemprop=description content="Checks if firewall rules are configured correctly.
 ">
-<meta itemprop=dateModified content="2024-08-05T10:17:04+00:00">
-<meta itemprop=wordCount content="79"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2024-09-24T17:10:23+00:00">
+<meta itemprop=wordCount content="80"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="lb/Verify Firewall Rules">
@@ -805,13 +805,14 @@
 <h3 id=description>Description</h3>
 <p>None</p>
 <h3 id=failure-reason>Failure Reason</h3>
-<p>The health checks are currently failing due to a misconfigured firewall. This is preventing Google Cloud probers from connecting to your backends, causing the load balancer to consider them unhealthy.</p>
+<p>{insight}
+The health checks are currently failing due to a misconfigured firewall. This is preventing Google Cloud probers from connecting to your backends, causing the load balancer to consider them unhealthy.</p>
 <h3 id=failure-remediation>Failure Remediation</h3>
 <p>Update your firewall rules to allow inbound traffic from the Google Cloud health check IP ranges (found at <a href=https://cloud.google.com/load-balancing/docs/health-check-concepts#ip-ranges>https://cloud.google.com/load-balancing/docs/health-check-concepts#ip-ranges</a>) to your backends.</p>
 <h3 id=success-reason>Success Reason</h3>
 <p>Firewalls are correctly configured and are not blocking the health check probes.</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified August 5, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/d7cb461ad3846a9ac43ebdca5c0bdd38f0c760b6>Health check troubleshooting runbook: Verify firewall rules step (d7cb461ad)</a>
+Last modified September 24, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/ca130d0fc5d7d54b135dc740a9fc08f8afc9d6bf>Merge "Some improvements to the unhealthy backends runbook:" -- Branch commit log -- commit 5c9d9692f08eb898596191c2c9cbd07c0a605637 Author: Natalia Kaczor &lt;nataliakaczor@google.com> Date: 2024-09-24T12:41:22Z (ca130d0fc)</a>
 </div>
 </div>
 </main>
