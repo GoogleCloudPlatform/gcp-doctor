@@ -21,11 +21,11 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/diagnostic-trees/dataproc/cluster-creation/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-09-06T07:54:47+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2024-10-10T01:19:43+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="dataproc/Cluster Creation">
 <meta itemprop=description content="Provides a comprehensive analysis of common issues which affect Dataproc cluster creation.
 ">
-<meta itemprop=dateModified content="2024-09-06T07:54:47+00:00">
+<meta itemprop=dateModified content="2024-10-10T01:19:43+00:00">
 <meta itemprop=wordCount content="464"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
@@ -835,12 +835,12 @@ logs regarding init actions script failures or timeouts.</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>gcpdiag runbook dataproc/cluster-creation <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>project_id</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>cluster_name</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
+</span><span style=color:#4e9a06></span>  -p <span style=color:#000>region</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>cluster_uuid</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>project_number</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>service_account</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>constraint</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>stackdriver</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
-</span><span style=color:#4e9a06></span>  -p <span style=color:#000>region</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>zone</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>network</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>subnetwork</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
@@ -876,6 +876,13 @@ logs regarding init actions script failures or timeouts.</p>
 <td>Dataproc cluster Name of an existing/active resource</td>
 </tr>
 <tr>
+<td><code>region</code></td>
+<td>True</td>
+<td>None</td>
+<td>str</td>
+<td>Dataproc cluster Region</td>
+</tr>
+<tr>
 <td><code>cluster_uuid</code></td>
 <td>False</td>
 <td>None</td>
@@ -909,13 +916,6 @@ logs regarding init actions script failures or timeouts.</p>
 <td>True</td>
 <td>str</td>
 <td>Checks if stackdriver logging is enabled for further troubleshooting</td>
-</tr>
-<tr>
-<td><code>region</code></td>
-<td>False</td>
-<td>None</td>
-<td>str</td>
-<td>Dataproc cluster Region</td>
 </tr>
 <tr>
 <td><code>zone</code></td>
@@ -1050,7 +1050,7 @@ logs regarding init actions script failures or timeouts.</p>
 </li>
 </ul>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified September 6, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/5247410aa9f708919cd2a3a009aaabe9f103dca1>fix typos in dataproc/cluster_creation runbook (5247410aa)</a>
+Last modified October 10, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/88a925934fc142cb8034e88ed0fca0a451f34732>Merge "Add a get_cluster function to retrieve a cluster using its project, region, and cluster name." -- Branch commit log -- commit d2f31b47bf913860220a8a647743410060544710 Author: Kwesi Graham &lt;akyen@google.com> Date: 2024-10-07T14:35:37Z (88a925934)</a>
 </div>
 </div>
 </main>
