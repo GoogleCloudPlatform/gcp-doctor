@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/diagnostic-trees/gce/vm-performance/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-08-24T07:19:43+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2024-10-04T15:58:13+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gce/Vm Performance">
 <meta itemprop=description content="Google Compute Engine VM performance checks
 ">
-<meta itemprop=dateModified content="2024-08-24T07:19:43+00:00">
-<meta itemprop=wordCount content="248"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2024-10-04T15:58:13+00:00">
+<meta itemprop=wordCount content="255"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="gce/Vm Performance">
@@ -333,6 +333,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcecpu-overcommitment-check-li>
 <input type=checkbox id=m-runbookstepsgcecpu-overcommitment-check-check>
 <label for=m-runbookstepsgcecpu-overcommitment-check-check><a href=/runbook/steps/gce/cpu-overcommitment-check/ title="gce/Cpu Overcommitment Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcecpu-overcommitment-check><span>Cpu Overcommitment Check</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcedisk-health-check-li>
+<input type=checkbox id=m-runbookstepsgcedisk-health-check-check>
+<label for=m-runbookstepsgcedisk-health-check-check><a href=/runbook/steps/gce/disk-health-check/ title="gce/Disk Health Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcedisk-health-check><span>Disk Health Check</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcedisk-iops-throughput-utilisation-checks-li>
 <input type=checkbox id=m-runbookstepsgcedisk-iops-throughput-utilisation-checks-check>
 <label for=m-runbookstepsgcedisk-iops-throughput-utilisation-checks-check><a href=/runbook/steps/gce/disk-iops-throughput-utilisation-checks/ title="gce/Disk Iops Throughput Utilisation Checks" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcedisk-iops-throughput-utilisation-checks><span>Disk Iops Throughput Utilisation Checks</span></a></label>
@@ -662,6 +665,15 @@
 <label for=m-runbookstepslbverify-health-check-logging-enabled-check><a href=/runbook/steps/lb/verify-health-check-logging-enabled/ title="lb/Verify Health Check Logging Enabled" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbverify-health-check-logging-enabled><span>Verify Health Check Logging Enabled</span></a></label>
 </li>
 </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepslogs-li>
+<input type=checkbox id=m-runbookstepslogs-check>
+<label for=m-runbookstepslogs-check><a href=/runbook/steps/logs/ title=LOGS class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepslogs><span>logs</span></a></label>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslogslogs-check-li>
+<input type=checkbox id=m-runbookstepslogslogs-check-check>
+<label for=m-runbookstepslogslogs-check-check><a href=/runbook/steps/logs/logs-check/ title="logs/Logs Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslogslogs-check><span>Logs Check</span></a></label>
+</li>
+</ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepsmonitoring-li>
 <input type=checkbox id=m-runbookstepsmonitoring-check>
 <label for=m-runbookstepsmonitoring-check><a href=/runbook/steps/monitoring/ title=MONITORING class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepsmonitoring><span>monitoring</span></a></label>
@@ -669,6 +681,21 @@
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsmonitoringtime-series-check-li>
 <input type=checkbox id=m-runbookstepsmonitoringtime-series-check-check>
 <label for=m-runbookstepsmonitoringtime-series-check-check><a href=/runbook/steps/monitoring/time-series-check/ title="monitoring/Time Series Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsmonitoringtime-series-check><span>Time Series Check</span></a></label>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepsnat-li>
+<input type=checkbox id=m-runbookstepsnat-check>
+<label for=m-runbookstepsnat-check><a href=/runbook/steps/nat/ title=NAT class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepsnat><span>nat</span></a></label>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsnatnat-dropped-received-packet-check-li>
+<input type=checkbox id=m-runbookstepsnatnat-dropped-received-packet-check-check>
+<label for=m-runbookstepsnatnat-dropped-received-packet-check-check><a href=/runbook/steps/nat/nat-dropped-received-packet-check/ title="nat/Nat Dropped Received Packet Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsnatnat-dropped-received-packet-check><span>Nat Dropped Received Packet Check</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsnatnat-ip-exhaustion-check-li>
+<input type=checkbox id=m-runbookstepsnatnat-ip-exhaustion-check-check>
+<label for=m-runbookstepsnatnat-ip-exhaustion-check-check><a href=/runbook/steps/nat/nat-ip-exhaustion-check/ title="nat/Nat Ip Exhaustion Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsnatnat-ip-exhaustion-check><span>Nat Ip Exhaustion Check</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsnatnat-resource-exhaustion-check-li>
+<input type=checkbox id=m-runbookstepsnatnat-resource-exhaustion-check-check>
+<label for=m-runbookstepsnatnat-resource-exhaustion-check-check><a href=/runbook/steps/nat/nat-resource-exhaustion-check/ title="nat/Nat Resource Exhaustion Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsnatnat-resource-exhaustion-check><span>Nat Resource Exhaustion Check</span></a></label>
 </li>
 </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepspubsub-li>
@@ -811,6 +838,7 @@ behind the performance issues of your Google Compute Engine VMs within Google Cl
 - Disk space high utilisation
 - High Disk IOPS utilisation
 - High Disk Throughput utilisation
+- Disk Health check
 - Check for Live Migrations
 - Usualy Error checks in Serial console logs
 </code></pre>
@@ -893,6 +921,9 @@ behind the performance issues of your Google Compute Engine VMs within Google Cl
 <p><a href=/runbook/steps/gce/vm-serial-logs-check>Vm Serial Logs Check</a></p>
 </li>
 <li>
+<p><a href=/runbook/steps/gce/disk-health-check>Disk Health Check</a></p>
+</li>
+<li>
 <p><a href=/runbook/steps/gce/high-vm-disk-utilization>High Vm Disk Utilization</a></p>
 </li>
 <li>
@@ -918,7 +949,7 @@ behind the performance issues of your Google Compute Engine VMs within Google Cl
 </li>
 </ul>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified August 24, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/38fc03c70595be61dc3e6ada834add70466a8f43>Use of a product name acronym or abbreviation is a violation of Google Cloud brand guidelines (38fc03c70)</a>
+Last modified October 4, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/2851aea8f0af57580ff649acc3d98997b8fec2a5>Add PD performance health check to gce/vm-performance (2851aea8f)</a>
 </div>
 </div>
 </main>

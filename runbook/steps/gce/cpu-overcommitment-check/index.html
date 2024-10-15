@@ -333,6 +333,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-runbookstepsgcecpu-overcommitment-check-li>
 <input type=checkbox id=m-runbookstepsgcecpu-overcommitment-check-check checked>
 <label for=m-runbookstepsgcecpu-overcommitment-check-check><a href=/runbook/steps/gce/cpu-overcommitment-check/ title="gce/Cpu Overcommitment Check" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcecpu-overcommitment-check><span class=td-sidebar-nav-active-item>Cpu Overcommitment Check</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcedisk-health-check-li>
+<input type=checkbox id=m-runbookstepsgcedisk-health-check-check>
+<label for=m-runbookstepsgcedisk-health-check-check><a href=/runbook/steps/gce/disk-health-check/ title="gce/Disk Health Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcedisk-health-check><span>Disk Health Check</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcedisk-iops-throughput-utilisation-checks-li>
 <input type=checkbox id=m-runbookstepsgcedisk-iops-throughput-utilisation-checks-check>
 <label for=m-runbookstepsgcedisk-iops-throughput-utilisation-checks-check><a href=/runbook/steps/gce/disk-iops-throughput-utilisation-checks/ title="gce/Disk Iops Throughput Utilisation Checks" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcedisk-iops-throughput-utilisation-checks><span>Disk Iops Throughput Utilisation Checks</span></a></label>
@@ -662,6 +665,15 @@
 <label for=m-runbookstepslbverify-health-check-logging-enabled-check><a href=/runbook/steps/lb/verify-health-check-logging-enabled/ title="lb/Verify Health Check Logging Enabled" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbverify-health-check-logging-enabled><span>Verify Health Check Logging Enabled</span></a></label>
 </li>
 </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepslogs-li>
+<input type=checkbox id=m-runbookstepslogs-check>
+<label for=m-runbookstepslogs-check><a href=/runbook/steps/logs/ title=LOGS class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepslogs><span>logs</span></a></label>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslogslogs-check-li>
+<input type=checkbox id=m-runbookstepslogslogs-check-check>
+<label for=m-runbookstepslogslogs-check-check><a href=/runbook/steps/logs/logs-check/ title="logs/Logs Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslogslogs-check><span>Logs Check</span></a></label>
+</li>
+</ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepsmonitoring-li>
 <input type=checkbox id=m-runbookstepsmonitoring-check>
 <label for=m-runbookstepsmonitoring-check><a href=/runbook/steps/monitoring/ title=MONITORING class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepsmonitoring><span>monitoring</span></a></label>
@@ -669,6 +681,21 @@
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsmonitoringtime-series-check-li>
 <input type=checkbox id=m-runbookstepsmonitoringtime-series-check-check>
 <label for=m-runbookstepsmonitoringtime-series-check-check><a href=/runbook/steps/monitoring/time-series-check/ title="monitoring/Time Series Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsmonitoringtime-series-check><span>Time Series Check</span></a></label>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepsnat-li>
+<input type=checkbox id=m-runbookstepsnat-check>
+<label for=m-runbookstepsnat-check><a href=/runbook/steps/nat/ title=NAT class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepsnat><span>nat</span></a></label>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsnatnat-dropped-received-packet-check-li>
+<input type=checkbox id=m-runbookstepsnatnat-dropped-received-packet-check-check>
+<label for=m-runbookstepsnatnat-dropped-received-packet-check-check><a href=/runbook/steps/nat/nat-dropped-received-packet-check/ title="nat/Nat Dropped Received Packet Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsnatnat-dropped-received-packet-check><span>Nat Dropped Received Packet Check</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsnatnat-ip-exhaustion-check-li>
+<input type=checkbox id=m-runbookstepsnatnat-ip-exhaustion-check-check>
+<label for=m-runbookstepsnatnat-ip-exhaustion-check-check><a href=/runbook/steps/nat/nat-ip-exhaustion-check/ title="nat/Nat Ip Exhaustion Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsnatnat-ip-exhaustion-check><span>Nat Ip Exhaustion Check</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsnatnat-resource-exhaustion-check-li>
+<input type=checkbox id=m-runbookstepsnatnat-resource-exhaustion-check-check>
+<label for=m-runbookstepsnatnat-resource-exhaustion-check-check><a href=/runbook/steps/nat/nat-resource-exhaustion-check/ title="nat/Nat Resource Exhaustion Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsnatnat-resource-exhaustion-check><span>Nat Resource Exhaustion Check</span></a></label>
 </li>
 </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepspubsub-li>
