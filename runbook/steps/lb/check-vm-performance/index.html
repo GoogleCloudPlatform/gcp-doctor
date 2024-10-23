@@ -168,7 +168,13 @@
 <input type=checkbox id=m-runbookdiagnostic-treeslb-check>
 <label for=m-runbookdiagnostic-treeslb-check><a href=/runbook/diagnostic-trees/lb/ title=LB class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookdiagnostic-treeslb><span>lb</span></a></label>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookdiagnostic-treeslbunhealthy-backends-li>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookdiagnostic-treeslbssl-certificate-li>
+<input type=checkbox id=m-runbookdiagnostic-treeslbssl-certificate-check>
+<label for=m-runbookdiagnostic-treeslbssl-certificate-check><a href=/runbook/diagnostic-trees/lb/ssl-certificate/ title="lb/Ssl Certificate" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treeslbssl-certificate><span>lb/ssl-certificate</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookdiagnostic-treeslbssl-certificates-li>
+<input type=checkbox id=m-runbookdiagnostic-treeslbssl-certificates-check>
+<label for=m-runbookdiagnostic-treeslbssl-certificates-check><a href=/runbook/diagnostic-trees/lb/ssl-certificates/ title="lb/Ssl Certificates" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treeslbssl-certificates><span>lb/ssl-certificates</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookdiagnostic-treeslbunhealthy-backends-li>
 <input type=checkbox id=m-runbookdiagnostic-treeslbunhealthy-backends-check>
 <label for=m-runbookdiagnostic-treeslbunhealthy-backends-check><a href=/runbook/diagnostic-trees/lb/unhealthy-backends/ title="lb/Unhealthy Backends" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treeslbunhealthy-backends><span>lb/unhealthy-backends</span></a></label>
 </li>
@@ -630,9 +636,27 @@
 <input type=checkbox id=m-runbookstepslb-check checked>
 <label for=m-runbookstepslb-check><a href=/runbook/steps/lb/ title=LB class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepslb><span>lb</span></a></label>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbanalyze-latest-health-check-log-li>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbanalyze-certificate-status-li>
+<input type=checkbox id=m-runbookstepslbanalyze-certificate-status-check>
+<label for=m-runbookstepslbanalyze-certificate-status-check><a href=/runbook/steps/lb/analyze-certificate-status/ title="lb/Analyze Certificate Status" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbanalyze-certificate-status><span>Analyze Certificate Status</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbanalyze-domain-statuses-li>
+<input type=checkbox id=m-runbookstepslbanalyze-domain-statuses-check>
+<label for=m-runbookstepslbanalyze-domain-statuses-check><a href=/runbook/steps/lb/analyze-domain-statuses/ title="lb/Analyze Domain Statuses" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbanalyze-domain-statuses><span>Analyze Domain Statuses</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbanalyze-failed-caa-check-li>
+<input type=checkbox id=m-runbookstepslbanalyze-failed-caa-check-check>
+<label for=m-runbookstepslbanalyze-failed-caa-check-check><a href=/runbook/steps/lb/analyze-failed-caa-check/ title="lb/Analyze Failed Caa Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbanalyze-failed-caa-check><span>Analyze Failed Caa Check</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbanalyze-failed-not-visible-domains-li>
+<input type=checkbox id=m-runbookstepslbanalyze-failed-not-visible-domains-check>
+<label for=m-runbookstepslbanalyze-failed-not-visible-domains-check><a href=/runbook/steps/lb/analyze-failed-not-visible-domains/ title="lb/Analyze Failed Not Visible Domains" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbanalyze-failed-not-visible-domains><span>Analyze Failed Not Visible Domains</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbanalyze-latest-health-check-log-li>
 <input type=checkbox id=m-runbookstepslbanalyze-latest-health-check-log-check>
 <label for=m-runbookstepslbanalyze-latest-health-check-log-check><a href=/runbook/steps/lb/analyze-latest-health-check-log/ title="lb/Analyze Latest Health Check Log" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbanalyze-latest-health-check-log><span>Analyze Latest Health Check Log</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbanalyze-provisioning-domains-li>
+<input type=checkbox id=m-runbookstepslbanalyze-provisioning-domains-check>
+<label for=m-runbookstepslbanalyze-provisioning-domains-check><a href=/runbook/steps/lb/analyze-provisioning-domains/ title="lb/Analyze Provisioning Domains" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbanalyze-provisioning-domains><span>Analyze Provisioning Domains</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbanalyze-rate-limited-domains-li>
+<input type=checkbox id=m-runbookstepslbanalyze-rate-limited-domains-check>
+<label for=m-runbookstepslbanalyze-rate-limited-domains-check><a href=/runbook/steps/lb/analyze-rate-limited-domains/ title="lb/Analyze Rate Limited Domains" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbanalyze-rate-limited-domains><span>Analyze Rate Limited Domains</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbanalyze-timeout-health-check-log-li>
 <input type=checkbox id=m-runbookstepslbanalyze-timeout-health-check-log-check>
 <label for=m-runbookstepslbanalyze-timeout-health-check-log-check><a href=/runbook/steps/lb/analyze-timeout-health-check-log/ title="lb/Analyze Timeout Health Check Log" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbanalyze-timeout-health-check-log><span>Analyze Timeout Health Check Log</span></a></label>
@@ -642,12 +666,30 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbanalyze-unknown-health-check-log-li>
 <input type=checkbox id=m-runbookstepslbanalyze-unknown-health-check-log-check>
 <label for=m-runbookstepslbanalyze-unknown-health-check-log-check><a href=/runbook/steps/lb/analyze-unknown-health-check-log/ title="lb/Analyze Unknown Health Check Log" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbanalyze-unknown-health-check-log><span>Analyze Unknown Health Check Log</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbcheck-certificate-attachment-li>
+<input type=checkbox id=m-runbookstepslbcheck-certificate-attachment-check>
+<label for=m-runbookstepslbcheck-certificate-attachment-check><a href=/runbook/steps/lb/check-certificate-attachment/ title="lb/Check Certificate Attachment" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbcheck-certificate-attachment><span>Check Certificate Attachment</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbcheck-past-health-check-success-li>
 <input type=checkbox id=m-runbookstepslbcheck-past-health-check-success-check>
 <label for=m-runbookstepslbcheck-past-health-check-success-check><a href=/runbook/steps/lb/check-past-health-check-success/ title="lb/Check Past Health Check Success" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbcheck-past-health-check-success><span>Check Past Health Check Success</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbcheck-provisioning-time-li>
+<input type=checkbox id=m-runbookstepslbcheck-provisioning-time-check>
+<label for=m-runbookstepslbcheck-provisioning-time-check><a href=/runbook/steps/lb/check-provisioning-time/ title="lb/Check Provisioning Time" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbcheck-provisioning-time><span>Check Provisioning Time</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-runbookstepslbcheck-vm-performance-li>
 <input type=checkbox id=m-runbookstepslbcheck-vm-performance-check checked>
 <label for=m-runbookstepslbcheck-vm-performance-check><a href=/runbook/steps/lb/check-vm-performance/ title="lb/Check Vm Performance" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbcheck-vm-performance><span class=td-sidebar-nav-active-item>Check Vm Performance</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbssl-certificate-end-li>
+<input type=checkbox id=m-runbookstepslbssl-certificate-end-check>
+<label for=m-runbookstepslbssl-certificate-end-check><a href=/runbook/steps/lb/ssl-certificate-end/ title="lb/Ssl Certificate End" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbssl-certificate-end><span>Ssl Certificate End</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbssl-certificate-start-li>
+<input type=checkbox id=m-runbookstepslbssl-certificate-start-check>
+<label for=m-runbookstepslbssl-certificate-start-check><a href=/runbook/steps/lb/ssl-certificate-start/ title="lb/Ssl Certificate Start" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbssl-certificate-start><span>Ssl Certificate Start</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbssl-certificates-end-li>
+<input type=checkbox id=m-runbookstepslbssl-certificates-end-check>
+<label for=m-runbookstepslbssl-certificates-end-check><a href=/runbook/steps/lb/ssl-certificates-end/ title="lb/Ssl Certificates End" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbssl-certificates-end><span>Ssl Certificates End</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbssl-certificates-start-li>
+<input type=checkbox id=m-runbookstepslbssl-certificates-start-check>
+<label for=m-runbookstepslbssl-certificates-start-check><a href=/runbook/steps/lb/ssl-certificates-start/ title="lb/Ssl Certificates Start" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbssl-certificates-start><span>Ssl Certificates Start</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbunhealthy-backends-end-li>
 <input type=checkbox id=m-runbookstepslbunhealthy-backends-end-check>
 <label for=m-runbookstepslbunhealthy-backends-end-check><a href=/runbook/steps/lb/unhealthy-backends-end/ title="lb/Unhealthy Backends End" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbunhealthy-backends-end><span>Unhealthy Backends End</span></a></label>
@@ -657,12 +699,21 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbvalidate-backend-service-port-configuration-li>
 <input type=checkbox id=m-runbookstepslbvalidate-backend-service-port-configuration-check>
 <label for=m-runbookstepslbvalidate-backend-service-port-configuration-check><a href=/runbook/steps/lb/validate-backend-service-port-configuration/ title="lb/Validate Backend Service Port Configuration" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbvalidate-backend-service-port-configuration><span>Validate Backend Service Port Configuration</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbverify-dns-records-li>
+<input type=checkbox id=m-runbookstepslbverify-dns-records-check>
+<label for=m-runbookstepslbverify-dns-records-check><a href=/runbook/steps/lb/verify-dns-records/ title="lb/Verify Dns Records" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbverify-dns-records><span>Verify Dns Records</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbverify-firewall-rules-li>
 <input type=checkbox id=m-runbookstepslbverify-firewall-rules-check>
 <label for=m-runbookstepslbverify-firewall-rules-check><a href=/runbook/steps/lb/verify-firewall-rules/ title="lb/Verify Firewall Rules" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbverify-firewall-rules><span>Verify Firewall Rules</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbverify-forwarding-rules-port-li>
+<input type=checkbox id=m-runbookstepslbverify-forwarding-rules-port-check>
+<label for=m-runbookstepslbverify-forwarding-rules-port-check><a href=/runbook/steps/lb/verify-forwarding-rules-port/ title="lb/Verify Forwarding Rules Port" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbverify-forwarding-rules-port><span>Verify Forwarding Rules Port</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbverify-health-check-logging-enabled-li>
 <input type=checkbox id=m-runbookstepslbverify-health-check-logging-enabled-check>
 <label for=m-runbookstepslbverify-health-check-logging-enabled-check><a href=/runbook/steps/lb/verify-health-check-logging-enabled/ title="lb/Verify Health Check Logging Enabled" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbverify-health-check-logging-enabled><span>Verify Health Check Logging Enabled</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbverify-no-certificate-map-conflict-li>
+<input type=checkbox id=m-runbookstepslbverify-no-certificate-map-conflict-check>
+<label for=m-runbookstepslbverify-no-certificate-map-conflict-check><a href=/runbook/steps/lb/verify-no-certificate-map-conflict/ title="lb/Verify No Certificate Map Conflict" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbverify-no-certificate-map-conflict><span>Verify No Certificate Map Conflict</span></a></label>
 </li>
 </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepslogs-li>
