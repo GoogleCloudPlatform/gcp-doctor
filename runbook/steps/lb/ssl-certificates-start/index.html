@@ -26,7 +26,7 @@
 <meta itemprop=description content="Verifies the existence type and status of the SSL certificate.
 ">
 <meta itemprop=dateModified content="2024-10-17T16:09:27+00:00">
-<meta itemprop=wordCount content="45"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=wordCount content="59"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="lb/Ssl Certificates Start">
@@ -863,6 +863,7 @@
 <li><a href=#failure-reason>Failure Reason</a></li>
 <li><a href=#failure-remediation>Failure Remediation</a></li>
 <li><a href=#success-reason>Success Reason</a></li>
+<li><a href=#skipped-reason>Skipped Reason</a></li>
 </ul>
 </li>
 </ul>
@@ -888,8 +889,10 @@
 <p>Further investigation is required to identify the root cause and apply appropriate fixes</p>
 <h3 id=success-reason>Success Reason</h3>
 <p>The certificate &ldquo;{name}&rdquo; is in ACTIVE state.</p>
+<h3 id=skipped-reason>Skipped Reason</h3>
+<p>SSL certificate {name} does not exist or project {project_id} does not exist.</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified October 17, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/72eedfe7a62000feedc031e8ec224e2135183a4c>Runbook for SSL certificates troubleshooting (72eedfe7a)</a>
+Last modified October 17, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/fd6acab6cab05d2fed4fe9e0579bcaa5cfb026ed>Runbook for SSL certificates troubleshooting - fixes from code review (fd6acab6c)</a>
 </div>
 </div>
 </main>
