@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/diagnostic-trees/vpc/vm-external-ip-connectivity/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-07-01T15:03:31+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2024-10-27T21:24:09+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="vpc/Vm External Ip Connectivity">
 <meta itemprop=description content="Troubleshooting for common issues which affect VM connectivity to external IP addresses.
 ">
-<meta itemprop=dateModified content="2024-07-01T15:03:31+00:00">
-<meta itemprop=wordCount content="286"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2024-10-27T21:24:09+00:00">
+<meta itemprop=wordCount content="265"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="vpc/Vm External Ip Connectivity">
@@ -876,29 +876,48 @@ to external IP addresses</p>
 <p>Areas Examined:</p>
 <ul>
 <li>
-<p>VM Instance Status: Evaluates the VM&rsquo;s current state, performance - ensuring that it is running
-and not impaired by high CPU usage, insufficient memory, or disk space issues that might disrupt
-normal operations.</p>
+<p>VM Instance:</p>
+<ul>
+<li>Verify that the VM exists and is running</li>
+</ul>
 </li>
 <li>
-<p>VM Configuration: Checks the source nic configuration on the VM if it
-has an External IP address or not.</p>
+<p>VM Configuration:</p>
+<ul>
+<li>Checks the source nic configuration on the VM if it has an
+External IP address or not.</li>
+</ul>
 </li>
 <li>
-<p>GCE Network Connectivity Tests: Reviews applicable routing and firewall rules to
-verify that there are no network barriers preventing the VM from connection to
-an external IP address.</p>
+<p>VPC routes checks:</p>
+<ul>
+<li>Checks the VPC routing rules are configured to allow external connectivity</li>
+</ul>
 </li>
 <li>
-<p>NATGW Checks: For source nic without an External IP address,
-verify the VM is served by a Public NAT Gateway and check there are no issues on the NATGW.</p>
+<p>VPC firewall and firewall policy checks:</p>
+<ul>
+<li>Checks the VPC firewall and firewall policies allow external connectivity.</li>
+</ul>
+</li>
+<li>
+<p>GCE Network Connectivity Tests:</p>
+<ul>
+<li>Runs a VPC network connectivity test and reports the result.</li>
+</ul>
+</li>
+<li>
+<p>NATGW Checks:</p>
+<ul>
+<li>For source nics without an External IP address, verify the VM is served
+by a Public NAT Gateway and check there are no issues on the NATGW.</li>
+</ul>
 </li>
 </ul>
 <h3 id=executing-this-runbook>Executing this runbook</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>gcpdiag runbook vpc/vm-external-ip-connectivity <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>project_id</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>name</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
-</span><span style=color:#4e9a06></span>  -p <span style=color:#000>id</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>dest_ip</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>dest_port</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>protocol_type</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
@@ -929,13 +948,6 @@ verify the VM is served by a Public NAT Gateway and check there are no issues on
 <td>None</td>
 <td>str</td>
 <td>The name of the GCE VM</td>
-</tr>
-<tr>
-<td><code>id</code></td>
-<td>False</td>
-<td>None</td>
-<td>int</td>
-<td>The instance ID of the GCE VM</td>
 </tr>
 <tr>
 <td><code>dest_ip</code></td>
@@ -998,7 +1010,7 @@ verify the VM is served by a Public NAT Gateway and check there are no issues on
 </li>
 </ul>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified July 1, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/e8dac50fe3bef2ed431422f1290b8fe6d9f4c5b0>Merge "Improve Error handling." -- Branch commit log -- commit 409f3bf2571dd2bca46ee67d2b4b29150951681e Author: Kwesi Graham &lt;akyen@google.com> Date: 2024-06-27T16:21:11Z (e8dac50fe)</a>
+Last modified October 27, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/9480efa2cbfe42f04e640d1f9b737b9947123891>Fix for issues in b/373965784 (9480efa2c)</a>
 </div>
 </div>
 </main>
