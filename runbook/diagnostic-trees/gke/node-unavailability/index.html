@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/diagnostic-trees/gke/node-unavailability/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-09-30T17:48:00+01:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2024-10-31T14:47:59+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gke/Node Unavailability">
 <meta itemprop=description content="Identifies the reasons for a GKE node being unavailable.
 ">
-<meta itemprop=dateModified content="2024-09-30T17:48:00+01:00">
-<meta itemprop=wordCount content="119"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2024-10-31T14:47:59+00:00">
+<meta itemprop=wordCount content="135"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="gke/Node Unavailability">
@@ -884,6 +884,7 @@ including:</p>
 </ul>
 <h3 id=executing-this-runbook>Executing this runbook</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>gcpdiag runbook gke/node-unavailability <span style=color:#4e9a06>\
+</span><span style=color:#4e9a06></span>  -p <span style=color:#000>project_id</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>name</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>node</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>location</span><span style=color:#ce5c00;font-weight:700>=</span>value
@@ -899,6 +900,13 @@ including:</p>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><code>project_id</code></td>
+<td>True</td>
+<td>None</td>
+<td>str</td>
+<td>The ID of the project hosting the GKE Cluster</td>
+</tr>
 <tr>
 <td><code>name</code></td>
 <td>False</td>
@@ -946,7 +954,7 @@ including:</p>
 </li>
 </ul>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified September 30, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/fbe9ce9dc8d96794d357d22b1adeb36e7c751e5f>New runbook: GKE Node Unavailability runbook (fbe9ce9dc)</a>
+Last modified October 31, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/64b672740b25395ec2045ccf6aa2b999afa2c0fb>added project_id parameter for the runbooks that didn't have it (64b672740)</a>
 </div>
 </div>
 </main>

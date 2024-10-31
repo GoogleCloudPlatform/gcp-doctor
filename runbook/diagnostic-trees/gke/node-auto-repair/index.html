@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/diagnostic-trees/gke/node-auto-repair/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-07-24T21:06:57+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2024-10-31T14:47:59+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gke/Node Auto Repair">
 <meta itemprop=description content="Provides the reason why a Node was auto-repaired
 ">
-<meta itemprop=dateModified content="2024-07-24T21:06:57+00:00">
-<meta itemprop=wordCount content="140"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2024-10-31T14:47:59+00:00">
+<meta itemprop=wordCount content="156"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="gke/Node Auto Repair">
@@ -884,6 +884,7 @@
 </ul>
 <h3 id=executing-this-runbook>Executing this runbook</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>gcpdiag runbook gke/node-auto-repair <span style=color:#4e9a06>\
+</span><span style=color:#4e9a06></span>  -p <span style=color:#000>project_id</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>name</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>node</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>location</span><span style=color:#ce5c00;font-weight:700>=</span>value
@@ -899,6 +900,13 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><code>project_id</code></td>
+<td>True</td>
+<td>None</td>
+<td>str</td>
+<td>The ID of the project hosting the GKE Cluster</td>
+</tr>
 <tr>
 <td><code>name</code></td>
 <td>False</td>
@@ -946,7 +954,7 @@
 </li>
 </ul>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified July 24, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/912a527c67abd4ff9a0c102928c7cd21191f71d5>GKE NodeAutorepair runbook (912a527c6)</a>
+Last modified October 31, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/64b672740b25395ec2045ccf6aa2b999afa2c0fb>added project_id parameter for the runbooks that didn't have it (64b672740)</a>
 </div>
 </div>
 </main>
