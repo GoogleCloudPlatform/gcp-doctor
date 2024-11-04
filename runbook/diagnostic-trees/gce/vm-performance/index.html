@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/diagnostic-trees/gce/vm-performance/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-10-04T15:58:13+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2024-11-04T16:09:12+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gce/Vm Performance">
 <meta itemprop=description content="Google Compute Engine VM performance checks
 ">
-<meta itemprop=dateModified content="2024-10-04T15:58:13+00:00">
-<meta itemprop=wordCount content="255"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2024-11-04T16:09:12+00:00">
+<meta itemprop=wordCount content="270"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="gce/Vm Performance">
@@ -339,6 +339,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcecpu-overcommitment-check-li>
 <input type=checkbox id=m-runbookstepsgcecpu-overcommitment-check-check>
 <label for=m-runbookstepsgcecpu-overcommitment-check-check><a href=/runbook/steps/gce/cpu-overcommitment-check/ title="gce/Cpu Overcommitment Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcecpu-overcommitment-check><span>Cpu Overcommitment Check</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcedisk-avg-i-o-latency-check-li>
+<input type=checkbox id=m-runbookstepsgcedisk-avg-i-o-latency-check-check>
+<label for=m-runbookstepsgcedisk-avg-i-o-latency-check-check><a href=/runbook/steps/gce/disk-avg-i-o-latency-check/ title="gce/Disk Avg I O Latency Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcedisk-avg-i-o-latency-check><span>Disk Avg I O Latency Check</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcedisk-health-check-li>
 <input type=checkbox id=m-runbookstepsgcedisk-health-check-check>
 <label for=m-runbookstepsgcedisk-health-check-check><a href=/runbook/steps/gce/disk-health-check/ title="gce/Disk Health Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcedisk-health-check><span>Disk Health Check</span></a></label>
@@ -884,8 +887,10 @@ behind the performance issues of your Google Compute Engine VMs within Google Cl
 - High Disk IOPS utilisation
 - High Disk Throughput utilisation
 - Disk Health check
+- Disk IO latency check
+- Disk Slowness check
 - Check for Live Migrations
-- Usualy Error checks in Serial console logs
+- Usual Error checks in Serial console logs
 </code></pre>
 <h3 id=executing-this-runbook>Executing this runbook</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>gcpdiag runbook gce/vm-performance <span style=color:#4e9a06>\
@@ -981,6 +986,9 @@ behind the performance issues of your Google Compute Engine VMs within Google Cl
 <p><a href=/runbook/steps/gce/vm-serial-logs-check>Vm Serial Logs Check</a></p>
 </li>
 <li>
+<p><a href=/runbook/steps/gce/disk-avg-i-o-latency-check>Disk Avg I O Latency Check</a></p>
+</li>
+<li>
 <p><a href=/runbook/steps/gce/check-live-migrations>Check Live Migrations</a></p>
 </li>
 <li>
@@ -994,7 +1002,7 @@ behind the performance issues of your Google Compute Engine VMs within Google Cl
 </li>
 </ul>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified October 4, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/2851aea8f0af57580ff649acc3d98997b8fec2a5>Add PD performance health check to gce/vm-performance (2851aea8f)</a>
+Last modified November 4, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/5c6442f90d818c63aafa8d8fa17fe6788c54b20b>Merge "implement disk average_io_latency check in gce/vm-performance" -- Branch commit log -- commit 7b517b6fd0148256c147600e2a1a30b17ebc6afc Author: Vinay Gahlout &lt;vinaygahlout@google.com> Date: 2024-10-20T09:07:51Z (5c6442f90)</a>
 </div>
 </div>
 </main>
