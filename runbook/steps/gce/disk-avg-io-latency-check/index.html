@@ -13,24 +13,24 @@
 <link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96>
 <link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
-<title>vertex/Check Workbench Instance Syslogs Jupyter Running On Port8080 | gcpdiag</title>
-<meta name=description content="Check Jupyter is running on port 127.0.0.1:8080
+<title>gce/Disk Avg Io Latency Check | gcpdiag</title>
+<meta name=description content="Check Disk Avg IO Latency
 ">
-<meta property="og:title" content="vertex/Check Workbench Instance Syslogs Jupyter Running On Port8080">
-<meta property="og:description" content="Check Jupyter is running on port 127.0.0.1:8080
+<meta property="og:title" content="gce/Disk Avg Io Latency Check">
+<meta property="og:description" content="Check Disk Avg IO Latency
 ">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://gcpdiag.dev/runbook/steps/vertex/check-workbench-instance-syslogs-jupyter-running-on-port8080/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-06-24T05:41:05+00:00"><meta property="og:site_name" content="gcpdiag">
-<meta itemprop=name content="vertex/Check Workbench Instance Syslogs Jupyter Running On Port8080">
-<meta itemprop=description content="Check Jupyter is running on port 127.0.0.1:8080
+<meta property="og:url" content="https://gcpdiag.dev/runbook/steps/gce/disk-avg-io-latency-check/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
+<meta property="article:modified_time" content="2024-11-07T13:17:56+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta itemprop=name content="gce/Disk Avg Io Latency Check">
+<meta itemprop=description content="Check Disk Avg IO Latency
 ">
-<meta itemprop=dateModified content="2024-06-24T05:41:05+00:00">
-<meta itemprop=wordCount content="132"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2024-11-07T13:17:56+00:00">
+<meta itemprop=wordCount content="264"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
-<meta name=twitter:title content="vertex/Check Workbench Instance Syslogs Jupyter Running On Port8080">
-<meta name=twitter:description content="Check Jupyter is running on port 127.0.0.1:8080
+<meta name=twitter:title content="gce/Disk Avg Io Latency Check">
+<meta name=twitter:description content="Check Disk Avg IO Latency
 ">
 <link href=/scss/main.css rel=stylesheet>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
@@ -300,9 +300,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsdataproccheck-private-google-access-li>
 <input type=checkbox id=m-runbookstepsdataproccheck-private-google-access-check>
 <label for=m-runbookstepsdataproccheck-private-google-access-check><a href=/runbook/steps/dataproc/check-private-google-access/ title="dataproc/Check Private Google Access" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsdataproccheck-private-google-access><span>Check Private Google Access</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsdataproccheck-shared-v-p-c-roles-li>
-<input type=checkbox id=m-runbookstepsdataproccheck-shared-v-p-c-roles-check>
-<label for=m-runbookstepsdataproccheck-shared-v-p-c-roles-check><a href=/runbook/steps/dataproc/check-shared-v-p-c-roles/ title="dataproc/Check Shared V P C Roles" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsdataproccheck-shared-v-p-c-roles><span>Check Shared V P C Roles</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsdataproccheck-shared-vpc-roles-li>
+<input type=checkbox id=m-runbookstepsdataproccheck-shared-vpc-roles-check>
+<label for=m-runbookstepsdataproccheck-shared-vpc-roles-check><a href=/runbook/steps/dataproc/check-shared-vpc-roles/ title="dataproc/Check Shared Vpc Roles" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsdataproccheck-shared-vpc-roles><span>Check Shared Vpc Roles</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsdataproccluster-creation-end-li>
 <input type=checkbox id=m-runbookstepsdataproccluster-creation-end-check>
 <label for=m-runbookstepsdataproccluster-creation-end-check><a href=/runbook/steps/dataproc/cluster-creation-end/ title="dataproc/Cluster Creation End" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsdataproccluster-creation-end><span>Cluster Creation End</span></a></label>
@@ -323,8 +323,8 @@
 <label for=m-runbookstepsdataprocservice-account-exists-check><a href=/runbook/steps/dataproc/service-account-exists/ title="dataproc/Service Account Exists" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsdataprocservice-account-exists><span>Service Account Exists</span></a></label>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepsgce-li>
-<input type=checkbox id=m-runbookstepsgce-check>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-runbookstepsgce-li>
+<input type=checkbox id=m-runbookstepsgce-check checked>
 <label for=m-runbookstepsgce-check><a href=/runbook/steps/gce/ title=GCE class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepsgce><span>gce</span></a></label>
 <ul class="ul-3 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgceanalysing-serial-logs-end-li>
@@ -339,9 +339,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcecpu-overcommitment-check-li>
 <input type=checkbox id=m-runbookstepsgcecpu-overcommitment-check-check>
 <label for=m-runbookstepsgcecpu-overcommitment-check-check><a href=/runbook/steps/gce/cpu-overcommitment-check/ title="gce/Cpu Overcommitment Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcecpu-overcommitment-check><span>Cpu Overcommitment Check</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcedisk-avg-i-o-latency-check-li>
-<input type=checkbox id=m-runbookstepsgcedisk-avg-i-o-latency-check-check>
-<label for=m-runbookstepsgcedisk-avg-i-o-latency-check-check><a href=/runbook/steps/gce/disk-avg-i-o-latency-check/ title="gce/Disk Avg I O Latency Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcedisk-avg-i-o-latency-check><span>Disk Avg I O Latency Check</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-runbookstepsgcedisk-avg-io-latency-check-li>
+<input type=checkbox id=m-runbookstepsgcedisk-avg-io-latency-check-check checked>
+<label for=m-runbookstepsgcedisk-avg-io-latency-check-check><a href=/runbook/steps/gce/disk-avg-io-latency-check/ title="gce/Disk Avg Io Latency Check" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcedisk-avg-io-latency-check><span class=td-sidebar-nav-active-item>Disk Avg Io Latency Check</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcedisk-health-check-li>
 <input type=checkbox id=m-runbookstepsgcedisk-health-check-check>
 <label for=m-runbookstepsgcedisk-health-check-check><a href=/runbook/steps/gce/disk-health-check/ title="gce/Disk Health Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcedisk-health-check><span>Disk Health Check</span></a></label>
@@ -498,15 +498,15 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkecheck-daemon-set-li>
 <input type=checkbox id=m-runbookstepsgkecheck-daemon-set-check>
 <label for=m-runbookstepsgkecheck-daemon-set-check><a href=/runbook/steps/gke/check-daemon-set/ title="gke/Check Daemon Set" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkecheck-daemon-set><span>Check Daemon Set</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkecheck-destination-i-p-li>
-<input type=checkbox id=m-runbookstepsgkecheck-destination-i-p-check>
-<label for=m-runbookstepsgkecheck-destination-i-p-check><a href=/runbook/steps/gke/check-destination-i-p/ title="gke/Check Destination I P" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkecheck-destination-i-p><span>Check Destination I P</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkecheck-node-i-p-li>
-<input type=checkbox id=m-runbookstepsgkecheck-node-i-p-check>
-<label for=m-runbookstepsgkecheck-node-i-p-check><a href=/runbook/steps/gke/check-node-i-p/ title="gke/Check Node I P" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkecheck-node-i-p><span>Check Node I P</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkecheck-pod-i-p-li>
-<input type=checkbox id=m-runbookstepsgkecheck-pod-i-p-check>
-<label for=m-runbookstepsgkecheck-pod-i-p-check><a href=/runbook/steps/gke/check-pod-i-p/ title="gke/Check Pod I P" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkecheck-pod-i-p><span>Check Pod I P</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkecheck-destination-ip-li>
+<input type=checkbox id=m-runbookstepsgkecheck-destination-ip-check>
+<label for=m-runbookstepsgkecheck-destination-ip-check><a href=/runbook/steps/gke/check-destination-ip/ title="gke/Check Destination Ip" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkecheck-destination-ip><span>Check Destination Ip</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkecheck-node-ip-li>
+<input type=checkbox id=m-runbookstepsgkecheck-node-ip-check>
+<label for=m-runbookstepsgkecheck-node-ip-check><a href=/runbook/steps/gke/check-node-ip/ title="gke/Check Node Ip" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkecheck-node-ip><span>Check Node Ip</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkecheck-pod-ip-li>
+<input type=checkbox id=m-runbookstepsgkecheck-pod-ip-check>
+<label for=m-runbookstepsgkecheck-pod-ip-check><a href=/runbook/steps/gke/check-pod-ip/ title="gke/Check Pod Ip" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkecheck-pod-ip><span>Check Pod Ip</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkecluster-autoscaler-end-li>
 <input type=checkbox id=m-runbookstepsgkecluster-autoscaler-end-check>
 <label for=m-runbookstepsgkecluster-autoscaler-end-check><a href=/runbook/steps/gke/cluster-autoscaler-end/ title="gke/Cluster Autoscaler End" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkecluster-autoscaler-end><span>Cluster Autoscaler End</span></a></label>
@@ -770,13 +770,13 @@
 <label for=m-runbookstepspubsubthroughput-qualification-check><a href=/runbook/steps/pubsub/throughput-qualification/ title="pubsub/Throughput Qualification" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepspubsubthroughput-qualification><span>Throughput Qualification</span></a></label>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-runbookstepsvertex-li>
-<input type=checkbox id=m-runbookstepsvertex-check checked>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepsvertex-li>
+<input type=checkbox id=m-runbookstepsvertex-check>
 <label for=m-runbookstepsvertex-check><a href=/runbook/steps/vertex/ title=VERTEX class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepsvertex><span>vertex</span></a></label>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsvertexcheck-workbench-instance-compute-engine-s-s-h-li>
-<input type=checkbox id=m-runbookstepsvertexcheck-workbench-instance-compute-engine-s-s-h-check>
-<label for=m-runbookstepsvertexcheck-workbench-instance-compute-engine-s-s-h-check><a href=/runbook/steps/vertex/check-workbench-instance-compute-engine-s-s-h/ title="vertex/Check Workbench Instance Compute Engine S S H" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsvertexcheck-workbench-instance-compute-engine-s-s-h><span>Check Workbench Instance Compute Engine S S H</span></a></label>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsvertexcheck-workbench-instance-compute-engine-ssh-li>
+<input type=checkbox id=m-runbookstepsvertexcheck-workbench-instance-compute-engine-ssh-check>
+<label for=m-runbookstepsvertexcheck-workbench-instance-compute-engine-ssh-check><a href=/runbook/steps/vertex/check-workbench-instance-compute-engine-ssh/ title="vertex/Check Workbench Instance Compute Engine Ssh" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsvertexcheck-workbench-instance-compute-engine-ssh><span>Check Workbench Instance Compute Engine Ssh</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsvertexcheck-workbench-instance-custom-scripts-li>
 <input type=checkbox id=m-runbookstepsvertexcheck-workbench-instance-custom-scripts-check>
 <label for=m-runbookstepsvertexcheck-workbench-instance-custom-scripts-check><a href=/runbook/steps/vertex/check-workbench-instance-custom-scripts/ title="vertex/Check Workbench Instance Custom Scripts" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsvertexcheck-workbench-instance-custom-scripts><span>Check Workbench Instance Custom Scripts</span></a></label>
@@ -792,9 +792,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsvertexcheck-workbench-instance-performance-li>
 <input type=checkbox id=m-runbookstepsvertexcheck-workbench-instance-performance-check>
 <label for=m-runbookstepsvertexcheck-workbench-instance-performance-check><a href=/runbook/steps/vertex/check-workbench-instance-performance/ title="vertex/Check Workbench Instance Performance" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsvertexcheck-workbench-instance-performance><span>Check Workbench Instance Performance</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-runbookstepsvertexcheck-workbench-instance-syslogs-jupyter-running-on-port8080-li>
-<input type=checkbox id=m-runbookstepsvertexcheck-workbench-instance-syslogs-jupyter-running-on-port8080-check checked>
-<label for=m-runbookstepsvertexcheck-workbench-instance-syslogs-jupyter-running-on-port8080-check><a href=/runbook/steps/vertex/check-workbench-instance-syslogs-jupyter-running-on-port8080/ title="vertex/Check Workbench Instance Syslogs Jupyter Running On Port8080" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-runbookstepsvertexcheck-workbench-instance-syslogs-jupyter-running-on-port8080><span class=td-sidebar-nav-active-item>Check Workbench Instance Syslogs Jupyter Running On Port8080</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsvertexcheck-workbench-instance-syslogs-jupyter-running-on-port-8080-li>
+<input type=checkbox id=m-runbookstepsvertexcheck-workbench-instance-syslogs-jupyter-running-on-port-8080-check>
+<label for=m-runbookstepsvertexcheck-workbench-instance-syslogs-jupyter-running-on-port-8080-check><a href=/runbook/steps/vertex/check-workbench-instance-syslogs-jupyter-running-on-port-8080/ title="vertex/Check Workbench Instance Syslogs Jupyter Running On Port 8080" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsvertexcheck-workbench-instance-syslogs-jupyter-running-on-port-8080><span>Check Workbench Instance Syslogs Jupyter Running On Port 8080</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsvertexcheck-workbench-instance-using-custom-container-li>
 <input type=checkbox id=m-runbookstepsvertexcheck-workbench-instance-using-custom-container-check>
 <label for=m-runbookstepsvertexcheck-workbench-instance-using-custom-container-check><a href=/runbook/steps/vertex/check-workbench-instance-using-custom-container/ title="vertex/Check Workbench Instance Using Custom Container" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsvertexcheck-workbench-instance-using-custom-container><span>Check Workbench Instance Using Custom Container</span></a></label>
@@ -865,41 +865,62 @@
 </ul>
 </nav></div>
 <div class="td-page-meta ml-0 pb-1 pt-0 mb-0">
-<a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/runbook/steps/vertex/check-workbench-instance-syslogs-jupyter-running-on-port8080.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-<a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=vertex/Check%20Workbench%20Instance%20Syslogs%20Jupyter%20Running%20On%20Port8080" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
+<a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/runbook/steps/gce/disk-avg-io-latency-check.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+<a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=gce/Disk%20Avg%20Io%20Latency%20Check" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
 </div>
 </aside>
 <main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
 <div class=td-content>
-<h1>vertex/Check Workbench Instance Syslogs Jupyter Running On Port8080</h1>
-<div class=lead>Check Jupyter is running on port 127.0.0.1:8080</div>
+<h1>gce/Disk Avg Io Latency Check</h1>
+<div class=lead>Check Disk Avg IO Latency</div>
 <header class=article-meta>
 </header>
-<p><strong>Product</strong>: <a href=https://cloud.google.com/vertex-ai>Vertex AI</a><br>
+<p><strong>Product</strong>: <a href=https://cloud.google.com/compute>Compute Engine</a><br>
 <strong>Step Type</strong>: AUTOMATED STEP</p>
 <h3 id=description>Description</h3>
-<p>Jupyter should always run on port 127.0.0.1:8080
-for the Workbench Instance to work correctly</p>
+<p>None</p>
 <h3 id=failure-reason>Failure Reason</h3>
-<p>Workbench Instance {instance_name} syslogs indicate Jupyter is NOT running on port 127.0.0.1:8080</p>
+<p>The performance of the disk &lsquo;{disk_name}&rsquo; is currently degraded due to high
+IO latency exceeding optimal thresholds. This may result in slower read/write
+speeds and overall reduced performance.</p>
 <h3 id=failure-remediation>Failure Remediation</h3>
-<p>If the instance is stopped, start it and rerun this check.
-You may also need to extend the logging query start and end times.
-Only port 8080 is supported. Installed extensions, packages or custom scripts may cause the port to change.</p>
-<ol>
-<li>Try following documentation [1] [2] [3]</li>
-<li>If it doesn&rsquo;t work, recover data by diagnosing the instance with the &ndash;enable-copy-home-files [4]</li>
-<li>Create a new Instance and migrate your data [5]</li>
-</ol>
-<p>[1] <a href="https://cloud.google.com/vertex-ai/docs/general/troubleshooting-workbench?component=any#verify-jupyter-service">https://cloud.google.com/vertex-ai/docs/general/troubleshooting-workbench?component=any#verify-jupyter-service</a>
-[2] <a href="https://cloud.google.com/vertex-ai/docs/general/troubleshooting-workbench?component=any#verify-jupyter-internal-api">https://cloud.google.com/vertex-ai/docs/general/troubleshooting-workbench?component=any#verify-jupyter-internal-api</a>
-[3] <a href="https://cloud.google.com/vertex-ai/docs/general/troubleshooting-workbench?component=any#restart-jupyter-service">https://cloud.google.com/vertex-ai/docs/general/troubleshooting-workbench?component=any#restart-jupyter-service</a>
-[4] <a href=https://cloud.google.com/sdk/gcloud/reference/workbench/instances/diagnose>https://cloud.google.com/sdk/gcloud/reference/workbench/instances/diagnose</a>
-[5] <a href=https://cloud.google.com/vertex-ai/docs/workbench/instances/migrate>https://cloud.google.com/vertex-ai/docs/workbench/instances/migrate</a></p>
+<p>Disk I/O latency is the time it takes for a read or write operation to complete on a
+disk.
+High disk I/O latency can significantly impact the performance of your applications
+and workloads running on the instance, leading to slow response times, increased
+processing time, and overall sluggishness.</p>
+<p>Potential Bottlenecks -</p>
+<ul>
+<li>
+<p>Disk Type: To optimize disk performance, ensure your disk type is appropriate
+for your workload and provides acceptable latency for your system architecture.
+Choosing the right disk type can significantly impact performance.
+<a href=https://cloud.google.com/compute/docs/disks>https://cloud.google.com/compute/docs/disks</a></p>
+</li>
+<li>
+<p>Workload: The nature of your workload also influences latency. Workloads with
+many small, random I/O operations will generally have higher latency than those
+with sequential I/O</p>
+</li>
+</ul>
+<p>Optimize Disk Usage:</p>
+<ul>
+<li>Reduce I/O Operations: Optimize your applications and database queries to minimize
+the number of disk I/O operations.</li>
+<li>Increase I/O Request Size: Larger I/O requests can be more efficient than many small
+ones. Consider adjusting your application or database settings to increase the I/O
+request size.</li>
+<li>Caching: Implement caching mechanisms to reduce the need to access the disk for
+frequently used data.</li>
+</ul>
+<p>Choose the Right Disk Type with lesser IO Latency - <a href=https://cloud.google.com/compute/docs/disks>https://cloud.google.com/compute/docs/disks</a></p>
+<p>You may also look into Optimizing persistent disk performance. -
+<a href=https://cloud.google.com/compute/docs/disks/optimizing-pd-performance>https://cloud.google.com/compute/docs/disks/optimizing-pd-performance</a></p>
+<p>Please don&rsquo;t hesitate to reach out to Google Cloud Support if issue is not resolved.</p>
 <h3 id=success-reason>Success Reason</h3>
-<p>OK! Workbench Instance {instance_name} syslogs indicate Jupyter is running on port 127.0.0.1:8080</p>
+<p>Instance disk &ldquo;{disk_name}"&rsquo;s IO latency is within the optimal limtis.</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified June 24, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/2eb56eb73906d2d50c6e5ebdf53a4ae79cbfef11>new runbook: Vertex AI Workbench Instance Stuck in Provisioning State (2eb56eb73)</a>
+Last modified November 7, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/5c95596eb1f7afdbba6c440cd869f7b549ab779f>Delete runbook name validation + add autosuggestion when runbook names are mispelled (5c95596eb)</a>
 </div>
 </div>
 </main>
