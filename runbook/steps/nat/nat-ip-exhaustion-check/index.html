@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/steps/nat/nat-ip-exhaustion-check/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-10-04T15:58:13+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2024-11-21T10:55:43+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="nat/Nat Ip Exhaustion Check">
 <meta itemprop=description content="Evaluates NATGW for NAT IP exhaustion/allocation issues.
 ">
-<meta itemprop=dateModified content="2024-10-04T15:58:13+00:00">
-<meta itemprop=wordCount content="65"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2024-11-21T10:55:43+00:00">
+<meta itemprop=wordCount content="67"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="nat/Nat Ip Exhaustion Check">
@@ -180,6 +180,15 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookdiagnostic-treeslbunhealthy-backends-li>
 <input type=checkbox id=m-runbookdiagnostic-treeslbunhealthy-backends-check>
 <label for=m-runbookdiagnostic-treeslbunhealthy-backends-check><a href=/runbook/diagnostic-trees/lb/unhealthy-backends/ title="lb/Unhealthy Backends" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treeslbunhealthy-backends><span>lb/unhealthy-backends</span></a></label>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookdiagnostic-treesnat-li>
+<input type=checkbox id=m-runbookdiagnostic-treesnat-check>
+<label for=m-runbookdiagnostic-treesnat-check><a href=/runbook/diagnostic-trees/nat/ title=NAT class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookdiagnostic-treesnat><span>nat</span></a></label>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookdiagnostic-treesnatpublic-nat-ip-allocation-failed-li>
+<input type=checkbox id=m-runbookdiagnostic-treesnatpublic-nat-ip-allocation-failed-check>
+<label for=m-runbookdiagnostic-treesnatpublic-nat-ip-allocation-failed-check><a href=/runbook/diagnostic-trees/nat/public-nat-ip-allocation-failed/ title="nat/Public Nat Ip Allocation Failed" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treesnatpublic-nat-ip-allocation-failed><span>nat/public-nat-ip-allocation-failed</span></a></label>
 </li>
 </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookdiagnostic-treespubsub-li>
@@ -756,9 +765,27 @@
 <input type=checkbox id=m-runbookstepsnat-check checked>
 <label for=m-runbookstepsnat-check><a href=/runbook/steps/nat/ title=NAT class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepsnat><span>nat</span></a></label>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsnatnat-dropped-received-packet-check-li>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsnatnat-allocation-failed-check-li>
+<input type=checkbox id=m-runbookstepsnatnat-allocation-failed-check-check>
+<label for=m-runbookstepsnatnat-allocation-failed-check-check><a href=/runbook/steps/nat/nat-allocation-failed-check/ title="nat/Nat Allocation Failed Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsnatnat-allocation-failed-check><span>Nat Allocation Failed Check</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsnatnat-dropped-received-packet-check-li>
 <input type=checkbox id=m-runbookstepsnatnat-dropped-received-packet-check-check>
 <label for=m-runbookstepsnatnat-dropped-received-packet-check-check><a href=/runbook/steps/nat/nat-dropped-received-packet-check/ title="nat/Nat Dropped Received Packet Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsnatnat-dropped-received-packet-check><span>Nat Dropped Received Packet Check</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsnatnat-ip-allocation-auto-only-li>
+<input type=checkbox id=m-runbookstepsnatnat-ip-allocation-auto-only-check>
+<label for=m-runbookstepsnatnat-ip-allocation-auto-only-check><a href=/runbook/steps/nat/nat-ip-allocation-auto-only/ title="nat/Nat Ip Allocation Auto Only" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsnatnat-ip-allocation-auto-only><span>Nat Ip Allocation Auto Only</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsnatnat-ip-allocation-failed-end-li>
+<input type=checkbox id=m-runbookstepsnatnat-ip-allocation-failed-end-check>
+<label for=m-runbookstepsnatnat-ip-allocation-failed-end-check><a href=/runbook/steps/nat/nat-ip-allocation-failed-end/ title="nat/Nat Ip Allocation Failed End" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsnatnat-ip-allocation-failed-end><span>Nat Ip Allocation Failed End</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsnatnat-ip-allocation-failed-start-li>
+<input type=checkbox id=m-runbookstepsnatnat-ip-allocation-failed-start-check>
+<label for=m-runbookstepsnatnat-ip-allocation-failed-start-check><a href=/runbook/steps/nat/nat-ip-allocation-failed-start/ title="nat/Nat Ip Allocation Failed Start" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsnatnat-ip-allocation-failed-start><span>Nat Ip Allocation Failed Start</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsnatnat-ip-allocation-manual-only-li>
+<input type=checkbox id=m-runbookstepsnatnat-ip-allocation-manual-only-check>
+<label for=m-runbookstepsnatnat-ip-allocation-manual-only-check><a href=/runbook/steps/nat/nat-ip-allocation-manual-only/ title="nat/Nat Ip Allocation Manual Only" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsnatnat-ip-allocation-manual-only><span>Nat Ip Allocation Manual Only</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsnatnat-ip-allocation-method-check-li>
+<input type=checkbox id=m-runbookstepsnatnat-ip-allocation-method-check-check>
+<label for=m-runbookstepsnatnat-ip-allocation-method-check-check><a href=/runbook/steps/nat/nat-ip-allocation-method-check/ title="nat/Nat Ip Allocation Method Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsnatnat-ip-allocation-method-check><span>Nat Ip Allocation Method Check</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-runbookstepsnatnat-ip-exhaustion-check-li>
 <input type=checkbox id=m-runbookstepsnatnat-ip-exhaustion-check-check checked>
 <label for=m-runbookstepsnatnat-ip-exhaustion-check-check><a href=/runbook/steps/nat/nat-ip-exhaustion-check/ title="nat/Nat Ip Exhaustion Check" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-runbookstepsnatnat-ip-exhaustion-check><span class=td-sidebar-nav-active-item>Nat Ip Exhaustion Check</span></a></label>
@@ -896,7 +923,7 @@
 <div class=lead>Evaluates NATGW for NAT IP exhaustion/allocation issues.</div>
 <header class=article-meta>
 </header>
-<p><strong>Product</strong>:<br>
+<p><strong>Product</strong>: <a href=https://cloud.google.com/nat>Cloud NAT</a><br>
 <strong>Step Type</strong>: AUTOMATED STEP</p>
 <h3 id=description>Description</h3>
 <p>This step determines whether Cloud NAT has run into issues due to insufficient NAT IP addresses.</p>
@@ -908,7 +935,7 @@
 <h3 id=success-reason>Success Reason</h3>
 <p>No IP exhaustion issues found on the NAT GW {nat_gateway_name}</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified October 4, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/2851aea8f0af57580ff649acc3d98997b8fec2a5>Add PD performance health check to gce/vm-performance (2851aea8f)</a>
+Last modified November 21, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/52e5a7d15d0bd72d0f0c7cf61916292c56667c4a>Merge "public nat ip allocation failed runbook" -- Branch commit log -- commit 9e204d1e85e6c1b399ead5f4b6eee66d76d5991b Author: Ebenezer Ejukorlem &lt;joekorlems@google.com> Date: 2024-10-27T06:10:47Z (52e5a7d15)</a>
 </div>
 </div>
 </main>
