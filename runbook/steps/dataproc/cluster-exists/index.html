@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/steps/dataproc/cluster-exists/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-11-30T02:03:39+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2024-12-01T07:27:06+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="dataproc/Cluster Exists">
 <meta itemprop=description content="Prepares the parameters required for the dataproc/cluster-creation runbook.
 ">
-<meta itemprop=dateModified content="2024-11-30T02:03:39+00:00">
-<meta itemprop=wordCount content="84"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2024-12-01T07:27:06+00:00">
+<meta itemprop=wordCount content="85"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="dataproc/Cluster Exists">
@@ -399,6 +399,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsdataproccluster-in-error-li>
 <input type=checkbox id=m-runbookstepsdataproccluster-in-error-check>
 <label for=m-runbookstepsdataproccluster-in-error-check><a href=/runbook/steps/dataproc/cluster-in-error/ title="dataproc/Cluster In Error" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsdataproccluster-in-error><span>Cluster In Error</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsdataprocdata-proc-cluster-exists-li>
+<input type=checkbox id=m-runbookstepsdataprocdata-proc-cluster-exists-check>
+<label for=m-runbookstepsdataprocdata-proc-cluster-exists-check><a href=/runbook/steps/dataproc/data-proc-cluster-exists/ title="dataproc/Data Proc Cluster Exists" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsdataprocdata-proc-cluster-exists><span>Data Proc Cluster Exists</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsdataprocinternal-ip-gateway-li>
 <input type=checkbox id=m-runbookstepsdataprocinternal-ip-gateway-check>
 <label for=m-runbookstepsdataprocinternal-ip-gateway-check><a href=/runbook/steps/dataproc/internal-ip-gateway/ title="dataproc/Internal Ip Gateway" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsdataprocinternal-ip-gateway><span>Internal Ip Gateway</span></a></label>
@@ -1006,15 +1009,15 @@
 <h3 id=description>Description</h3>
 <p>Ensures both project_id and cluster_name parameters are available.</p>
 <h3 id=failure-reason>Failure Reason</h3>
-<p>Cluster {cluster_name} doesn&rsquo;t exists in project {project_id}</p>
+<p>Cluster {cluster_name} does not exists in project {project_id}</p>
 <h3 id=failure-remediation>Failure Remediation</h3>
-<p>Either create again the cluster and keep it in ERROR state in Dataproc UI or manually provide additional parameters using command:
-gcpdiag runbook dataproc/cluster-creation -p cluster_name=CLUSTER_NAME -p cluster_uuid=CLUSTER_UUID -p network=NETWORK_URI -p subnetwork=SUBNETWORK_URI -p service_account=SERVICE_ACCOUNT -p internal_ip_only=True/False &ndash;project=PROJECT_ID.
-Please visit <a href=https://gcpdiag.dev/runbook/diagnostic-trees/dataproc/>https://gcpdiag.dev/runbook/diagnostic-trees/dataproc/</a> for any additional parameters you would like to specify.</p>
+<p>Either create again the cluster and keep it in ERROR state in Dataproc UI or manually provide additional parameters using command:</p>
+<p><code>gcpdiag runbook dataproc/cluster-creation -p cluster_name=CLUSTER_NAME -p cluster_uuid=CLUSTER_UUID -p network=NETWORK_URI -p subnetwork=SUBNETWORK_URI -p service_account=SERVICE_ACCOUNT -p internal_ip_only=True/False --project=PROJECT_ID</code></p>
+<p>Please visit <a href=https://gcpdiag.dev/runbook/diagnostic-trees/dataproc/>https://gcpdiag.dev/runbook/diagnostic-trees/dataproc/</a> for any additional parameters you would like to specify.</p>
 <h3 id=success-reason>Success Reason</h3>
 <p>Cluster {cluster_name} exists in project {project_id}</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified November 30, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/60cb824a5434ee7fa476ae8cbd6759f05a15d004>Fix: ongoing runbook doc generation issue https://github.com/GoogleCloudPlatform/gcpdiag/actions/runs/11955059801/job/33326585763 (60cb824a5)</a>
+Last modified December 1, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/f8c02f28b3f838a022936501148cf7e840ef594b>Fix: race condition due to same class name in 2 different runbooks within product (f8c02f28b)</a>
 </div>
 </div>
 </main>
