@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/diagnostic-trees/gke/ip-exhaustion/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-06-07T13:53:04-07:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2024-11-28T09:44:04+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gke/Ip Exhaustion">
 <meta itemprop=description content="Troubleshooting ip exhaustion issues on GKE clusters.
 ">
-<meta itemprop=dateModified content="2024-06-07T13:53:04-07:00">
-<meta itemprop=wordCount content="161"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2024-11-28T09:44:04+00:00">
+<meta itemprop=wordCount content="155"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="gke/Ip Exhaustion">
@@ -1010,15 +1010,9 @@
 steps.</p>
 <p>Areas Examined:</p>
 <ul>
-<li>
-<p>GKE cluster type.</p>
-</li>
-<li>
-<p>GKE cluster and nodepool configuration</p>
-</li>
-<li>
-<p>Stackdriver logs</p>
-</li>
+<li>GKE cluster type.</li>
+<li>GKE cluster and nodepool configuration</li>
+<li>Stackdriver logs</li>
 </ul>
 <h3 id=executing-this-runbook>Executing this runbook</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>gcpdiag runbook gke/ip-exhaustion <span style=color:#4e9a06>\
@@ -1084,9 +1078,6 @@ steps.</p>
 <p><a href=/runbook/steps/gke/ip-exhaustion-start>Ip Exhaustion Start</a></p>
 </li>
 <li>
-<p><a href=/runbook/steps/gke/ip-exhaustion-gateway>Ip Exhaustion Gateway</a></p>
-</li>
-<li>
 <p><a href=/runbook/steps/gke/node-ip-range-exhaustion>Node Ip Range Exhaustion</a></p>
 </li>
 <li>
@@ -1095,12 +1086,9 @@ steps.</p>
 <li>
 <p><a href=/runbook/steps/gke/ip-exhaustion-end>Ip Exhaustion End</a></p>
 </li>
-<li>
-<p><a href=/runbook/steps/gke/ip-exhaustion-end>Ip Exhaustion End</a></p>
-</li>
 </ul>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified June 7, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/e7428350211476d9bfb6ebe57dc76ca2be8d3983>spelling corrections (e74283502)</a>
+Last modified November 28, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/b99c86de554a677d48f19ee62156e57f043ff230>Fixed hardcoded project_id and cluster_name. Fixed the character limit for GKE node names. Deleted util.py as it's not needed anymore with these changes. (b99c86de5)</a>
 </div>
 </div>
 </main>

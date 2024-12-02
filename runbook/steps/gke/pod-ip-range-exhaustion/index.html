@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/steps/gke/pod-ip-range-exhaustion/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-06-28T03:44:13+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2024-11-28T09:44:04+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gke/Pod Ip Range Exhaustion">
 <meta itemprop=description content="Check Pod IP Range Exhaustion and offer remediation.
 ">
-<meta itemprop=dateModified content="2024-06-28T03:44:13+00:00">
-<meta itemprop=wordCount content="60"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2024-11-28T09:44:04+00:00">
+<meta itemprop=wordCount content="51"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="gke/Pod Ip Range Exhaustion">
@@ -1010,11 +1010,10 @@
 <h3 id=failure-reason>Failure Reason</h3>
 <p>Pod IP exhaustion is detected in the cluster {cluster_name}</p>
 <h3 id=failure-remediation>Failure Remediation</h3>
-<p>Follow [1] to add ipv4 range to the autopilot cluster and [2] to add ipv4 pod range to a standard cluster to mitgate the issue.
-[1] <a href=https://cloud.google.com/kubernetes-engine/docs/how-to/multi-pod-cidr#add-pod-ipv4-range-in-autopilot-cluster>https://cloud.google.com/kubernetes-engine/docs/how-to/multi-pod-cidr#add-pod-ipv4-range-in-autopilot-cluster</a>
-[2] <a href=https://cloud.google.com/kubernetes-engine/docs/how-to/multi-pod-cidr#cluster-add-pod-ipv4-range>https://cloud.google.com/kubernetes-engine/docs/how-to/multi-pod-cidr#cluster-add-pod-ipv4-range</a></p>
+<p>Please follow the below documentation [1] to add ipv4 range to the autopilot cluster to mitgate the issue.</p>
+<p>[1] <a href=https://cloud.google.com/kubernetes-engine/docs/how-to/multi-pod-cidr#add-pod-ipv4-range-in-autopilot-cluster>https://cloud.google.com/kubernetes-engine/docs/how-to/multi-pod-cidr#add-pod-ipv4-range-in-autopilot-cluster</a></p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified June 28, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/8f05b7262eb11e066e67a92745a44b843674d5c3>gke ip exhaustion runbook (8f05b7262)</a>
+Last modified November 28, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/b99c86de554a677d48f19ee62156e57f043ff230>Fixed hardcoded project_id and cluster_name. Fixed the character limit for GKE node names. Deleted util.py as it's not needed anymore with these changes. (b99c86de5)</a>
 </div>
 </div>
 </main>
