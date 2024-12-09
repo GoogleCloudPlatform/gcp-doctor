@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/diagnostic-trees/gce/serial-log-analyzer/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-08-24T07:19:43+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2024-09-20T06:00:58+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gce/Serial Log Analyzer">
 <meta itemprop=description content="Google Compute Engine VM Serial log analyzer
 ">
-<meta itemprop=dateModified content="2024-08-24T07:19:43+00:00">
-<meta itemprop=wordCount content="386"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2024-09-20T06:00:58+00:00">
+<meta itemprop=wordCount content="415"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="gce/Serial Log Analyzer">
@@ -429,6 +429,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcecheck-serial-port-logging-li>
 <input type=checkbox id=m-runbookstepsgcecheck-serial-port-logging-check>
 <label for=m-runbookstepsgcecheck-serial-port-logging-check><a href=/runbook/steps/gce/check-serial-port-logging/ title="gce/Check Serial Port Logging" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcecheck-serial-port-logging><span>Check Serial Port Logging</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcecloud-init-checks-li>
+<input type=checkbox id=m-runbookstepsgcecloud-init-checks-check>
+<label for=m-runbookstepsgcecloud-init-checks-check><a href=/runbook/steps/gce/cloud-init-checks/ title="gce/Cloud Init Checks" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcecloud-init-checks><span>Cloud Init Checks</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcecpu-overcommitment-check-li>
 <input type=checkbox id=m-runbookstepsgcecpu-overcommitment-check-check>
 <label for=m-runbookstepsgcecpu-overcommitment-check-check><a href=/runbook/steps/gce/cpu-overcommitment-check/ title="gce/Cpu Overcommitment Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcecpu-overcommitment-check><span>Cpu Overcommitment Check</span></a></label>
@@ -1019,6 +1022,10 @@ Boot Issues:
 Memory crunch issues:
     - Check if OOM kills happened on the VM or any other memory related issues.
 
+Cloud-init checks:
+    - Check if cloud-init has initialised or started.
+    - Check if NIC has received the IP.
+
 Network related issues:
     - Check if metadata server became unreachable since last boot.
     - Check if there are any time sync related errors.
@@ -1117,6 +1124,15 @@ SSH guard check:
 <p><a href=/runbook/steps/gce/vm-serial-logs-check>Vm Serial Logs Check</a></p>
 </li>
 <li>
+<p><a href=/runbook/steps/gce/cloud-init-checks>Cloud Init Checks</a></p>
+</li>
+<li>
+<p><a href=/runbook/steps/gce/vm-serial-logs-check>Vm Serial Logs Check</a></p>
+</li>
+<li>
+<p><a href=/runbook/steps/gce/vm-serial-logs-check>Vm Serial Logs Check</a></p>
+</li>
+<li>
 <p><a href=/runbook/steps/gce/vm-serial-logs-check>Vm Serial Logs Check</a></p>
 </li>
 <li>
@@ -1139,7 +1155,7 @@ SSH guard check:
 </li>
 </ul>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified August 24, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/38fc03c70595be61dc3e6ada834add70466a8f43>Use of a product name acronym or abbreviation is a violation of Google Cloud brand guidelines (38fc03c70)</a>
+Last modified September 20, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/38003eb94abae2c3baaef4122baf0ff65ab64e9f>Adding cloud-init related checks to serial-log-analyzer (38003eb94)</a>
 </div>
 </div>
 </main>
