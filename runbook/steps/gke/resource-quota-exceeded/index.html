@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/steps/gke/resource-quota-exceeded/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-07-16T13:45:53+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2024-12-09T17:41:06+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gke/Resource Quota Exceeded">
 <meta itemprop=description content="Verifies that Kubernetes resource quotas have been exceeded or not.
 ">
-<meta itemprop=dateModified content="2024-07-16T13:45:53+00:00">
-<meta itemprop=wordCount content="10"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2024-12-09T17:41:06+00:00">
+<meta itemprop=wordCount content="176"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="gke/Resource Quota Exceeded">
@@ -984,6 +984,18 @@
 </div>
 </aside>
 <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+<div class=td-toc><nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li><a href=#description>Description</a></li>
+<li><a href=#failure-reason>Failure Reason</a></li>
+<li><a href=#failure-remediation>Failure Remediation</a></li>
+<li><a href=#success-reason>Success Reason</a></li>
+</ul>
+</li>
+</ul>
+</nav></div>
 <div class="td-page-meta ml-0 pb-1 pt-0 mb-0">
 <a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/runbook/steps/gke/resource-quota-exceeded.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
 <a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=gke/Resource%20Quota%20Exceeded" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
@@ -999,8 +1011,21 @@
 <strong>Step Type</strong>: AUTOMATED STEP</p>
 <h3 id=description>Description</h3>
 <p>None</p>
+<h3 id=failure-reason>Failure Reason</h3>
+<p>The cluster {CLUSTER} in location {LOCATION} in project {PROJECT} has exceeded its kubernetes resource quota between {START_TIME_UTC} and {END_TIME_UTC} UTC.
+Example log entry that would help identify involved objects:</p>
+<p>{LOG_ENTRY}</p>
+<h3 id=failure-remediation>Failure Remediation</h3>
+<p>For clusters with under 100 nodes, GKE applies Kubernetes resource quota to every namespace. These quotas protect the cluster&rsquo;s control plane from instability caused by potential bugs in applications deployed to the cluster. You cannot remove these quotas because they are enforced by GKE.
+See details: <a href=https://cloud.google.com/kubernetes-engine/quotas#resource_quotas>https://cloud.google.com/kubernetes-engine/quotas#resource_quotas</a>
+You can use below command to list resourcequota in your cluster.</p>
+<p><code>kubectl get resourcequota --all-namespaces</code></p>
+<p>Refer document to know more about resource quota: <a href=https://kubernetes.io/docs/concepts/policy/resource-quotas/>https://kubernetes.io/docs/concepts/policy/resource-quotas/</a></p>
+<p>There are two resolutions for this issues regarding GKE resource quotas with name &ldquo;gke-resource-quotas&rdquo;. Kindly open the GCP support case to increase a resource quota to a specific number or request to disable GKE resource quotas for the cluster.</p>
+<h3 id=success-reason>Success Reason</h3>
+<p>The cluster {CLUSTER} in location {LOCATION} in project {PROJECT} was within its kubernetes resource quota between {START_TIME_UTC} and {END_TIME_UTC} UTC.</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified July 16, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/af2e5f060760faaad9f68c7025ef0a15f76851e6>Merge "new runbook : GKE resource quotas runbook" -- Branch commit log -- commit c4088d706b555e63164273f56f4d5f2517bd861a Author: gcpdiag team &lt;noreply@google.com> Date: 2024-06-24T13:50:48Z (af2e5f060)</a>
+Last modified December 9, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/bdffebd0f48d5f6a9139f0a0cdeb51d7b15fbb28>Merge changes I2ed310be,I53bf0164 (bdffebd0f)</a>
 </div>
 </div>
 </main>
