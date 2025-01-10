@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/steps/lb/ssl-certificates-start/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-10-17T16:09:27+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2025-01-10T03:48:02-08:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="lb/Ssl Certificates Start">
 <meta itemprop=description content="Verifies the existence type and status of the SSL certificate.
 ">
-<meta itemprop=dateModified content="2024-10-17T16:09:27+00:00">
-<meta itemprop=wordCount content="59"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2025-01-10T03:48:02-08:00">
+<meta itemprop=wordCount content="41"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="lb/Ssl Certificates Start">
@@ -990,7 +990,6 @@
 <ul>
 <li><a href=#description>Description</a></li>
 <li><a href=#failure-reason>Failure Reason</a></li>
-<li><a href=#failure-remediation>Failure Remediation</a></li>
 <li><a href=#success-reason>Success Reason</a></li>
 <li><a href=#skipped-reason>Skipped Reason</a></li>
 </ul>
@@ -1013,15 +1012,13 @@
 <h3 id=description>Description</h3>
 <p>None</p>
 <h3 id=failure-reason>Failure Reason</h3>
-<p>We detected that the certificate &ldquo;{name}&rdquo; is not in ACTIVE state.</p>
-<h3 id=failure-remediation>Failure Remediation</h3>
-<p>Further investigation is required to identify the root cause and apply appropriate fixes</p>
+<p>The certificate &ldquo;{name}&rdquo; is not in ACTIVE state.</p>
 <h3 id=success-reason>Success Reason</h3>
 <p>The certificate &ldquo;{name}&rdquo; is in ACTIVE state.</p>
 <h3 id=skipped-reason>Skipped Reason</h3>
 <p>SSL certificate {name} does not exist or project {project_id} does not exist.</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified October 17, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/fd6acab6cab05d2fed4fe9e0579bcaa5cfb026ed>Runbook for SSL certificates troubleshooting - fixes from code review (fd6acab6c)</a>
+Last modified January 10, 2025: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/9082d31c7b2652f7ae722c8e349b2fd54b8ab7e2>Merge "Fix LB runbook messages to follow the recommendations" -- Branch commit log -- commit 025bdec8ccecd86f7e6884b5adc6576571344790 Author: Natalia Kaczor &lt;nataliakaczor@google.com> Date: 2025-01-03T13:42:07Z (9082d31c7)</a>
 </div>
 </div>
 </main>

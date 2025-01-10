@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/steps/lb/analyze-timeout-health-check-log/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-08-05T10:17:04+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2025-01-10T03:48:02-08:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="lb/Analyze Timeout Health Check Log">
 <meta itemprop=description content="Analyzes logs with the detailed health check state TIMEOUT
 ">
-<meta itemprop=dateModified content="2024-08-05T10:17:04+00:00">
-<meta itemprop=wordCount content="144"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2025-01-10T03:48:02-08:00">
+<meta itemprop=wordCount content="139"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="lb/Analyze Timeout Health Check Log">
@@ -1011,7 +1011,7 @@
 <h3 id=description>Description</h3>
 <p>None</p>
 <h3 id=uncertain-reason>Uncertain Reason</h3>
-<p>In the health check logs, we found logs with the detailed health state TIMEOUT.
+<p>Health check logs show the detailed health state &ldquo;TIMEOUT&rdquo;.
 The backend might be timing out because:</p>
 <ol>
 <li>The application is overloaded and taking too long to respond.</li>
@@ -1026,7 +1026,7 @@ The following responses were received from your backends: {probe_results_text_st
 <li>Check if firewall rules or iptables configurations are not blocking the health check probes from reaching the backend instances, resulting in timeouts.</li>
 </ol>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified August 5, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/ea1aea0cf3acfb2384f944ec663d5fd2e8afb0f8>Runbook for unhealthy backends troubleshooting (ea1aea0cf)</a>
+Last modified January 10, 2025: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/9082d31c7b2652f7ae722c8e349b2fd54b8ab7e2>Merge "Fix LB runbook messages to follow the recommendations" -- Branch commit log -- commit 025bdec8ccecd86f7e6884b5adc6576571344790 Author: Natalia Kaczor &lt;nataliakaczor@google.com> Date: 2025-01-03T13:42:07Z (9082d31c7)</a>
 </div>
 </div>
 </main>
