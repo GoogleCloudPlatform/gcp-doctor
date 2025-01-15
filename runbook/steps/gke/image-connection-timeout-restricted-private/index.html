@@ -21,11 +21,11 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/steps/gke/image-connection-timeout-restricted-private/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-08-12T11:35:44+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2025-01-15T01:40:55-08:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gke/Image Connection Timeout Restricted Private">
 <meta itemprop=description content="The connection to restricted.googleapis.com or private.googleapis.com is timing out
 ">
-<meta itemprop=dateModified content="2024-08-12T11:35:44+00:00">
+<meta itemprop=dateModified content="2025-01-15T01:40:55-08:00">
 <meta itemprop=wordCount content="82"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
@@ -636,6 +636,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkeimage-not-found-li>
 <input type=checkbox id=m-runbookstepsgkeimage-not-found-check>
 <label for=m-runbookstepsgkeimage-not-found-check><a href=/runbook/steps/gke/image-not-found/ title="gke/Image Not Found" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkeimage-not-found><span>Image Not Found</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkeimage-not-found-insufficient-scope-li>
+<input type=checkbox id=m-runbookstepsgkeimage-not-found-insufficient-scope-check>
+<label for=m-runbookstepsgkeimage-not-found-insufficient-scope-check><a href=/runbook/steps/gke/image-not-found-insufficient-scope/ title="gke/Image Not Found Insufficient Scope" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkeimage-not-found-insufficient-scope><span>Image Not Found Insufficient Scope</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkeimage-pull-end-li>
 <input type=checkbox id=m-runbookstepsgkeimage-pull-end-check>
 <label for=m-runbookstepsgkeimage-pull-end-check><a href=/runbook/steps/gke/image-pull-end/ title="gke/Image Pull End" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkeimage-pull-end><span>Image Pull End</span></a></label>
@@ -714,9 +717,6 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkepod-ip-range-exhaustion-li>
 <input type=checkbox id=m-runbookstepsgkepod-ip-range-exhaustion-check>
 <label for=m-runbookstepsgkepod-ip-range-exhaustion-check><a href=/runbook/steps/gke/pod-ip-range-exhaustion/ title="gke/Pod Ip Range Exhaustion" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkepod-ip-range-exhaustion><span>Pod Ip Range Exhaustion</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgkepreemption-condition-li>
-<input type=checkbox id=m-runbookstepsgkepreemption-condition-check>
-<label for=m-runbookstepsgkepreemption-condition-check><a href=/runbook/steps/gke/preemption-condition/ title="gke/Preemption Condition" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgkepreemption-condition><span>Preemption Condition</span></a></label>
 </li>
 </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepsiam-li>
@@ -1013,15 +1013,15 @@
 <p>None</p>
 <h3 id=failure-reason>Failure Reason</h3>
 <p>The connection from Node to restricted.googleapis.com (199.36.153.4/30) or private.googleapis.com (199.36.153.8/30) is timing out, preventing image pull. It is probable that a firewall rule is blocking this IP range. A firewall to permit this egress should be created.
-Example log entry that would help identify involved objects:
-{LOG_ENTRY}</p>
+Example log entry that would help identify involved objects:</p>
+<p>{LOG_ENTRY}</p>
 <h3 id=failure-remediation>Failure Remediation</h3>
 <p>Follow the documentation:
 <a href=https://cloud.google.com/vpc-service-controls/docs/set-up-private-connectivity>https://cloud.google.com/vpc-service-controls/docs/set-up-private-connectivity</a></p>
 <h3 id=success-reason>Success Reason</h3>
 <p>No &ldquo;Failed to pull image.*dial tcp.*199.36.153.\d:443: i/o timeout&rdquo; errors found between {START_TIME_UTC} and {END_TIME_UTC} UTC</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified August 12, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/083aa7412da74b961bf9b2f6f050381df2ca3648>Merge "New runbook: GKE Image Pull" -- Branch commit log -- commit 48229068605081a9659e7c077b3c2ded5da5d0ee Author: Pratik Sonavane &lt;pratiksonavane@google.com> Date: 2024-08-12T10:17:14Z (083aa7412)</a>
+Last modified January 15, 2025: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/5a646b85ac2532366a900a4628f570387f5f8270>Merge "additional error scenario into the gke/image-pull runbook" -- Branch commit log -- commit 4e3bc0204a5cb72a2f01a781e2b3b039c64faf85 Author: Pratik Sonavane &lt;pratiksonavane@google.com> Date: 2024-12-18T14:35:12Z (5a646b85a)</a>
 </div>
 </div>
 </main>
