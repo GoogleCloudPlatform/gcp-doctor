@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/diagnostic-trees/gce/ssh/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-08-07T13:44:38+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2025-01-17T07:32:00-08:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gce/Ssh">
 <meta itemprop=description content="A comprehensive troubleshooting guide for common issues which affects SSH connectivity to VMs.
 ">
-<meta itemprop=dateModified content="2024-08-07T13:44:38+00:00">
-<meta itemprop=wordCount content="511"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2025-01-17T07:32:00-08:00">
+<meta itemprop=wordCount content="645"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="gce/Ssh">
@@ -486,9 +486,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgceos-login-status-check-li>
 <input type=checkbox id=m-runbookstepsgceos-login-status-check-check>
 <label for=m-runbookstepsgceos-login-status-check-check><a href=/runbook/steps/gce/os-login-status-check/ title="gce/Os Login Status Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgceos-login-status-check><span>Os Login Status Check</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcepoxis-user-has-valid-ssh-key-check-li>
-<input type=checkbox id=m-runbookstepsgcepoxis-user-has-valid-ssh-key-check-check>
-<label for=m-runbookstepsgcepoxis-user-has-valid-ssh-key-check-check><a href=/runbook/steps/gce/poxis-user-has-valid-ssh-key-check/ title="gce/Poxis User Has Valid Ssh Key Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcepoxis-user-has-valid-ssh-key-check><span>Poxis User Has Valid Ssh Key Check</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgceposix-user-has-valid-ssh-key-check-li>
+<input type=checkbox id=m-runbookstepsgceposix-user-has-valid-ssh-key-check-check>
+<label for=m-runbookstepsgceposix-user-has-valid-ssh-key-check-check><a href=/runbook/steps/gce/posix-user-has-valid-ssh-key-check/ title="gce/Posix User Has Valid Ssh Key Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgceposix-user-has-valid-ssh-key-check><span>Posix User Has Valid Ssh Key Check</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcesingle-termination-check-li>
 <input type=checkbox id=m-runbookstepsgcesingle-termination-check-check>
 <label for=m-runbookstepsgcesingle-termination-check-check><a href=/runbook/steps/gce/single-termination-check/ title="gce/Single Termination Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcesingle-termination-check><span>Single Termination Check</span></a></label>
@@ -1009,7 +1009,7 @@
 <p><strong>Product</strong>: <a href=https://cloud.google.com/compute>Compute Engine</a>
 <strong>Kind</strong>: Debugging Tree</p>
 <h3 id=description>Description</h3>
-<p>This runbook focuses on investigating components required for ssh on either Windows and Linux VMs
+<p>Investigates components required for ssh on either Windows and Linux VMs
 hosted on Google Cloud Platform and pinpoint misconfigurations.</p>
 <p>Areas Examined:</p>
 <ul>
@@ -1043,16 +1043,23 @@ the organization policies permits SSH in Browser.</p>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>gcpdiag runbook gce/ssh <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>project_id</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>name</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
+</span><span style=color:#4e9a06></span>  -p <span style=color:#000>instance_name</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
+</span><span style=color:#4e9a06></span>  -p <span style=color:#000>instance_id</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>id</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>zone</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>principal</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>local_user</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
+</span><span style=color:#4e9a06></span>  -p <span style=color:#000>posix_user</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>tunnel_through_iap</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
+</span><span style=color:#4e9a06></span>  -p <span style=color:#000>proxy</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>check_os_login</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
+</span><span style=color:#4e9a06></span>  -p <span style=color:#000>client</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>src_ip</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>protocol_type</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>port</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
-</span><span style=color:#4e9a06></span>  -p <span style=color:#000>check_ssh_in_browser</span><span style=color:#ce5c00;font-weight:700>=</span>value
+</span><span style=color:#4e9a06></span>  -p <span style=color:#000>check_ssh_in_browser</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
+</span><span style=color:#4e9a06></span>  -p <span style=color:#000>access_method</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
+</span><span style=color:#4e9a06></span>  -p <span style=color:#000>mfa</span><span style=color:#ce5c00;font-weight:700>=</span>value
 </code></pre></div><h4 id=parameters>Parameters</h4>
 <table>
 <thead>
@@ -1080,6 +1087,20 @@ the organization policies permits SSH in Browser.</p>
 <td>The name of the target GCE VM</td>
 </tr>
 <tr>
+<td><code>instance_name</code></td>
+<td>False</td>
+<td>None</td>
+<td>str</td>
+<td>The name of the target GCE VM</td>
+</tr>
+<tr>
+<td><code>instance_id</code></td>
+<td>False</td>
+<td>None</td>
+<td>int</td>
+<td>The instance ID of the target GCE VM</td>
+</tr>
+<tr>
 <td><code>id</code></td>
 <td>False</td>
 <td>None</td>
@@ -1095,17 +1116,24 @@ the organization policies permits SSH in Browser.</p>
 </tr>
 <tr>
 <td><code>principal</code></td>
-<td>True</td>
+<td>False</td>
 <td>None</td>
 <td>str</td>
-<td>The user or service account principal initiating the SSH connection this user should be authenticated in gcloud/cloud console when sshing into to the GCE. For service account impersonation, it should be the service account&rsquo;s email</td>
+<td>The user or service account initiating the SSH connection. This user should be authenticated in gcloud/cloud console when sshing into to a GCE instance. For service account impersonation, it should be the service account&rsquo;s email. (format: user:user@example.com or serviceAccount:service-account-name@project-id.iam.gserviceaccount.com)</td>
 </tr>
 <tr>
 <td><code>local_user</code></td>
 <td>False</td>
 <td>None</td>
 <td>str</td>
-<td>Poxis User on the VM</td>
+<td>Posix User on the VM</td>
+</tr>
+<tr>
+<td><code>posix_user</code></td>
+<td>False</td>
+<td>None</td>
+<td>str</td>
+<td>Posix User on the VM</td>
 </tr>
 <tr>
 <td><code>tunnel_through_iap</code></td>
@@ -1115,6 +1143,13 @@ the organization policies permits SSH in Browser.</p>
 <td>(&lsquo;A boolean parameter (true or false) indicating whether &lsquo;, &lsquo;Identity-Aware Proxy should be used for establishing the SSH connection.')</td>
 </tr>
 <tr>
+<td><code>proxy</code></td>
+<td>False</td>
+<td>None</td>
+<td>str</td>
+<td>(&lsquo;A string that specifies the method used to establish the SSH connection, &lsquo;, &lsquo;and indicating whether Identity-Aware Proxy (IAP) or a jumphost is utilized.')</td>
+</tr>
+<tr>
 <td><code>check_os_login</code></td>
 <td>False</td>
 <td>True</td>
@@ -1122,11 +1157,18 @@ the organization policies permits SSH in Browser.</p>
 <td>A boolean value (true or false) indicating whether OS Login should be used for SSH authentication</td>
 </tr>
 <tr>
+<td><code>client</code></td>
+<td>False</td>
+<td>None</td>
+<td>str</td>
+<td>The SSH client used to establish SSH connection</td>
+</tr>
+<tr>
 <td><code>src_ip</code></td>
 <td>False</td>
 <td>None</td>
 <td>IPv4Address</td>
-<td>Source IP address. Workstation connecting from workstation,Ip of the bastion/jumphost if currently on logged on a basition/jumphost</td>
+<td>Specify the IPv4 address of the workstation connecting to the network, or the IP of the bastion/jumphost if currently logged in through one.</td>
 </tr>
 <tr>
 <td><code>protocol_type</code></td>
@@ -1140,7 +1182,7 @@ the organization policies permits SSH in Browser.</p>
 <td>False</td>
 <td>22</td>
 <td>int</td>
-<td>Port used to connect to SSH</td>
+<td>Specifies the port used to connect to on the remote host (default: 22)</td>
 </tr>
 <tr>
 <td><code>check_ssh_in_browser</code></td>
@@ -1148,6 +1190,20 @@ the organization policies permits SSH in Browser.</p>
 <td>False</td>
 <td>bool</td>
 <td>Check that SSH in Browser is feasible</td>
+</tr>
+<tr>
+<td><code>access_method</code></td>
+<td>False</td>
+<td>None</td>
+<td>str</td>
+<td>The method used to share or restrict access to the instance</td>
+</tr>
+<tr>
+<td><code>mfa</code></td>
+<td>False</td>
+<td>None</td>
+<td>str</td>
+<td>Additional authentication features required to access to the instance</td>
 </tr>
 </tbody>
 </table>
@@ -1226,7 +1282,7 @@ the organization policies permits SSH in Browser.</p>
 </li>
 </ul>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified August 7, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/5c6e11df633857820e3bd81e595dfb8a7ae09e1c>Merge "expand gce/ssh and gce/serial-log-analyzer to include Auth failures due to bad permissions" -- Branch commit log -- commit b2e8578e8116113af7ac20c0639dc4ca52087687 Author: gcpdiag team &lt;noreply@google.com> Date: 2024-07-30T07:35:28Z (5c6e11df6)</a>
+Last modified January 17, 2025: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/d193832312f877c1693751a7515db5eec3d54222>Merge "[Runbook Update] Update ssh runbook input parameters" -- Branch commit log -- commit f46df4a1968ea74a2a5787e447a451b5beb0f548 Author: Kwesi Graham &lt;akyen@google.com> Date: 2025-01-12T00:11:48Z (d19383231)</a>
 </div>
 </div>
 </main>
