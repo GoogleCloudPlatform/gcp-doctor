@@ -61,6 +61,10 @@ class NodeConfig:
   def oauth_scopes(self) -> list:
     return self._resource_data['oauthScopes']
 
+  @property
+  def metadata(self) -> dict:
+    return self._resource_data.get('metadata', {})
+
 
 class NodePool(models.Resource):
   """Represents a GKE node pool."""
@@ -694,3 +698,4 @@ def get_release_schedule() -> Dict:
   ) as e:
     logging.error('Error in extracting gke release schedule: %s', e)
     return release_data
+
