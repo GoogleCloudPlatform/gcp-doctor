@@ -437,9 +437,6 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcedisk-iops-throughput-utilisation-checks-li>
 <input type=checkbox id=m-runbookstepsgcedisk-iops-throughput-utilisation-checks-check>
 <label for=m-runbookstepsgcedisk-iops-throughput-utilisation-checks-check><a href=/runbook/steps/gce/disk-iops-throughput-utilisation-checks/ title="gce/Disk Iops Throughput Utilisation Checks" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcedisk-iops-throughput-utilisation-checks><span>Disk Iops Throughput Utilisation Checks</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcefetch-vm-details-li>
-<input type=checkbox id=m-runbookstepsgcefetch-vm-details-check>
-<label for=m-runbookstepsgcefetch-vm-details-check><a href=/runbook/steps/gce/fetch-vm-details/ title="gce/Fetch Vm Details" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcefetch-vm-details><span>Fetch Vm Details</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcegce-firewall-allows-ssh-li>
 <input type=checkbox id=m-runbookstepsgcegce-firewall-allows-ssh-check>
 <label for=m-runbookstepsgcegce-firewall-allows-ssh-check><a href=/runbook/steps/gce/gce-firewall-allows-ssh/ title="gce/Gce Firewall Allows Ssh" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcegce-firewall-allows-ssh><span>Gce Firewall Allows Ssh</span></a></label>
@@ -482,6 +479,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgceposix-user-has-valid-ssh-key-check-li>
 <input type=checkbox id=m-runbookstepsgceposix-user-has-valid-ssh-key-check-check>
 <label for=m-runbookstepsgceposix-user-has-valid-ssh-key-check-check><a href=/runbook/steps/gce/posix-user-has-valid-ssh-key-check/ title="gce/Posix User Has Valid Ssh Key Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgceposix-user-has-valid-ssh-key-check><span>Posix User Has Valid Ssh Key Check</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgceserial-log-analyzer-start-li>
+<input type=checkbox id=m-runbookstepsgceserial-log-analyzer-start-check>
+<label for=m-runbookstepsgceserial-log-analyzer-start-check><a href=/runbook/steps/gce/serial-log-analyzer-start/ title="gce/Serial Log Analyzer Start" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgceserial-log-analyzer-start><span>Serial Log Analyzer Start</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcesingle-termination-check-li>
 <input type=checkbox id=m-runbookstepsgcesingle-termination-check-check>
 <label for=m-runbookstepsgcesingle-termination-check-check><a href=/runbook/steps/gce/single-termination-check/ title="gce/Single Termination Check" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcesingle-termination-check><span>Single Termination Check</span></a></label>
@@ -515,6 +515,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcevm-performance-end-li>
 <input type=checkbox id=m-runbookstepsgcevm-performance-end-check>
 <label for=m-runbookstepsgcevm-performance-end-check><a href=/runbook/steps/gce/vm-performance-end/ title="gce/Vm Performance End" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcevm-performance-end><span>Vm Performance End</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcevm-performance-start-li>
+<input type=checkbox id=m-runbookstepsgcevm-performance-start-check>
+<label for=m-runbookstepsgcevm-performance-start-check><a href=/runbook/steps/gce/vm-performance-start/ title="gce/Vm Performance Start" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcevm-performance-start><span>Vm Performance Start</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepsgcevm-scope-li>
 <input type=checkbox id=m-runbookstepsgcevm-scope-check>
 <label for=m-runbookstepsgcevm-scope-check><a href=/runbook/steps/gce/vm-scope/ title="gce/Vm Scope" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsgcevm-scope><span>Vm Scope</span></a></label>
@@ -994,7 +997,7 @@
 <h5>
 <a href=/runbook/steps/gce/analysing-serial-logs-end/>gce/Analysing Serial Logs End</a>
 </h5>
-<p>Finalizing Serial console Log Analysis&mldr;</p>
+<p>Finalize Serial console Log Analysis.</p>
 </div>
 <div class=entry>
 <h5>
@@ -1037,12 +1040,6 @@
 <a href=/runbook/steps/gce/disk-iops-throughput-utilisation-checks/>gce/Disk Iops Throughput Utilisation Checks</a>
 </h5>
 <p>Checking if the Disk IOPS/throughput usage is within optimal levels</p>
-</div>
-<div class=entry>
-<h5>
-<a href=/runbook/steps/gce/fetch-vm-details/>gce/Fetch Vm Details</a>
-</h5>
-<p>Fetching VM details &mldr;</p>
 </div>
 <div class=entry>
 <h5>
@@ -1130,6 +1127,12 @@
 </div>
 <div class=entry>
 <h5>
+<a href=/runbook/steps/gce/serial-log-analyzer-start/>gce/Serial Log Analyzer Start</a>
+</h5>
+<p>Fetching VM details.</p>
+</div>
+<div class=entry>
+<h5>
 <a href=/runbook/steps/gce/single-termination-check/>gce/Single Termination Check</a>
 </h5>
 <p>Investigates the cause of a single VM termination.</p>
@@ -1192,7 +1195,13 @@
 <h5>
 <a href=/runbook/steps/gce/vm-performance-end/>gce/Vm Performance End</a>
 </h5>
-<p>Finalizing VM performance diagnostics&mldr;</p>
+<p>Finalize VM performance diagnostics.</p>
+</div>
+<div class=entry>
+<h5>
+<a href=/runbook/steps/gce/vm-performance-start/>gce/Vm Performance Start</a>
+</h5>
+<p>Fetching VM details.</p>
 </div>
 <div class=entry>
 <h5>
