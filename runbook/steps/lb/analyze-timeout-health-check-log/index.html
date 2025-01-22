@@ -21,11 +21,11 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/steps/lb/analyze-timeout-health-check-log/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2025-01-10T03:48:02-08:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2025-01-21T11:53:46+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="lb/Analyze Timeout Health Check Log">
 <meta itemprop=description content="Analyzes logs with the detailed health check state TIMEOUT
 ">
-<meta itemprop=dateModified content="2025-01-10T03:48:02-08:00">
+<meta itemprop=dateModified content="2025-01-21T11:53:46+00:00">
 <meta itemprop=wordCount content="139"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
@@ -813,6 +813,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbvalidate-backend-service-port-configuration-li>
 <input type=checkbox id=m-runbookstepslbvalidate-backend-service-port-configuration-check>
 <label for=m-runbookstepslbvalidate-backend-service-port-configuration-check><a href=/runbook/steps/lb/validate-backend-service-port-configuration/ title="lb/Validate Backend Service Port Configuration" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbvalidate-backend-service-port-configuration><span>Validate Backend Service Port Configuration</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbvalidate-backend-service-protocol-configuration-li>
+<input type=checkbox id=m-runbookstepslbvalidate-backend-service-protocol-configuration-check>
+<label for=m-runbookstepslbvalidate-backend-service-protocol-configuration-check><a href=/runbook/steps/lb/validate-backend-service-protocol-configuration/ title="lb/Validate Backend Service Protocol Configuration" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbvalidate-backend-service-protocol-configuration><span>Validate Backend Service Protocol Configuration</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbverify-dns-records-li>
 <input type=checkbox id=m-runbookstepslbverify-dns-records-check>
 <label for=m-runbookstepslbverify-dns-records-check><a href=/runbook/steps/lb/verify-dns-records/ title="lb/Verify Dns Records" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbverify-dns-records><span>Verify Dns Records</span></a></label>
@@ -1014,22 +1017,34 @@
 <h3 id=description>Description</h3>
 <p>None</p>
 <h3 id=uncertain-reason>Uncertain Reason</h3>
-<p>Health check logs show the detailed health state &ldquo;TIMEOUT&rdquo;.
-The backend might be timing out because:</p>
+<p>Health check logs show the detailed health state &ldquo;TIMEOUT&rdquo;.</p>
+<p>The backend might be timing out because:</p>
 <ol>
-<li>The application is overloaded and taking too long to respond.</li>
-<li>The backend service or health check timeout is too low.</li>
-<li>Connection to the endpoint cannot be established - the backend instance has crashed or is otherwise unresponsive.
-The following responses were received from your backends: {probe_results_text_str}</li>
+<li>
+<p>The application is overloaded and taking too long to respond.</p>
+</li>
+<li>
+<p>The backend service or health check timeout is too low.</p>
+</li>
+<li>
+<p>Connection to the endpoint cannot be established - the backend instance has crashed or is otherwise unresponsive.</p>
+</li>
 </ol>
+<p>The following responses were received from your backends: {probe_results_text_str}</p>
 <h3 id=uncertain-remediation>Uncertain Remediation</h3>
 <ol>
-<li>Make sure that the backend service timeout (current value: {bs_timeout_sec}s) and health check timeout (current value: {hc_timeout_sec}s) are appropriately configured to accommodate your application&rsquo;s expected response time.</li>
-<li>Investigate your application&rsquo;s configuration to ensure it is correctly handling health check probe requests. {success_criteria}</li>
-<li>Check if firewall rules or iptables configurations are not blocking the health check probes from reaching the backend instances, resulting in timeouts.</li>
+<li>
+<p>Make sure that the backend service timeout (current value: {bs_timeout_sec}s) and health check timeout (current value: {hc_timeout_sec}s) are appropriately configured to accommodate your application&rsquo;s expected response time.</p>
+</li>
+<li>
+<p>Investigate your application&rsquo;s configuration to ensure it is correctly handling health check probe requests. {success_criteria}</p>
+</li>
+<li>
+<p>Check if firewall rules or iptables configurations are not blocking the health check probes from reaching the backend instances, resulting in timeouts.</p>
+</li>
 </ol>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified January 10, 2025: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/9082d31c7b2652f7ae722c8e349b2fd54b8ab7e2>Merge "Fix LB runbook messages to follow the recommendations" -- Branch commit log -- commit 025bdec8ccecd86f7e6884b5adc6576571344790 Author: Natalia Kaczor &lt;nataliakaczor@google.com> Date: 2025-01-03T13:42:07Z (9082d31c7)</a>
+Last modified January 21, 2025: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/15bda49a2052a2cb01e243f7024a4bc13520873b>Add new step to unhealthy backends runbook - check for protocol mismatch for health check and serving traffic (15bda49a2)</a>
 </div>
 </div>
 </main>

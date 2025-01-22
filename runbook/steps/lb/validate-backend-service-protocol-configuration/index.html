@@ -13,24 +13,24 @@
 <link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96>
 <link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
-<title>vpc/Vm External Ip Connectivity | gcpdiag</title>
-<meta name=description content="Troubleshooting for common issues which affect VM connectivity to external IP addresses.
+<title>lb/Validate Backend Service Protocol Configuration | gcpdiag</title>
+<meta name=description content="Checks if health check uses the same protocol as backend service for serving traffic.
 ">
-<meta property="og:title" content="vpc/Vm External Ip Connectivity">
-<meta property="og:description" content="Troubleshooting for common issues which affect VM connectivity to external IP addresses.
+<meta property="og:title" content="lb/Validate Backend Service Protocol Configuration">
+<meta property="og:description" content="Checks if health check uses the same protocol as backend service for serving traffic.
 ">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://gcpdiag.dev/runbook/diagnostic-trees/vpc/vm-external-ip-connectivity/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-10-27T21:24:09+00:00"><meta property="og:site_name" content="gcpdiag">
-<meta itemprop=name content="vpc/Vm External Ip Connectivity">
-<meta itemprop=description content="Troubleshooting for common issues which affect VM connectivity to external IP addresses.
+<meta property="og:url" content="https://gcpdiag.dev/runbook/steps/lb/validate-backend-service-protocol-configuration/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
+<meta property="article:modified_time" content="2025-01-21T11:53:46+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta itemprop=name content="lb/Validate Backend Service Protocol Configuration">
+<meta itemprop=description content="Checks if health check uses the same protocol as backend service for serving traffic.
 ">
-<meta itemprop=dateModified content="2024-10-27T21:24:09+00:00">
-<meta itemprop=wordCount content="265"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2025-01-21T11:53:46+00:00">
+<meta itemprop=wordCount content="112"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
-<meta name=twitter:title content="vpc/Vm External Ip Connectivity">
-<meta name=twitter:description content="Troubleshooting for common issues which affect VM connectivity to external IP addresses.
+<meta name=twitter:title content="lb/Validate Backend Service Protocol Configuration">
+<meta name=twitter:description content="Checks if health check uses the same protocol as backend service for serving traffic.
 ">
 <link href=/scss/main.css rel=stylesheet>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
@@ -79,8 +79,8 @@
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-runbook-li>
 <a href=/runbook/ title="Runbook Rules" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id=m-runbook><span>Runbook</span></a>
 <ul class=ul-1>
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-runbookdiagnostic-trees-li>
-<input type=checkbox id=m-runbookdiagnostic-trees-check checked>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookdiagnostic-trees-li>
+<input type=checkbox id=m-runbookdiagnostic-trees-check>
 <label for=m-runbookdiagnostic-trees-check><a href=/runbook/diagnostic-trees/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookdiagnostic-trees><span>Debugging Trees</span></a></label>
 <ul class="ul-2 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookdiagnostic-treescloudrun-li>
@@ -212,19 +212,19 @@
 <label for=m-runbookdiagnostic-treesvertexworkbench-instance-stuck-in-provisioning-check><a href=/runbook/diagnostic-trees/vertex/workbench-instance-stuck-in-provisioning/ title="vertex/Workbench Instance Stuck In Provisioning" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treesvertexworkbench-instance-stuck-in-provisioning><span>vertex/workbench-instance-stuck-in-provisioning</span></a></label>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-runbookdiagnostic-treesvpc-li>
-<input type=checkbox id=m-runbookdiagnostic-treesvpc-check checked>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookdiagnostic-treesvpc-li>
+<input type=checkbox id=m-runbookdiagnostic-treesvpc-check>
 <label for=m-runbookdiagnostic-treesvpc-check><a href=/runbook/diagnostic-trees/vpc/ title=VPC class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookdiagnostic-treesvpc><span>vpc</span></a></label>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-runbookdiagnostic-treesvpcvm-external-ip-connectivity-li>
-<input type=checkbox id=m-runbookdiagnostic-treesvpcvm-external-ip-connectivity-check checked>
-<label for=m-runbookdiagnostic-treesvpcvm-external-ip-connectivity-check><a href=/runbook/diagnostic-trees/vpc/vm-external-ip-connectivity/ title="vpc/Vm External Ip Connectivity" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treesvpcvm-external-ip-connectivity><span class=td-sidebar-nav-active-item>vpc/vm-external-ip-connectivity</span></a></label>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookdiagnostic-treesvpcvm-external-ip-connectivity-li>
+<input type=checkbox id=m-runbookdiagnostic-treesvpcvm-external-ip-connectivity-check>
+<label for=m-runbookdiagnostic-treesvpcvm-external-ip-connectivity-check><a href=/runbook/diagnostic-trees/vpc/vm-external-ip-connectivity/ title="vpc/Vm External Ip Connectivity" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookdiagnostic-treesvpcvm-external-ip-connectivity><span>vpc/vm-external-ip-connectivity</span></a></label>
 </li>
 </ul>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbooksteps-li>
-<input type=checkbox id=m-runbooksteps-check>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-runbooksteps-li>
+<input type=checkbox id=m-runbooksteps-check checked>
 <label for=m-runbooksteps-check><a href=/runbook/steps/ title="All Steps" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbooksteps><span>steps</span></a></label>
 <ul class="ul-2 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepscloudrun-li>
@@ -734,8 +734,8 @@
 <label for=m-runbookstepsiamvm-has-an-active-service-account-check><a href=/runbook/steps/iam/vm-has-an-active-service-account/ title="iam/Vm Has An Active Service Account" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepsiamvm-has-an-active-service-account><span>Vm Has An Active Service Account</span></a></label>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-runbookstepslb-li>
-<input type=checkbox id=m-runbookstepslb-check>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-runbookstepslb-li>
+<input type=checkbox id=m-runbookstepslb-check checked>
 <label for=m-runbookstepslb-check><a href=/runbook/steps/lb/ title=LB class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-runbookstepslb><span>lb</span></a></label>
 <ul class="ul-3 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbanalyze-certificate-status-li>
@@ -813,9 +813,9 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbvalidate-backend-service-port-configuration-li>
 <input type=checkbox id=m-runbookstepslbvalidate-backend-service-port-configuration-check>
 <label for=m-runbookstepslbvalidate-backend-service-port-configuration-check><a href=/runbook/steps/lb/validate-backend-service-port-configuration/ title="lb/Validate Backend Service Port Configuration" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbvalidate-backend-service-port-configuration><span>Validate Backend Service Port Configuration</span></a></label>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbvalidate-backend-service-protocol-configuration-li>
-<input type=checkbox id=m-runbookstepslbvalidate-backend-service-protocol-configuration-check>
-<label for=m-runbookstepslbvalidate-backend-service-protocol-configuration-check><a href=/runbook/steps/lb/validate-backend-service-protocol-configuration/ title="lb/Validate Backend Service Protocol Configuration" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbvalidate-backend-service-protocol-configuration><span>Validate Backend Service Protocol Configuration</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-runbookstepslbvalidate-backend-service-protocol-configuration-li>
+<input type=checkbox id=m-runbookstepslbvalidate-backend-service-protocol-configuration-check checked>
+<label for=m-runbookstepslbvalidate-backend-service-protocol-configuration-check><a href=/runbook/steps/lb/validate-backend-service-protocol-configuration/ title="lb/Validate Backend Service Protocol Configuration" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbvalidate-backend-service-protocol-configuration><span class=td-sidebar-nav-active-item>Validate Backend Service Protocol Configuration</span></a></label>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-runbookstepslbverify-dns-records-li>
 <input type=checkbox id=m-runbookstepslbverify-dns-records-check>
 <label for=m-runbookstepslbverify-dns-records-check><a href=/runbook/steps/lb/verify-dns-records/ title="lb/Verify Dns Records" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-runbookstepslbverify-dns-records><span>Verify Dns Records</span></a></label>
@@ -995,166 +995,34 @@
 <li>
 <ul>
 <li><a href=#description>Description</a></li>
-<li><a href=#executing-this-runbook>Executing this runbook</a></li>
-<li><a href=#potential-steps>Potential Steps</a></li>
+<li><a href=#success-reason>Success Reason</a></li>
+<li><a href=#uncertain-reason>Uncertain Reason</a></li>
 </ul>
 </li>
 </ul>
 </nav></div>
 <div class="td-page-meta ml-0 pb-1 pt-0 mb-0">
-<a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/runbook/diagnostic-trees/vpc/vm-external-ip-connectivity.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-<a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=vpc/Vm%20External%20Ip%20Connectivity" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
+<a href=https://github.com/GoogleCloudPlatform/gcpdiag/edit/main/website/content/en/runbook/steps/lb/validate-backend-service-protocol-configuration.md target=_blank><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+<a href="https://github.com/GoogleCloudPlatform/gcpdiag/issues/new?title=lb/Validate%20Backend%20Service%20Protocol%20Configuration" target=_blank class=mb-2><i class="fab fa-github fa-fw"></i> Create issue</a>
 </div>
 </aside>
 <main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
 <div class=td-content>
-<h1>vpc/Vm External Ip Connectivity</h1>
-<div class=lead>Troubleshooting for common issues which affect VM connectivity to external IP addresses.</div>
+<h1>lb/Validate Backend Service Protocol Configuration</h1>
+<div class=lead>Checks if health check uses the same protocol as backend service for serving traffic.</div>
 <header class=article-meta>
 </header>
-<p><strong>Product</strong>: <a href=https://cloud.google.com/vpc>Virtual Private Cloud</a>
-<strong>Kind</strong>: Debugging Tree</p>
+<p><strong>Product</strong>: <a href=https://cloud.google.com/load-balancing>Load balancing</a><br>
+<strong>Step Type</strong>: AUTOMATED STEP</p>
 <h3 id=description>Description</h3>
-<p>This runbook investigates components required for VMs to establish connectivity
-to external IP addresses</p>
-<p>Areas Examined:</p>
-<ul>
-<li>
-<p>VM Instance:</p>
-<ul>
-<li>Verify that the VM exists and is running</li>
-</ul>
-</li>
-<li>
-<p>VM Configuration:</p>
-<ul>
-<li>Checks the source nic configuration on the VM if it has an
-External IP address or not.</li>
-</ul>
-</li>
-<li>
-<p>VPC routes checks:</p>
-<ul>
-<li>Checks the VPC routing rules are configured to allow external connectivity</li>
-</ul>
-</li>
-<li>
-<p>VPC firewall and firewall policy checks:</p>
-<ul>
-<li>Checks the VPC firewall and firewall policies allow external connectivity.</li>
-</ul>
-</li>
-<li>
-<p>GCE Network Connectivity Tests:</p>
-<ul>
-<li>Runs a VPC network connectivity test and reports the result.</li>
-</ul>
-</li>
-<li>
-<p>NATGW Checks:</p>
-<ul>
-<li>For source nics without an External IP address, verify the VM is served
-by a Public NAT Gateway and check there are no issues on the NATGW.</li>
-</ul>
-</li>
-</ul>
-<h3 id=executing-this-runbook>Executing this runbook</h3>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>gcpdiag runbook vpc/vm-external-ip-connectivity <span style=color:#4e9a06>\
-</span><span style=color:#4e9a06></span>  -p <span style=color:#000>project_id</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
-</span><span style=color:#4e9a06></span>  -p <span style=color:#000>name</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
-</span><span style=color:#4e9a06></span>  -p <span style=color:#000>dest_ip</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
-</span><span style=color:#4e9a06></span>  -p <span style=color:#000>dest_port</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
-</span><span style=color:#4e9a06></span>  -p <span style=color:#000>protocol_type</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
-</span><span style=color:#4e9a06></span>  -p <span style=color:#000>src_nic</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
-</span><span style=color:#4e9a06></span>  -p <span style=color:#000>zone</span><span style=color:#ce5c00;font-weight:700>=</span>value
-</code></pre></div><h4 id=parameters>Parameters</h4>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Required</th>
-<th>Default</th>
-<th>Type</th>
-<th>Help</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>project_id</code></td>
-<td>True</td>
-<td>None</td>
-<td>str</td>
-<td>The Project ID of the resource under investigation</td>
-</tr>
-<tr>
-<td><code>name</code></td>
-<td>True</td>
-<td>None</td>
-<td>str</td>
-<td>The name of the GCE VM</td>
-</tr>
-<tr>
-<td><code>dest_ip</code></td>
-<td>True</td>
-<td>None</td>
-<td>IPv4Address</td>
-<td>External IP the VM is connecting to</td>
-</tr>
-<tr>
-<td><code>dest_port</code></td>
-<td>False</td>
-<td>443</td>
-<td>int</td>
-<td>External IP the VM is connecting to</td>
-</tr>
-<tr>
-<td><code>protocol_type</code></td>
-<td>False</td>
-<td>tcp</td>
-<td>str</td>
-<td>Protocol used to connect to SSH</td>
-</tr>
-<tr>
-<td><code>src_nic</code></td>
-<td>True</td>
-<td>None</td>
-<td>str</td>
-<td>VM source NIC</td>
-</tr>
-<tr>
-<td><code>zone</code></td>
-<td>True</td>
-<td>None</td>
-<td>str</td>
-<td>The zone of the target GCE VM</td>
-</tr>
-</tbody>
-</table>
-<p>Get help on available commands</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>gcpdiag runbook --help
-</code></pre></div><h3 id=potential-steps>Potential Steps</h3>
-<ul>
-<li>
-<p><a href=/runbook/steps/vpc/vm-external-ip-connectivity-start>Vm External Ip Connectivity Start</a></p>
-</li>
-<li>
-<p><a href=/runbook/steps/gcp/service-api-status-check>Service Api Status Check</a></p>
-</li>
-<li>
-<p><a href=/runbook/steps/vpc/vm-has-external-ip>Vm Has External Ip</a></p>
-</li>
-<li>
-<p><a href=/runbook/steps/vpc/external-interface-check>External Interface Check</a></p>
-</li>
-<li>
-<p><a href=/runbook/steps/vpc/internal-interface-check>Internal Interface Check</a></p>
-</li>
-<li>
-<p><a href=/runbook/steps/vpc/vm-external-ip-connectivity-end>Vm External Ip Connectivity End</a></p>
-</li>
-</ul>
+<p>None</p>
+<h3 id=success-reason>Success Reason</h3>
+<p>The load balancer is performing health checks using the same protocol ({hc_protocol}) that it is using for serving traffic. This is the standard configuration.</p>
+<h3 id=uncertain-reason>Uncertain Reason</h3>
+<p>The load balancer uses {serving_protocol} for traffic but {hc_protocol} for health checks. If not intended, this protocol mismatch can lead to incorrect health assessments, causing traffic to be sent to failing backends or unnecessary failovers.</p>
+<p><strong>Important:</strong> Health checks using {hc_protocol} might be passing while the application serving {serving_protocol} traffic is failing, because the success criteria for the two protocols can be different. More details on the health check success criteria can be found in <a href=https://cloud.google.com/load-balancing/docs/health-check-concepts#criteria-protocol-http>docs</a>.</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified October 27, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/9480efa2cbfe42f04e640d1f9b737b9947123891>Fix for issues in b/373965784 (9480efa2c)</a>
+Last modified January 21, 2025: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/15bda49a2052a2cb01e243f7024a4bc13520873b>Add new step to unhealthy backends runbook - check for protocol mismatch for health check and serving traffic (15bda49a2)</a>
 </div>
 </div>
 </main>
