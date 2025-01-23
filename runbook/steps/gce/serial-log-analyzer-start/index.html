@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/steps/gce/serial-log-analyzer-start/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2025-01-17T16:24:03+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2025-01-23T13:52:53-08:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gce/Serial Log Analyzer Start">
 <meta itemprop=description content="Fetching VM details.
 ">
-<meta itemprop=dateModified content="2025-01-17T16:24:03+00:00">
-<meta itemprop=wordCount content="94"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2025-01-23T13:52:53-08:00">
+<meta itemprop=wordCount content="80"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="gce/Serial Log Analyzer Start">
@@ -1019,21 +1019,20 @@
 <h3 id=description>Description</h3>
 <p>None</p>
 <h3 id=failure-reason>Failure Reason</h3>
-<p>The GCE VM {vm_full_path} is in an undesired state: {status}.</p>
+<p>The GCE Instance {full_resource_path} is not in the {status}.</p>
 <h3 id=failure-remediation>Failure Remediation</h3>
-<p>This step failed because GCE Virtual Machine {vm_full_path} is expected to be in a RUNNING state:</p>
-<p>To initiate the lifecycle transition from {status} to RUNNING state follow guide [1]</p>
-<p>If you encounter any difficulties during the startup process, consult the troubleshooting
-documentation to identify and resolve potential startup issues [2]
-Resources:
-[1] <a href=https://cloud.google.com/compute/docs/instances/stop-start-instance#restart-vm>https://cloud.google.com/compute/docs/instances/stop-start-instance#restart-vm</a>
-[2] <a href=https://cloud.google.com/compute/docs/troubleshooting/vm-startup#identify_the_reason_why_the_boot_disk_isnt_booting>https://cloud.google.com/compute/docs/troubleshooting/vm-startup#identify_the_reason_why_the_boot_disk_isnt_booting</a></p>
+<p>Restart VM {full_resource_path} and ensure VM lifecycle transitions from {status} to RUNNING.</p>
+<p>You can <a href=https://cloud.google.com/compute/docs/instances/stop-start-instance#restart-vm>restart a compute instance</a>
+with this guide.</p>
+<p>If you encounter any difficulties starting the VM, consult the <a href=https://cloud.google.com/compute/docs/troubleshooting/vm-startup#identify_the_reason_why_the_boot_disk_isnt_booting>VM Startup troubleshooting
+documentation</a>
+to identify and resolve potential startup issues.</p>
 <h3 id=success-reason>Success Reason</h3>
-<p>The GCE VM {vm_full_path} is in {status} state.</p>
+<p>The GCE Instance {full_resource_path} is in {status} state.</p>
 <h3 id=skipped-reason>Skipped Reason</h3>
 <p>Could not validate VM lifecycle.</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified January 17, 2025: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/a58e239ff7e20c673e3ec5d188ec00762f574953>[Runbook Update] Remove ellipsis from step descriptions (a58e239ff)</a>
+Last modified January 23, 2025: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/e1abea4ccfd79ec6a9cbe2624a491a6e60866d78>Merge "[Runbook Update] Improve SSH observation tone" -- Branch commit log -- commit 1557b7a1060430705750eb5c436c72a1258ced48 Author: Kwesi Graham &lt;akyen@google.com> Date: 2025-01-22T16:05:04Z (e1abea4cc)</a>
 </div>
 </div>
 </main>

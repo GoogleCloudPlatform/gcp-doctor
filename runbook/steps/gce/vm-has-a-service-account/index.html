@@ -21,11 +21,11 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/steps/gce/vm-has-a-service-account/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2025-01-17T16:24:03+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2025-01-23T13:52:53-08:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gce/Vm Has A Service Account">
 <meta itemprop=description content="Verifies the existence of a service account for the Ops Agent to use.
 ">
-<meta itemprop=dateModified content="2025-01-17T16:24:03+00:00">
+<meta itemprop=dateModified content="2025-01-23T13:52:53-08:00">
 <meta itemprop=wordCount content="100"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
@@ -1021,18 +1021,18 @@ user provided input. We don&rsquo;t look inside the VM for cases like
 GOOGLE_APPLICATION_CREDENTIALS. User will have to know and specify that if
 They are using the application</p>
 <h3 id=failure-reason>Failure Reason</h3>
-<p>Ops agent in {vm_name} doesn&rsquo;t have a service account to use when
+<p>Ops agent in {full_resource_path} doesn&rsquo;t have a service account to use when
 exporting logs/metrics.</p>
 <h3 id=failure-remediation>Failure Remediation</h3>
-<p>Follow [1] to attach an active service account to this GCE VM.
+<p>Follow [1] to attach an active service account to this GCE Instance.
 Read more on how to properly authorize ops agent.
 [1] <a href=https://cloud.google.com/compute/docs/instances/change-service-account#changeserviceaccountandscopes>https://cloud.google.com/compute/docs/instances/change-service-account#changeserviceaccountandscopes</a>
 [2]
 <a href=https://cloud.google.com/stackdriver/docs/solutions/agents/ops-agent/authorization#authorize_with_an_attached_service_account>https://cloud.google.com/stackdriver/docs/solutions/agents/ops-agent/authorization#authorize_with_an_attached_service_account</a></p>
 <h3 id=success-reason>Success Reason</h3>
-<p>Ops agent in {vm_name} has {sa} to use when exporting logs/metrics</p>
+<p>Ops agent in {full_resource_path} has {sa} to use when exporting logs/metrics</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified January 17, 2025: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/a58e239ff7e20c673e3ec5d188ec00762f574953>[Runbook Update] Remove ellipsis from step descriptions (a58e239ff)</a>
+Last modified January 23, 2025: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/e1abea4ccfd79ec6a9cbe2624a491a6e60866d78>Merge "[Runbook Update] Improve SSH observation tone" -- Branch commit log -- commit 1557b7a1060430705750eb5c436c72a1258ced48 Author: Kwesi Graham &lt;akyen@google.com> Date: 2025-01-22T16:05:04Z (e1abea4cc)</a>
 </div>
 </div>
 </main>

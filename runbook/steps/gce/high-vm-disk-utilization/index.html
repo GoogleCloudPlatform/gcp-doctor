@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/steps/gce/high-vm-disk-utilization/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-07-06T13:03:51+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2025-01-23T13:52:53-08:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gce/High Vm Disk Utilization">
 <meta itemprop=description content="Assesses disk utilization on a VM, aiming to identify high usage that could impact performance.
 ">
-<meta itemprop=dateModified content="2024-07-06T13:03:51+00:00">
-<meta itemprop=wordCount content="119"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2025-01-23T13:52:53-08:00">
+<meta itemprop=wordCount content="149"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="gce/High Vm Disk Utilization">
@@ -1030,11 +1030,12 @@ This action can help avoid performance issues and ensure smoother SSH connection
 Follow the guide to increase disk size:
 <a href=https://cloud.google.com/compute/docs/disks/resize-persistent-disk#increase_the_size_of_a_disk>https://cloud.google.com/compute/docs/disks/resize-persistent-disk#increase_the_size_of_a_disk</a></p>
 <h3 id=success-reason>Success Reason</h3>
-<p>The VM&rsquo;s disk space usage is within optimal levels.</p>
+<p>The boot disk space usage for the Compute Engine VM {full_resource_path}, is within optimal levels.</p>
 <h3 id=skipped-reason>Skipped Reason</h3>
-<p>There are no logs to examine !</p>
+<p>No Google Cloud Ops Agent installed on the VM, making it difficult to retrieve disk utilization data via metrics.
+Falling back to checking for filesystem utilization-related messages in the serial logs.</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified July 6, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/9f84bc0ab7fdc376a57fc8d6082317d064bdf1ec>Runbook for analysing GCE VM performance (9f84bc0ab)</a>
+Last modified January 23, 2025: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/e1abea4ccfd79ec6a9cbe2624a491a6e60866d78>Merge "[Runbook Update] Improve SSH observation tone" -- Branch commit log -- commit 1557b7a1060430705750eb5c436c72a1258ced48 Author: Kwesi Graham &lt;akyen@google.com> Date: 2025-01-22T16:05:04Z (e1abea4cc)</a>
 </div>
 </div>
 </main>
