@@ -21,11 +21,11 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/diagnostic-trees/gce/vm-termination/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2025-01-23T13:52:53-08:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2025-01-23T22:52:56+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gce/Vm Termination">
 <meta itemprop=description content="GCE Instance shutdowns and reboots Root Cause Analysis (RCA)
 ">
-<meta itemprop=dateModified content="2025-01-23T13:52:53-08:00">
+<meta itemprop=dateModified content="2025-01-23T22:52:56+00:00">
 <meta itemprop=wordCount content="273"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
@@ -1034,8 +1034,8 @@ to prevent future occurrences where applicable.</p>
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>name</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>id</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>zone</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
-</span><span style=color:#4e9a06></span>  -p <span style=color:#000>start_time_utc</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
-</span><span style=color:#4e9a06></span>  -p <span style=color:#000>end_time_utc</span><span style=color:#ce5c00;font-weight:700>=</span>value
+</span><span style=color:#4e9a06></span>  -p <span style=color:#000>start_time</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
+</span><span style=color:#4e9a06></span>  -p <span style=color:#000>end_time</span><span style=color:#ce5c00;font-weight:700>=</span>value
 </code></pre></div><h4 id=parameters>Parameters</h4>
 <table>
 <thead>
@@ -1077,14 +1077,14 @@ to prevent future occurrences where applicable.</p>
 <td>The Google Cloud zone where the terminated VM is located.</td>
 </tr>
 <tr>
-<td><code>start_time_utc</code></td>
+<td><code>start_time</code></td>
 <td>False</td>
 <td>None</td>
 <td>datetime</td>
 <td>The start window to investigate vm termination. Format: YYYY-MM-DDTHH:MM:SSZ</td>
 </tr>
 <tr>
-<td><code>end_time_utc</code></td>
+<td><code>end_time</code></td>
 <td>False</td>
 <td>None</td>
 <td>datetime</td>
@@ -1113,7 +1113,7 @@ to prevent future occurrences where applicable.</p>
 </li>
 </ul>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified January 23, 2025: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/e1abea4ccfd79ec6a9cbe2624a491a6e60866d78>Merge "[Runbook Update] Improve SSH observation tone" -- Branch commit log -- commit 1557b7a1060430705750eb5c436c72a1258ced48 Author: Kwesi Graham &lt;akyen@google.com> Date: 2025-01-22T16:05:04Z (e1abea4cc)</a>
+Last modified January 23, 2025: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/7bb0fa9c7a1e644bf80c80d9661a3ffa4d217561>[Bug Fix] Add full resource path variable to steps (7bb0fa9c7)</a>
 </div>
 </div>
 </main>

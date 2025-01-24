@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/diagnostic-trees/gce/ssh/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2025-01-23T13:52:53-08:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2025-01-23T22:52:56+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gce/Ssh">
 <meta itemprop=description content="A comprehensive troubleshooting guide for common issues which affects SSH connectivity to VMs.
 ">
-<meta itemprop=dateModified content="2025-01-23T13:52:53-08:00">
-<meta itemprop=wordCount content="645"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2025-01-23T22:52:56+00:00">
+<meta itemprop=wordCount content="643"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="gce/Ssh">
@@ -1167,14 +1167,14 @@ the organization policies permits SSH in Browser.</p>
 <td>False</td>
 <td>None</td>
 <td>str</td>
-<td>The SSH client used to establish SSH connection</td>
+<td>The SSH client application used to establish SSH connection</td>
 </tr>
 <tr>
 <td><code>src_ip</code></td>
 <td>False</td>
 <td>None</td>
 <td>IPv4Address</td>
-<td>Specify the IPv4 address of the workstation connecting to the network, or the IP of the bastion/jumphost if currently logged in through one.</td>
+<td>The IPv4 address of the workstation connecting to the network, or the IP of the bastion/jumphost if currently logged in through one.</td>
 </tr>
 <tr>
 <td><code>protocol_type</code></td>
@@ -1188,7 +1188,7 @@ the organization policies permits SSH in Browser.</p>
 <td>False</td>
 <td>22</td>
 <td>int</td>
-<td>Specifies the port used to connect to on the remote host (default: 22)</td>
+<td>The port used to connect to on the remote host (default: 22)</td>
 </tr>
 <tr>
 <td><code>check_ssh_in_browser</code></td>
@@ -1209,7 +1209,7 @@ the organization policies permits SSH in Browser.</p>
 <td>False</td>
 <td>None</td>
 <td>str</td>
-<td>Additional authentication features required to access to the instance</td>
+<td>Multifactor authentication required to access to the instance</td>
 </tr>
 </tbody>
 </table>
@@ -1288,7 +1288,7 @@ the organization policies permits SSH in Browser.</p>
 </li>
 </ul>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified January 23, 2025: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/e1abea4ccfd79ec6a9cbe2624a491a6e60866d78>Merge "[Runbook Update] Improve SSH observation tone" -- Branch commit log -- commit 1557b7a1060430705750eb5c436c72a1258ced48 Author: Kwesi Graham &lt;akyen@google.com> Date: 2025-01-22T16:05:04Z (e1abea4cc)</a>
+Last modified January 23, 2025: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/7bb0fa9c7a1e644bf80c80d9661a3ffa4d217561>[Bug Fix] Add full resource path variable to steps (7bb0fa9c7)</a>
 </div>
 </div>
 </main>

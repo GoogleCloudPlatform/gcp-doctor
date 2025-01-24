@@ -21,11 +21,11 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/diagnostic-trees/gke/gke-ip-masq-standard/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-11-07T13:17:56+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2025-01-23T22:52:56+00:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gke/Gke Ip Masq Standard">
 <meta itemprop=description content="This runbook will analyze symptoms for IP Masquerading issues on GKE Cluster.
 ">
-<meta itemprop=dateModified content="2024-11-07T13:17:56+00:00">
+<meta itemprop=dateModified content="2025-01-23T22:52:56+00:00">
 <meta itemprop=wordCount content="240"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
@@ -1032,8 +1032,8 @@
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>name</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>location</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
 </span><span style=color:#4e9a06></span>  -p <span style=color:#000>node_ip</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
-</span><span style=color:#4e9a06></span>  -p <span style=color:#000>start_time_utc</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
-</span><span style=color:#4e9a06></span>  -p <span style=color:#000>end_time_utc</span><span style=color:#ce5c00;font-weight:700>=</span>value
+</span><span style=color:#4e9a06></span>  -p <span style=color:#000>start_time</span><span style=color:#ce5c00;font-weight:700>=</span>value <span style=color:#4e9a06>\
+</span><span style=color:#4e9a06></span>  -p <span style=color:#000>end_time</span><span style=color:#ce5c00;font-weight:700>=</span>value
 </code></pre></div><h4 id=parameters>Parameters</h4>
 <table>
 <thead>
@@ -1096,14 +1096,14 @@
 <td>GKE Node IP address or address range/CIDR (Example 192.168.1.0/24)</td>
 </tr>
 <tr>
-<td><code>start_time_utc</code></td>
+<td><code>start_time</code></td>
 <td>False</td>
 <td>None</td>
 <td>datetime</td>
 <td>Start time of the issue</td>
 </tr>
 <tr>
-<td><code>end_time_utc</code></td>
+<td><code>end_time</code></td>
 <td>False</td>
 <td>None</td>
 <td>datetime</td>
@@ -1141,7 +1141,7 @@
 </li>
 </ul>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified November 7, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/5c95596eb1f7afdbba6c440cd869f7b549ab779f>Delete runbook name validation + add autosuggestion when runbook names are mispelled (5c95596eb)</a>
+Last modified January 23, 2025: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/7bb0fa9c7a1e644bf80c80d9661a3ffa4d217561>[Bug Fix] Add full resource path variable to steps (7bb0fa9c7)</a>
 </div>
 </div>
 </main>
