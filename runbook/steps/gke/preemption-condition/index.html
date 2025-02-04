@@ -21,11 +21,11 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/steps/gke/preemption-condition/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-09-30T17:48:00+01:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2025-02-04T08:42:18-08:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gke/Preemption Condition">
 <meta itemprop=description content="Checks if the node was preempted.
 ">
-<meta itemprop=dateModified content="2024-09-30T17:48:00+01:00">
+<meta itemprop=dateModified content="2025-02-04T08:42:18-08:00">
 <meta itemprop=wordCount content="64"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
@@ -1018,15 +1018,15 @@
 <h3 id=description>Description</h3>
 <p>None</p>
 <h3 id=failure-reason>Failure Reason</h3>
-<p>The node {NODE} was preempted.</p>
+<p>The node {node} was preempted.</p>
 <h3 id=failure-remediation>Failure Remediation</h3>
 <p>Compute Engine might stop (preempt) preemptible instances if it needs to reclaim the compute capacity for allocation to other VMs.</p>
 <p>For more details about preemptible VMs in GKE please consult the documentation:
 <a href=https://cloud.google.com/kubernetes-engine/docs/how-to/preemptible-vms>https://cloud.google.com/kubernetes-engine/docs/how-to/preemptible-vms</a></p>
 <h3 id=success-reason>Success Reason</h3>
-<p>The node {NODE} was unavailable for reasons other than preemption.</p>
+<p>The node {node} was unavailable for reasons other than preemption.</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified September 30, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/fbe9ce9dc8d96794d357d22b1adeb36e7c751e5f>New runbook: GKE Node Unavailability runbook (fbe9ce9dc)</a>
+Last modified February 4, 2025: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/a65d10459832025bb55cf275b134e49ae59248e7>Merge "[Runbook] Step class attributes interpolation in step names" -- Branch commit log -- commit d00714acdb7b389a0891712cd13a27c08354b4e0 Author: Kwesi Graham &lt;akyen@google.com> Date: 2025-01-30T21:34:43Z (a65d10459)</a>
 </div>
 </div>
 </main>

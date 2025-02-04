@@ -21,11 +21,11 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/steps/gke/node-pool-cloud-logging-access-scope/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-05-17T10:00:32+01:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2025-02-04T08:42:18-08:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gke/Node Pool Cloud Logging Access Scope">
 <meta itemprop=description content="Verifies that GKE node pools have the required Cloud Logging access scopes.
 ">
-<meta itemprop=dateModified content="2024-05-17T10:00:32+01:00">
+<meta itemprop=dateModified content="2025-02-04T08:42:18-08:00">
 <meta itemprop=wordCount content="89"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
@@ -1024,11 +1024,12 @@ such as &lsquo;<a href="https://www.googleapis.com/auth/cloud-platform'">https:/
 <h3 id=failure-reason>Failure Reason</h3>
 <p>The logging health check failed because node pools have insufficient access scope for Cloud Logging.</p>
 <h3 id=failure-remediation>Failure Remediation</h3>
-<p>Adjust node pool access scope to grant necessary logging permissions. See instructions: <a href=https://cloud.google.com/kubernetes-engine/docs/troubleshooting/logging#verify_nodes_in_the_node_pools_have_access_scope>https://cloud.google.com/kubernetes-engine/docs/troubleshooting/logging#verify_nodes_in_the_node_pools_have_access_scope</a></p>
+<p>Adjust node pool access scope to grant necessary logging permissions. See instructions:
+<a href=https://cloud.google.com/kubernetes-engine/docs/troubleshooting/logging#verify_nodes_in_the_node_pools_have_access_scope>https://cloud.google.com/kubernetes-engine/docs/troubleshooting/logging#verify_nodes_in_the_node_pools_have_access_scope</a></p>
 <h3 id=success-reason>Success Reason</h3>
 <p>Node pools have sufficient access scope for Cloud Logging.</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified May 17, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/8fe375d5d6b638f7166eaf2222d3ca4f335b5dae>NEW runbook: GKE logs (8fe375d5d)</a>
+Last modified February 4, 2025: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/a65d10459832025bb55cf275b134e49ae59248e7>Merge "[Runbook] Step class attributes interpolation in step names" -- Branch commit log -- commit d00714acdb7b389a0891712cd13a27c08354b4e0 Author: Kwesi Graham &lt;akyen@google.com> Date: 2025-01-30T21:34:43Z (a65d10459)</a>
 </div>
 </div>
 </main>

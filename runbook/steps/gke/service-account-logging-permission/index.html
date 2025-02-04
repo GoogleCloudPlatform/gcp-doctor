@@ -21,11 +21,11 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/steps/gke/service-account-logging-permission/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-05-17T10:00:32+01:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2025-02-04T08:42:18-08:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gke/Service Account Logging Permission">
 <meta itemprop=description content="Verifies the service accounts associated with node pools have 'logging.logWriter' permissions.
 ">
-<meta itemprop=dateModified content="2024-05-17T10:00:32+01:00">
+<meta itemprop=dateModified content="2025-02-04T08:42:18-08:00">
 <meta itemprop=wordCount content="82"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
@@ -1022,11 +1022,12 @@ permission is required to send log data to Google Cloud Logging.</p>
 <h3 id=failure-reason>Failure Reason</h3>
 <p>The logging health check failed because the service account lacks necessary permissions to write logs.</p>
 <h3 id=failure-remediation>Failure Remediation</h3>
-<p>Grant the service account the &lsquo;roles/logging.logWriter&rsquo; role or equivalent permissions. See instructions: <a href=https://cloud.google.com/kubernetes-engine/docs/troubleshooting/logging#verify_the_node_pools_service_account_has_a_role_with_the_correct_permissions>https://cloud.google.com/kubernetes-engine/docs/troubleshooting/logging#verify_the_node_pools_service_account_has_a_role_with_the_correct_permissions</a></p>
+<p>Grant the service account the &lsquo;roles/logging.logWriter&rsquo; role or equivalent permissions. See instructions:
+<a href=https://cloud.google.com/kubernetes-engine/docs/troubleshooting/logging#verify_the_node_pools_service_account_has_a_role_with_the_correct_permissions>https://cloud.google.com/kubernetes-engine/docs/troubleshooting/logging#verify_the_node_pools_service_account_has_a_role_with_the_correct_permissions</a></p>
 <h3 id=success-reason>Success Reason</h3>
 <p>The service account has necessary permissions to write logs.</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified May 17, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/8fe375d5d6b638f7166eaf2222d3ca4f335b5dae>NEW runbook: GKE logs (8fe375d5d)</a>
+Last modified February 4, 2025: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/a65d10459832025bb55cf275b134e49ae59248e7>Merge "[Runbook] Step class attributes interpolation in step names" -- Branch commit log -- commit d00714acdb7b389a0891712cd13a27c08354b4e0 Author: Kwesi Graham &lt;akyen@google.com> Date: 2025-01-30T21:34:43Z (a65d10459)</a>
 </div>
 </div>
 </main>

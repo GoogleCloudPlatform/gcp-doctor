@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/steps/gke/logging-write-api-quota-exceeded/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2024-05-29T19:21:56+00:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2025-02-04T08:42:18-08:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gke/Logging Write Api Quota Exceeded">
 <meta itemprop=description content="Verifies that Cloud Logging API write quotas have not been exceeded.
 ">
-<meta itemprop=dateModified content="2024-05-29T19:21:56+00:00">
-<meta itemprop=wordCount content="94"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2025-02-04T08:42:18-08:00">
+<meta itemprop=wordCount content="93"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="gke/Logging Write Api Quota Exceeded">
@@ -1022,11 +1022,12 @@ log data, even if other configurations are correct.</p>
 <h3 id=failure-reason>Failure Reason</h3>
 <p>The logging health check failed because your project has exceeded its Cloud Logging Write API quota.</p>
 <h3 id=failure-remediation>Failure Remediation</h3>
-<p>Review your logging usage and either reduce log volume or request a quota increase. See instructions: <a href=https://cloud.google.com/kubernetes-engine/docs/troubleshooting/logging#verify_that_write_api_quotas_have_not_been_reached>https://cloud.google.com/kubernetes-engine/docs/troubleshooting/logging#verify_that_write_api_quotas_have_not_been_reached</a></p>
+<p>Review your logging usage and either reduce log volume or request a quota increase. See instructions:
+<a href=https://cloud.google.com/kubernetes-engine/docs/troubleshooting/logging#verify_that_write_api_quotas_have_not_been_reached>https://cloud.google.com/kubernetes-engine/docs/troubleshooting/logging#verify_that_write_api_quotas_have_not_been_reached</a></p>
 <h3 id=success-reason>Success Reason</h3>
-<p>The project is within its Cloud Logging Write API quota between {START_TIME_UTC} and {END_TIME_UTC} UTC.</p>
+<p>The project is within its Cloud Logging Write API quota between {start_time} and {end_time}.</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified May 29, 2024: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/04597c23b9ae7e0aedfa1b08334b9e9aec6222e7>Merge "spell check and corrections" -- Branch commit log -- commit 12be01778fc37f8cc299e80cbeb598d2385ba794 Author: Rodney Peck &lt;ropeck@google.com> Date: 2024-05-22T12:02:54-07:00 (04597c23b)</a>
+Last modified February 4, 2025: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/a65d10459832025bb55cf275b134e49ae59248e7>Merge "[Runbook] Step class attributes interpolation in step names" -- Branch commit log -- commit d00714acdb7b389a0891712cd13a27c08354b4e0 Author: Kwesi Graham &lt;akyen@google.com> Date: 2025-01-30T21:34:43Z (a65d10459)</a>
 </div>
 </div>
 </main>

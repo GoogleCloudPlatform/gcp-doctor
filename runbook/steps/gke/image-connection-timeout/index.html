@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/steps/gke/image-connection-timeout/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2025-01-15T01:40:55-08:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2025-02-04T08:42:18-08:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gke/Image Connection Timeout">
 <meta itemprop=description content="The connection to Google APIs is timing out
 ">
-<meta itemprop=dateModified content="2025-01-15T01:40:55-08:00">
-<meta itemprop=wordCount content="74"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2025-02-04T08:42:18-08:00">
+<meta itemprop=wordCount content="73"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="gke/Image Connection Timeout">
@@ -1018,16 +1018,17 @@
 <h3 id=description>Description</h3>
 <p>None</p>
 <h3 id=failure-reason>Failure Reason</h3>
-<p>The connection from Node to Google APIs is timing out. It is probable that a firewall rule is blocking this IP range. Expand results to see the blocked IP range.
+<p>The connection from Node to Google APIs is timing out. It is probable that a firewall rule is blocking this IP range.
+Expand results to see the blocked IP range.
 Example log entry that would help identify involved objects:</p>
-<p>{LOG_ENTRY}</p>
+<p>{log_entry}</p>
 <h3 id=failure-remediation>Failure Remediation</h3>
 <p>Follow the documentation:
 <a href=https://cloud.google.com/kubernetes-engine/docs/concepts/firewall-rules>https://cloud.google.com/kubernetes-engine/docs/concepts/firewall-rules</a></p>
 <h3 id=success-reason>Success Reason</h3>
-<p>No &ldquo;Failed to pull image.*dial tcp.*i/o timeout&rdquo; errors found between {START_TIME_UTC} and {END_TIME_UTC} UTC</p>
+<p>No &ldquo;Failed to pull image.*dial tcp.*i/o timeout&rdquo; errors found between {start_time} and {end_time}</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified January 15, 2025: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/5a646b85ac2532366a900a4628f570387f5f8270>Merge "additional error scenario into the gke/image-pull runbook" -- Branch commit log -- commit 4e3bc0204a5cb72a2f01a781e2b3b039c64faf85 Author: Pratik Sonavane &lt;pratiksonavane@google.com> Date: 2024-12-18T14:35:12Z (5a646b85a)</a>
+Last modified February 4, 2025: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/a65d10459832025bb55cf275b134e49ae59248e7>Merge "[Runbook] Step class attributes interpolation in step names" -- Branch commit log -- commit d00714acdb7b389a0891712cd13a27c08354b4e0 Author: Kwesi Graham &lt;akyen@google.com> Date: 2025-01-30T21:34:43Z (a65d10459)</a>
 </div>
 </div>
 </main>

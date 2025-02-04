@@ -21,11 +21,11 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/steps/gce/vm-has-ops-agent/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2025-01-23T13:52:53-08:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2025-02-04T08:42:18-08:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gce/Vm Has Ops Agent">
 <meta itemprop=description content="Verifies that a GCE Instance has at ops agent installed and
 ">
-<meta itemprop=dateModified content="2025-01-23T13:52:53-08:00">
+<meta itemprop=dateModified content="2025-02-04T08:42:18-08:00">
 <meta itemprop=wordCount content="91"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
@@ -1023,14 +1023,14 @@
 <li>Set <code>check_metrics</code> to check for metrics sub agent. Default is True</li>
 </ul>
 <h3 id=failure-reason>Failure Reason</h3>
-<p>GCE Instance &ldquo;{vm_name}&rdquo; does not have {subagent} agent installed and the subagent is not exporting data</p>
+<p>GCE Instance &ldquo;{full_resource_path}&rdquo; does not have {subagent} agent installed and the subagent is not exporting data</p>
 <h3 id=failure-remediation>Failure Remediation</h3>
-<p>GCE Instance &ldquo;{vm_name}&rdquo; does not have {subagent} agent installed and the subagent is not exporting data
+<p>GCE Instance &ldquo;{full_resource_path}&rdquo; does not have {subagent} agent installed and the subagent is not exporting data
 <a href=https://cloud.google.com/stackdriver/docs/solutions/agents/ops-agent/troubleshoot-run-ingest>https://cloud.google.com/stackdriver/docs/solutions/agents/ops-agent/troubleshoot-run-ingest</a></p>
 <h3 id=success-reason>Success Reason</h3>
-<p>GCE Instance &ldquo;{vm_name}&rdquo; has {subagent} agent installed and currently exporting data</p>
+<p>GCE Instance &ldquo;{full_resource_path}&rdquo; has {subagent} agent installed and currently exporting data</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified January 23, 2025: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/e1abea4ccfd79ec6a9cbe2624a491a6e60866d78>Merge "[Runbook Update] Improve SSH observation tone" -- Branch commit log -- commit 1557b7a1060430705750eb5c436c72a1258ced48 Author: Kwesi Graham &lt;akyen@google.com> Date: 2025-01-22T16:05:04Z (e1abea4cc)</a>
+Last modified February 4, 2025: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/a65d10459832025bb55cf275b134e49ae59248e7>Merge "[Runbook] Step class attributes interpolation in step names" -- Branch commit log -- commit d00714acdb7b389a0891712cd13a27c08354b4e0 Author: Kwesi Graham &lt;akyen@google.com> Date: 2025-01-30T21:34:43Z (a65d10459)</a>
 </div>
 </div>
 </main>

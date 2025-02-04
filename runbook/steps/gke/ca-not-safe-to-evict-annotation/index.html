@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://gcpdiag.dev/runbook/steps/gke/ca-not-safe-to-evict-annotation/"><meta property="og:image" content="https://gcpdiag.dev/images/website-preview.jpg"><meta property="article:section" content="runbook">
-<meta property="article:modified_time" content="2025-01-27T06:58:18-08:00"><meta property="og:site_name" content="gcpdiag">
+<meta property="article:modified_time" content="2025-02-04T08:42:18-08:00"><meta property="og:site_name" content="gcpdiag">
 <meta itemprop=name content="gke/Ca Not Safe To Evict Annotation">
 <meta itemprop=description content="Check for &#34;no.scale.down.node.pod.not.safe.to.evict.annotation&#34; log entries
 ">
-<meta itemprop=dateModified content="2025-01-27T06:58:18-08:00">
-<meta itemprop=wordCount content="69"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
+<meta itemprop=dateModified content="2025-02-04T08:42:18-08:00">
+<meta itemprop=wordCount content="68"><meta itemprop=image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://gcpdiag.dev/images/website-preview.jpg">
 <meta name=twitter:title content="gke/Ca Not Safe To Evict Annotation">
@@ -1020,13 +1020,14 @@
 <h3 id=failure-reason>Failure Reason</h3>
 <p>The scaleDown event failed because a Pod on the node has the safe-to-evict=false annotation
 Example log entry that would help identify involved objects:
-{LOG_ENTRY}</p>
+{log_entry}</p>
 <h3 id=failure-remediation>Failure Remediation</h3>
-<p>If the Pod can be safely evicted, edit the manifest of the Pod and update the annotation to &ldquo;cluster-autoscaler.kubernetes.io/safe-to-evict&rdquo;: &ldquo;true&rdquo;.</p>
+<p>If the Pod can be safely evicted, edit the manifest of the Pod and update the annotation to
+&ldquo;cluster-autoscaler.kubernetes.io/safe-to-evict&rdquo;: &ldquo;true&rdquo;.</p>
 <h3 id=success-reason>Success Reason</h3>
-<p>No &ldquo;no.scale.down.node.pod.not.safe.to.evict.annotation&rdquo; errors found between {START_TIME_UTC} and {END_TIME_UTC} UTC</p>
+<p>No &ldquo;no.scale.down.node.pod.not.safe.to.evict.annotation&rdquo; errors found between {start_time} and {end_time}</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified January 27, 2025: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/e3348eeb98e4c31a1003d71e13fd82044f0de955>Merge "Update the Cluster Autoscaler runbook to add more ScaleDown scenarios" -- Branch commit log -- commit 08dc76b6475483ee40c677cd52c2f0e91f722135 Author: Piyush Sachdeva &lt;piyushsachdeva@google.com> Date: 2025-01-10T15:00:42Z (e3348eeb9)</a>
+Last modified February 4, 2025: <a href=https://github.com/GoogleCloudPlatform/gcpdiag/commit/a65d10459832025bb55cf275b134e49ae59248e7>Merge "[Runbook] Step class attributes interpolation in step names" -- Branch commit log -- commit d00714acdb7b389a0891712cd13a27c08354b4e0 Author: Kwesi Graham &lt;akyen@google.com> Date: 2025-01-30T21:34:43Z (a65d10459)</a>
 </div>
 </div>
 </main>
